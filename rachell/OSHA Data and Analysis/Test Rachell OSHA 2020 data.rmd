@@ -1,0 +1,115 @@
+---
+title: "OSHA Analysis Template"
+date: "11/25/2020"
+author: "Your Name"
+output:
+  html_document:
+    code_folding: hide
+    theme: cerulean
+    highlight: pygments
+    toc: true
+    toc_float:
+      collapsed: true
+      smooth_scroll: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Summary
+
+Provide a brief summary of the purpose of this document and high-level findings.
+
+## Load libraries
+
+Code to load necessary libraries. Click "Code" button to view.
+
+```{r message=FALSE, echo=TRUE, warning=FALSE}
+# For general data science work
+library(tidyverse)
+
+# For data cleaning
+library(janitor)
+
+# For writing data to google sheets
+library(gargle)
+library(googlesheets4)
+#source("keys/keys.R")
+
+# For fancy tables
+# library(DT)
+# library(kableExtra)
+
+# # For producing html files
+# library(knitr)
+
+```
+
+## Load and clean data
+
+Describe the data you are loading here. 
+
+Click "Code" button to view scripts to load data.
+
+```{r message=FALSE, echo=TRUE, warning=FALSE}
+
+# Write code to load necessary data 
+#open_complaints <- read_csv("RMD/data/closed_complaints_labeled.csv")
+open_complaints <- rio::import("closed_complaints.xlsx", skip=3)
+# Write code to clean necessary data, if cleaning required. 
+open_complaints <- open_complaints %>%
+  clean_names()
+```
+
+## Analyze data
+
+Brief description of analysis goes here. 
+
+### Analyze data section title
+
+Brief description of specific analysis and results, as output by the code block below this section. 
+
+```{r message=FALSE, echo=TRUE, warning=FALSE}
+
+# Example
+# Group and count by state
+state_count <- open_complaints %>%
+  group_by(site_state) %>%
+  summarise(count_open_complaints = n()) %>%
+  arrange(desc(count_open_complaints))
+
+# Display the result in le fancy datatable format
+# Lots of customizable options https://rstudio.github.io/DT/
+state_count %>%
+  datatable()
+
+```
+
+## Export data
+
+Brief description of dataframes to export to Google Sheets for global sharing. 
+
+```{r message=FALSE, echo=TRUE, warning=FALSE}
+# https://googlesheets4.tidyverse.org/
+#workbook_id <- 
+  
+# Build a list of dataframes to write to google sheets
+list_of_dataframes <-  list(state_count)
+
+# Create a Google Sheets workbook
+example_workbook_name <- gs4_create("example_osha_workbook", sheets=list_of_dataframes)
+
+# Get the ID
+example_workbook_url <- unclass(example_workbook_name)
+example_workbook_url <- paste0(
+  "https://docs.google.com/spreadsheets/d/",
+  example_workbook_url
+)
+example_workbook_url
+
+
+
+
+
+```
