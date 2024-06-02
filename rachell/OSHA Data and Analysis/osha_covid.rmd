@@ -1,0 +1,439 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+
+```
+
+## About this notebook
+This is our final project for JOUR702, created by Kara Newhouse and Aadit Tambe. In this notebook, we're trying to analyze COVID-related OSHA complaints. Here are some of the question we're seeking to answer:
+* Which states have the most/fewest complaints? 
+* Which industries are they coming from? How does this relate to the number of employees in the industry? Are the industries with most COVID-related complaints those considered essential and with mostly in-person work?
+* Text analysis: Which words came up the most in complaints reported?
+
+## Information about how we obtained the data
+The data set we used is available on OSHA’s [website](https://www.osha.gov/foia#covid-19), and the data is relatively clean. The biggest advantage is OSHA updates the data set weekly -- therefore, we always have access to the most recent data. 
+There are two COVID complaint-related data sets: closed complaints and open complaints. Information on open cases is not available until investigations are complete. Therefore the closed complaints data is the most helpful. 
+In addition to this data set, we used data from the U.S. Bureau of Labor Statistics (https://www.bls.gov/oes/special.requests/oesm19all.zip) to compare the number of complaints coming from each industry to the number of employees within that industry. This data set was particularly difficult to work with. We filtered the original file to include only records containing employment numbers across occupation types. Additional cleaning was necessary after pulling the filtered data set into R.
+
+## Limitations of the data
+Some industries represented in the complaints are not included in industry_size_filtered.xlxs. We are working on this and will continue to update this data notebook.
+
+
+## Install and load packages
+```{r}
+#install.packages("tidyverse")
+#install.packages("lubridate")
+#install.packages("readxl")
+#install.packages("janitor")
+#install.packages("blscrapeR")
+#install.packages("tidytext")
+#install.packages("textstem")
+
+library(tidyverse)
+library(lubridate)
+library(readxl)
+library(janitor)
+#library(blscrapeR)
+library(tidytext)
+library(textstem)
+
+
+```
+
+## Load Data
+```{r}
+# PART 1: Open complaints
+# Create an object open_complaints from the OSHA open_complaints spreadsheet.
+open_complaints <- read_excel("data/open_complaints.xlsx") %>%
+  # Format the data set -- take out the first two rows because they aren't row headings.
+  remove_empty() %>%
+  slice(-1) %>%
+  # Bring row headings to the first line of the data set.
+  row_to_names(1) %>%
+  clean_names() %>%
+  # Create a new column to check the status of the complaint -- open or closed.
+  mutate(complaint_status = "open_complaint")
+
+#--#--#--#--#
+
+# PART 2: Closed complaints
+# Create an object closed_complaints from the OSHA closed_complaints spreadsheet.
+closed_complaints <- read_excel("data/closed_complaints.xlsx") %>%
+  # Same as part 1 -- take out the first two rows because they aren't row headings.
+  remove_empty() %>%
+  slice(-1) %>%
+  # Bring row headings to the first line of the data set.
+  row_to_names(1) %>%
+  clean_names() %>%
+  # Create a new column to check the status of the complaint -- open or closed.
+  mutate(complaint_status = "closed_complaint")
+
+#--#--#--#--#
+
+# PART 3: Join open and closed complaints
+# Create a new object "complaints." This will be our main dataset.
+complaints <- closed_complaints %>%
+  # Use bind_rows to join the two datasets
+  bind_rows(open_complaints) %>%
+  # Because Excel stores dates in a different format, we convert it to a number.
+  mutate(upa_receipt_date = as.numeric(upa_receipt_date)) %>%
+  # Then, we use the "excel_numeric_to_date" function to return an actual date
+  mutate(upa_receipt_date = excel_numeric_to_date(upa_receipt_date)) %>%
+  # We also need to separate the number of alleged hazards and number of employees exposed into two columns.
+  separate(number_alleged_hazards_emp_exposed, sep = "/", into = c("number_alleged_hazards","number_employees_exposed"))%>%
+  # Next, we take out the spaces after alleged hazards using str_trim.
+  mutate(number_alleged_hazards = str_trim(number_alleged_hazards, side = "right")) %>%
+  # These columns are stored as characters, so we convert them to numbers.
+  mutate(number_alleged_hazards = as.numeric(number_alleged_hazards)) %>%
+  mutate(number_employees_exposed = as.numeric(number_employees_exposed))
+
+#--#--#--#--#
+
+# PART 4: Industry size
+# Create an object industry_size from the filtered BLS industry size spreadsheet.
+industry_size <- read_excel("data/industry_size_filtered.xlsx") %>%
+  # View only the columns for industry code and total employees.
+  select(naics, naics_title, own_code, tot_emp) %>%
+  # Change column names to "industry_code," ownership code and "total_employees."
+  rename(industry_code = naics, industry_title = naics_title, ownership_code = own_code, total_employees = tot_emp) %>%
+  # Create a new column called "industry_code_clean."
+  mutate(industry_code_clean = case_when(
+  # Use a case_when function to remove a 0 if it is the last digit in the code. This will return a five-digit code.
+    str_detect(industry_code, "0$")~str_sub(industry_code, start=1L, end=5L),
+    TRUE~industry_code
+    )
+  ) %>%
+  # Repeat case_when, but for the second-to-last digit -- if that's a 0, take it out. This will return a four-digit code.
+  mutate(industry_code_clean = case_when(
+    str_detect(industry_code_clean, "0$")~str_sub(industry_code_clean, start=1L, end=4L),
+    TRUE~industry_code_clean
+    )
+  ) %>%
+  # Repeat case_when one last time -- if the third-to-last digit is a zero, take it out. This will return a three-digit code.
+  mutate(industry_code_clean = case_when(
+    str_detect(industry_code_clean, "0$")~str_sub(industry_code_clean, start=1L, end=3L),
+    TRUE~industry_code_clean
+    )
+  ) 
+
+#--#--#--#--#
+
+# PART 5: Industry codes
+# Create an object complaints_industry_codes.
+complaints_industry_codes <- complaints %>%
+  # In this step, we separate the two NAICS codes into two columns: primary_site_naics_1 and primary_site_naics_2
+  separate(primary_site_naics, sep = "/", into = c("primary_site_naics_1","primary_site_naics_2"))%>%
+  # Next, we take out the spaces before and after the codes using str_trim.
+  mutate(primary_site_naics_1 = str_trim(primary_site_naics_1, side = "both"))%>%
+  mutate(primary_site_naics_2 = str_trim(primary_site_naics_2, side = "both"))%>%
+  # If/else statement: if primary_site_naics_1 equals primary_site_naics_2, return true in another column, else, return false.
+  mutate(naics_check = case_when(
+    primary_site_naics_1 == primary_site_naics_2 ~ "true", 
+    TRUE ~ "false"
+    # primary_site_naics_1 != primary_site_naics_2 ~ "false"
+  )) 
+
+#--#--#--#--#
+
+# PART 6: Viewing industry size and industry codes together
+
+# Create a new object industry_size_duplicates.
+industry_size_duplicates <- industry_size %>%
+  # Convert ownership codes to numbers.
+  mutate(ownership_code =  as.numeric(ownership_code)) %>%
+  # Use distinct function to retain only unique/distinct rows in the data set.
+  distinct() %>%
+  # Group by industry_code_clean.
+  group_by(industry_code_clean) %>%
+  # Count the number of complaints for each industry code.
+  count() %>%
+  # Arrange in descending order
+  arrange(desc(n)) %>%
+  # If ownership code contains more than 1 digit, filter it. For ex. 235, 57, etc.
+  filter(n > 1) %>%
+  # Join industry_size so we can see ownership codes with the grouped industry codes.
+  inner_join(industry_size) %>%
+  # Case_when: if ownership_code is 235, assign it a "y" in new column called keep_dupes. This helps us identify the aggregate level records for industry codes that appear multiple times with different ownership codes.
+  mutate(keep_dupes = case_when(
+    ownership_code == 235 ~ "y",
+    TRUE ~ "n"
+  )) %>%
+  # Create a new column "industry_code_clean_ownership" that includes both the industry code and the ownership code.
+  mutate(industry_code_clean_ownership=paste0(industry_code_clean, " ", ownership_code)) %>%
+  # Ungroup.
+  ungroup() %>% 
+  # Select industry_code_clean_ownership, keep_dupes.
+  select(industry_code_clean_ownership, keep_dupes) 
+
+# Create a new object industry_size_clean where industry codes will only appear once. 
+industry_size_clean <- industry_size %>%
+  # Convert ownership codes to numbers.
+  mutate(ownership_code = as.numeric(ownership_code)) %>%
+  # Use distinct function to retain only unique/distinct rows in the data set.
+  distinct() %>%
+  # Create a new column, industry_code_clean_ownership, that includes both the industry code and the ownership code.
+  mutate(industry_code_clean_ownership=paste0(industry_code_clean, " ", ownership_code)) %>%
+  # If industry code contains 'A' or a hyphen, or if it's less than 5, assign it a '"y" in a new column called keep. Otherwise, assign it an "n" in column keep.
+  mutate(keep = case_when(
+    str_detect(industry_code_clean, "A")~"y",
+    str_detect(industry_code_clean, "-")~"y",
+    str_length(industry_code_clean)<5~"y",
+    TRUE~"n",
+  )) %>%
+  # Now, if keep is "y" and keep_dupes is n, then assign an "n" in new column, keep_final. If keep is "y" and keep dupes is "y," assign a "y" in that column.
+  left_join(industry_size_duplicates) %>%
+  mutate(keep_final = case_when(
+    keep == "y" & keep_dupes == "n" ~ "n",
+    keep == "y" & keep_dupes == "y" ~ "y",
+    TRUE ~ keep
+  )) %>%
+    # Filter for "y."
+    filter(keep_final == "y")
+``` 
+
+## Examine data
+```{r}
+# complaints data:
+closed_complaints
+open_complaints
+complaints
+
+# industry data:
+industry_size_clean
+```
+
+
+## TOTAL COMPLAINTS
+### Question 1: How many COVID-19-related complaints have been filed to OSHA?
+### Answer: There were 33,609 closed complaints and 12,239 open complaints as of Dec. 6, 2020, for a total of 45,848 complaints.
+
+```{r}
+# Create a new object called "totals." Group by complaint status and count for each category.
+totals <- complaints %>%
+  group_by(complaint_status) %>%
+  count() %>%
+# Reshape the dataframe so that complaint statuses are in columns.
+  pivot_wider(names_from = complaint_status, values_from = n) %>%
+# Create a new column by adding the values from the "closed_complaint" and "open_complaint" columns.  
+  mutate(total=closed_complaint+open_complaint)
+  
+totals
+```
+
+# LOCATIONS OF COMPLAINTS
+### Question 1: Which states have the most complaints?
+### Answer: Oregon and California had the most complaints with 6,022 and 5,347, respectively. Eight states had more than 1,000 complaints.
+
+```{r}
+
+#Location data is only available for closed complaints. Create a new object called "complaint_locations" and filter for closed complaints.
+complaint_locations <- complaints %>%
+  filter(complaint_status == "closed_complaint") %>%
+#Group by state and count.
+  group_by(site_state) %>%
+  count() %>%
+#Arrange in descending order.
+  arrange(desc(n))
+
+complaint_locations
+
+```
+
+
+### Question 2: Which states have the fewest complaints?
+### Answer: Louisiana had the fewest complaints with 12. Three states had fewer than 20 complaints: Louisiana, Wyoming and Hawaii.
+### Note: When we ran the location analysis using Nov. 6, 2020 data, Utah had the fewest complaints with 2. In the Dec. 6, 2020 data, Utah shot up to 112 complaints, ranking 33rd among the states for total complaints. This jump may be worth exploring.
+```{r}
+
+#Location data is only available for closed complaints. Create a new object called "complaint_locations" and filter for closed complaints.
+complaint_locations <- complaints %>%
+  filter(complaint_status == "closed_complaint") %>%
+#Group by state and count.
+  group_by(site_state) %>%
+  count() %>%
+#Arrange in ascending order.
+  arrange(n)
+
+complaint_locations
+
+```
+
+## INDUSTRIES
+### Question 2. What types of industries are complaints coming from?
+### Answer for 2-digit codes: The highest number of complaints come from the Agriculture, Forestry, Fishing and Hunting industry with a rate of 0.94 complaints per 1,000 employees. The Arts, Entertainment, and Recreation industry ranked second with 0.42 complaints per 1,000 employees.
+### Answer for 3-digit codes: The highest number of complaints come from the federal Postal service with a rate of 1.01 complaints per 1,000 employees. Miscellaneous Store Retailers ranked second with 0.94 complaints per 1,000 employees. Furniture and Related Product Manufacturing followed closely with 0.93 complaints per 1,000 employees.
+### Note: There are still some duplicates in the weighted complaints data frames, however it does not cause errors in the weighted calculation. We will continue to refine the code to address this issue.
+
+
+```{r}
+# Weighted complaints 2-digit codes
+
+# Create a new object called complaints_industry_codes_2digit.
+complaints_industry_codes_2digit <- complaints_industry_codes %>%
+  # Look at the first two digits of the code.
+  mutate(primary_site_naics_1_2digit = str_sub(primary_site_naics_1, start = 1L, end = 2L)) %>%
+  # Join with industry_size_clean data frame, which includes industry titles and number of employees
+  left_join(industry_size_clean, by = c("primary_site_naics_1_2digit" = "industry_code_clean")) %>%
+  # rename industry_title column to indicate that we're looking just at two-digit codes.
+  rename(industry_title_2digit = industry_title) %>%
+  # Group by industry title and count the number of complaints.
+  group_by(industry_title_2digit)%>%
+  count()
+
+# Create a new object called complaints_weighted_2digit.
+complaints_weighted_2digit <- complaints_industry_codes_2digit %>%
+  # Join with industry_size_clean so that we can see the industry size with the grouped industries. 
+  left_join(industry_size_clean, by = c("industry_title_2digit" = "industry_title")) %>%
+  # Create a new column that calculates complaints per 1000 employees.
+  mutate(complaints_per_1000_employees = n/total_employees*1000) %>%
+  # Select only the columns we want to view and arrange in descending order.
+  select(industry_code_clean, industry_title_2digit, complaints_per_1000_employees) %>%
+  arrange(desc(complaints_per_1000_employees)) %>%
+  # Use distinct function to retain only unique/distinct rows in the data set.
+  distinct() 
+
+```
+
+
+```{r}
+# Weighted complaints 3-digit codes: 
+
+# Create a new object called complaints_industry_codes_3digit
+complaints_industry_codes_3digit <- complaints_industry_codes %>%
+  # Look at the first three digits of the codes
+  mutate(primary_site_naics_1_3digit = str_sub(primary_site_naics_1, start = 1L, end = 3L)) %>%
+  # Join with industry_size data frame, which includes industry titles and number of employees
+  left_join(industry_size_clean, by = c("primary_site_naics_1_3digit" = "industry_code_clean")) %>%
+  # Rename industry_title column to indicate that we're looking just at three-digit codes.
+  rename(industry_title_3digit = industry_title) %>%
+  # Group by industry title and count the number of complaints.
+  group_by(industry_title_3digit)%>%
+  count()
+
+# Weighted complaints
+complaints_weighted_3digit <- complaints_industry_codes_3digit %>%
+  left_join(industry_size_clean, by = c("industry_title_3digit" = "industry_title")) %>%
+  mutate(complaints_per_1000_employees = n/total_employees*1000) %>%
+  select(industry_code_clean, industry_title_3digit, complaints_per_1000_employees) %>%
+  arrange(desc(complaints_per_1000_employees))
+
+```
+
+## NEXT STEPS
+1. Figure out how to pull in complaints data from URL so that it is continually updated.
+2. Consider whether to weight location analysis by number of workers in each state. If so, what time frame would we use such data from, given how COVID has affected the economy?
+2. Analyze how often these complaints trigger on-site inspections. We would join inspection data with closed_complaints on "establishment name." [We need Sean to show us how to get the latest inspection data]
+3. Text analysis
+
+```{r}
+
+#Create a new object called "stop_words_edited" from the tidytext "stop_words" data frame. Filter all words except "serious" from stop_words data frame. This will ensure that "serious" is no longer considered a stop word.
+stop_words_edited <- stop_words %>%
+  filter(!str_detect(word, "serious"))
+
+#Create a new object called "text_analysis" from our data frame that includes all complaints and industry codes. Filter to include only closed complaints, because open complaints do not include hazard descriptions. Make all text in the hazard description lowercase.
+text_analysis <- complaints_industry_codes %>%
+  filter(complaint_status == "closed_complaint") %>%
+  ungroup() %>%
+  select(upa_number, site_state, hazard_desc_location) %>%
+  mutate(hazard_desc_location = tolower(hazard_desc_location)) 
+
+#Create a new object called "complaints_closed_words" from "text_analysis" data frame.
+complaints_closed_words <- text_analysis %>%
+  #Use unnest_tokens function to turn each word in the hazard descriptions into individual units (tokens).
+  unnest_tokens(word, hazard_desc_location, token="words") %>%
+  #Anti-join tokenized data frame from stop_words_edited to remove stop words.
+  anti_join(stop_words_edited) %>%
+  #Remove numbers?
+  mutate(word = str_remove_all(word, "[0-9]")) %>%
+  #Remove punctuation.
+  mutate(word = str_remove_all(word,"[:punct:]")) %>%
+  #Group by word and count. Arrange descending.
+  group_by(word) %>% 
+  count() %>%
+  arrange(desc(n)) %>%
+  #anti-join again?
+  anti_join(stop_words_edited) %>%
+  #Using lemmatize_words function, transform "word" column into a "word_category" column so words with similar stems are grouped together.      Group and count word categories and arrange descending.
+  mutate(word_category = lemmatize_words(word)) %>%
+  ungroup() %>%
+  group_by(word_category) %>%
+  summarise(n = sum(n)) %>%
+  arrange(desc(n))
+
+
+# create an object called "trigrams_complaints_close" to store values of words in groups of three
+trigrams_complaints_closed <- text_analysis %>% 
+  # unnest_tokens turns each word into tokens, in this case, we want groups of three words
+  unnest_tokens(trigram, hazard_desc_location, token="ngrams", n=3) %>%
+  # group by trigams
+  group_by(trigram) %>%
+  count() %>%
+  # arrange in descending order to view the trigram with the most iterations, first. 
+  arrange(desc(n))
+
+# create an object called "tetragram_complaints_close" to store values of words in groups of four
+tetragrams_complaints_closed <- text_analysis %>% 
+  # unnest_tokens turns each word into tokens, in this case, we want groups of four words
+  unnest_tokens(tetragram, hazard_desc_location, token="ngrams", n=4) %>%
+  # group by trigams
+  group_by(tetragram) %>%
+  count() %>%
+  # arrange in descending order to view the tetragram with the most iterations, first. 
+  arrange(desc(n))
+
+# create an object called "pentagrams_complaints_closed"
+pentagrams_complaints_closed <- text_analysis %>% 
+  # unnest_tokens turns each word into tokens, in this case, we want groups of five words
+  unnest_tokens(pentagram, hazard_desc_location, token="ngrams", n=5) %>%
+  # group by pentagrams
+  group_by(pentagram) %>%
+  count() %>%
+  # arrange in descending order to view the pentagram with the most iterations, first.  
+  arrange(desc(n))
+
+# create an object called sentences_complaints_closed to store the values of sentences
+sentences_complaints_closed <- text_analysis %>% 
+  # unnest_tokens separates out individual sentences
+  unnest_tokens(sentence, hazard_desc_location, token="sentences") %>%
+  # remove numbers
+  mutate(sentence = str_remove_all(sentence, "[0-9]")) %>%
+  # remove punctuation marks 
+  mutate(sentence = str_remove_all(sentence,"[:punct:]")) %>%
+  # remove spaces on both sides of the sentence
+  mutate(sentence = str_trim(sentence, side="both")) %>%
+  group_by(sentence) %>%
+  count() %>%
+  arrange(desc(n))
+
+
+
+#To assign categories to each complaint, we will need to...
+  #search the complaints for relevant phrases, select if those appear ... string detect? if else...?
+  #create a column called "complaint_categories"
+
+
+
+#complaints_y <- complaints %>%
+#  filter(str_detect(hazard_desc_location, "^Employee|^employee"))
+
+#Create a new object called "complaint_descriptions_frequency."
+complaint_descriptions_frequency <- closed_complaints %>%
+
+#Count the frequency of each complaint description.
+  count(hazard_desc_location, sort= TRUE) %>%
+
+#Arrange in descending order.
+  arrange(desc(n))
+
+
+
+```
+

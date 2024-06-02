@@ -1,0 +1,83 @@
+---
+title: "PPP Data"
+author: "Abby Zimmardi"
+date: "1/20/2021"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+#install.packages("rio")
+#install.packages(dplyr)
+library(dplyr)
+```
+
+```{r}
+#PPP <- rio::import('/Users/abbyzimmardi/Downloads/Data Spring 2021/OSHA/150k plus 0808/PPP Data 150k plus 080820.csv')
+
+#WELLS IMPORT:
+PPP <- rio::import('/Users/rswells/Dropbox/Classes/Data Fall 2020/ArkansasCovid/PPP Loan Data 150k plus 0808/PPP Data 150k plus 080820.csv')
+```
+
+
+```{r}
+PPP2 <- PPP %>% 
+  filter(State == "AR")
+#PPP2
+```
+#Clean Names, Make everything in BusinessName have an underscore in between
+#WELLS NEEDS WORK
+```{r}
+PPP2$BusinessName  <- gsub("[[:punct:]]", "", PPP2$BusinessName)
+PPP2$BusinessName  <- str_trim(PPP2$BusinessName, side =c("both"))
+PPP2$BusinessName <- str_replace_all(PPP2$BusinessName, pattern=fixed(' '), replacement=fixed('_') )
+PPP2
+```
+
+
+
+
+```{r}
+#OSHA <- rio::import('/Users/abbyzimmardi/Downloads/Data Spring 2021/OSHA/AR Closed Complaints Jan. 13.xlsx')
+#OSHA
+
+#WELLS IMPORT
+OSHA <- rio::import('https://github.com/profrobwells/Spring2021Data/blob/main/closed_complaints_jan_13.xlsx?raw=true', which="AR")
+```
+
+#For some reason when I upload the OSHA data from my files it adds extra columns, but when I import the same table from github, I don't get any data on the final combined table
+```{r}
+OSHA = subset(OSHA, select = -c(17,18, 19, 20, 21, 22, 23, 24, 25, 26))
+OSHA
+```
+
+
+#Rename columns
+```{r}
+OSHA <- OSHA %>%
+  rename(State = 'Site State', Address = 'Site Address 1', Zip = 'Site Zip', City = 'Site City', BusinessName = 'Estab Name')
+OSHA
+```
+#WELLS EDIT
+#clean
+#Make everything have an underscore in between
+```{r}
+OSHA$BusinessName<- gsub("[[:punct:]]", "", OSHA$BusinessName)
+OSHA$BusinessName <- str_trim(OSHA$BusinessName, side =c("both"))
+OSHA$BusinessName<- str_replace_all(OSHA$BusinessName, pattern=fixed(' '), replacement=fixed('_') )
+OSHA$BusinessName = toupper(OSHA$BusinessName)
+OSHA
+
+```
+
+
+#JOIN BY NAME 
+```{r}
+OSHA_PPP <- inner_join(PPP2, OSHA, by=c("BusinessName"="BusinessName"))
+```
+
+
+
+
+
+
