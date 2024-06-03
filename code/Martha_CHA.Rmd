@@ -1,0 +1,156 @@
+---
+title: "Sunday paragraph"
+output: html_document
+date: "2024-06-02"
+---
+Initial data gathering questions I would like to answer:
+Which private equity firms have the most amount of HCV leases? Least?
+What is the overall average gross rent? Sum? Per year? 
+What is the average gross rent of each firm? Sum? Per year?
+What is the overall average HAP to Owner? Sum? Per year?
+# What is the average HAP to each owner (firm)? Sum? Per year?
+Net_lease = Gross_Rent - HAP_to_Owner   
+What is the overall average of the net lease?Sum?Per year?
+What is average gross of the net lease of each firm? Sum? Per year?
+
+Data tasks I am not sure are feasible:
+Categorizing addresses by nieghborhoods using their zipcodes
+Comparing HAP leases to other lease prices in the same area (is there any exploitation of pricing happening?)
+
+Non-data questions to further investigate:
+On the Housing Assistance Payments (HAP Contract), it says that "During the
+initial lease term, the owner may not raise the rent to owner."
+    What is considered the initial lease term --> when can owners start raising the rent?
+    Based on the time period, COMPARE IN DATA (ie if span is 1 year then search for trends in        rent changes using the same addresses) 
+    --> unless the data set is only comprised of leases that begin, find this as well  
+I believe my story lies in these answers, so my idea is to answer these questions and narrow into a specific topic concerning private equity firms and HAP leases as my results reveal the story. Essentially, see if any data revails private equity firms exploiting the housing market and the HAP program  
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(rio)
+library(janitor)
+```
+
+```{r}
+CHA_2020_4 <- rio::import("https://github.com/wellsdata/DJNF_Merrill/raw/main/data/CHA_Data_24_053R.xlsx", sheet = "2020Q4") %>% 
+  mutate(quarter="2020Q4") %>% 
+  clean_names()
+
+CHA_2021_1 <- rio::import("https://github.com/wellsdata/DJNF_Merrill/raw/main/data/CHA_Data_24_053R.xlsx", sheet = "2021Q1") %>% 
+  mutate(quarter="2021Q1") %>% 
+  clean_names()
+
+CHA_2021_2 <- rio::import("https://github.com/wellsdata/DJNF_Merrill/raw/main/data/CHA_Data_24_053R.xlsx", sheet = "2021Q2") %>% 
+  mutate(quarter="2021Q2") %>% 
+  clean_names()
+
+CHA_2021_3 <- rio::import("https://github.com/wellsdata/DJNF_Merrill/raw/main/data/CHA_Data_24_053R.xlsx", sheet = "2021Q3") %>% 
+  mutate(quarter="2021Q3") %>% 
+  clean_names() %>% 
+  rename(vendor_id = vendor_i)
+
+CHA_2021_4 <- rio::import("https://github.com/wellsdata/DJNF_Merrill/raw/main/data/CHA_Data_24_053R.xlsx", sheet = "2021Q4") %>% 
+  mutate(quarter="2021Q4") %>% 
+  clean_names() %>% 
+  rename(vendor_id = vendor_i)
+
+CHA_2022_1 <- rio::import("https://github.com/wellsdata/DJNF_Merrill/raw/main/data/CHA_Data_24_053R.xlsx", sheet = "2022Q1") %>% 
+  mutate(quarter="2022Q1") %>% 
+  clean_names() %>% 
+  rename(vendor_id = vendor_i)
+
+CHA_2022_2 <- rio::import("https://github.com/wellsdata/DJNF_Merrill/raw/main/data/CHA_Data_24_053R.xlsx", sheet = "2022Q2") %>% 
+  mutate(quarter="2022Q2") %>% 
+  clean_names() %>% 
+  rename(vendor_id = vendor_i)
+
+CHA_2022_3 <- rio::import("https://github.com/wellsdata/DJNF_Merrill/raw/main/data/CHA_Data_24_053R.xlsx", sheet = "2022Q3") %>% 
+  mutate(quarter="2022Q3") %>% 
+  clean_names() %>% 
+  rename(vendor_id = vendor_i)
+
+CHA_2022_4 <- rio::import("https://github.com/wellsdata/DJNF_Merrill/raw/main/data/CHA_Data_24_053R.xlsx", sheet = "2022Q4") %>% 
+  mutate(quarter="2022Q4") %>% 
+  clean_names() %>% 
+  rename(vendor_id = vendor_i)
+
+CHA_2023_1 <- rio::import("https://github.com/wellsdata/DJNF_Merrill/raw/main/data/CHA_Data_24_053R.xlsx", sheet = "2023Q1") %>% 
+  mutate(quarter="2023Q1") %>% 
+  clean_names() %>% 
+  rename(vendor_id = vendor_i)
+
+CHA_2023_2 <- rio::import("https://github.com/wellsdata/DJNF_Merrill/raw/main/data/CHA_Data_24_053R.xlsx", sheet = "2023Q2") %>% 
+  mutate(quarter="2023Q2") %>% 
+  clean_names() %>% 
+  rename(vendor_id = vendor_i)
+
+CHA_2023_3 <- rio::import("https://github.com/wellsdata/DJNF_Merrill/raw/main/data/CHA_Data_24_053R.xlsx", sheet = "2023Q3") %>% 
+  mutate(quarter="2023Q3") %>% 
+  clean_names() %>% 
+  rename(vendor_id = vendor_i)
+
+CHA_2023_4 <- rio::import("https://github.com/wellsdata/DJNF_Merrill/raw/main/data/CHA_Data_24_053R.xlsx", sheet = "2023Q4") %>% 
+  mutate(quarter="2023Q4") %>% 
+  clean_names() 
+```
+
+```{r}
+
+combo <- rbind(CHA_2020_4, CHA_2021_1, CHA_2021_2, CHA_2021_3, CHA_2021_4, CHA_2022_1, CHA_2022_2, CHA_2022_3, CHA_2022_4)
+
+
+```
+
+```{r}
+
+# Function to import, mutate, and clean each quarterly data
+import_and_clean <- function(sheet_name, quarter_label) {
+  rio::import("https://github.com/wellsdata/DJNF_Merrill/raw/main/data/CHA_Data_24_053R.xlsx", sheet = sheet_name) %>%
+    mutate(quarter = quarter_label) %>%
+    clean_names()
+}
+
+# Import and clean each quarterly data
+CHA_2020_1 <- import_and_clean("2020Q1", "2020Q1")
+CHA_2020_4 <- import_and_clean("2020Q4", "2020Q4")
+CHA_2021_1 <- import_and_clean("2021Q1", "2021Q1")
+CHA_2021_2 <- import_and_clean("2021Q2", "2021Q2")
+CHA_2021_3 <- import_and_clean("2021Q3", "2021Q3")
+CHA_2021_4 <- import_and_clean("2021Q4", "2021Q4")
+CHA_2022_1 <- import_and_clean("2022Q1", "2022Q1")
+CHA_2022_2 <- import_and_clean("2022Q2", "2022Q2")
+CHA_2022_3 <- import_and_clean("2022Q3", "2022Q3")
+CHA_2022_4 <- import_and_clean("2022Q4", "2022Q4")
+CHA_2023_1 <- import_and_clean("2023Q1", "2023Q1")
+CHA_2023_2 <- import_and_clean("2023Q2", "2023Q2")
+CHA_2023_3 <- import_and_clean("2023Q3", "2023Q3")
+CHA_2023_4 <- import_and_clean("2023Q4", "2023Q4")
+
+# Ensure all data frames have the same column names
+all_columns <- c(colnames(CHA_2020_1), "quarter")
+standardize_columns <- function(df) {
+  df %>%
+    select(all_of(all_columns))
+}
+
+# Apply the column standardization
+CHA_2020_1 <- standardize_columns(CHA_2020_1)
+CHA_2020_4 <- standardize_columns(CHA_2020_4)
+CHA_2021_1 <- standardize_columns(CHA_2021_1)
+CHA_2021_2 <- standardize_columns(CHA_2021_2)
+CHA_2021_3 <- standardize_columns(CHA_2021_3)
+CHA_2021_4 <- standardize_columns(CHA_2021_4)
+CHA_2022_1 <- standardize_columns(CHA_2022_1)
+CHA_2022_2 <- standardize_columns(CHA_2022_2)
+CHA_2022_3 <- standardize_columns(CHA_2022_3)
+CHA_2022_4 <- standardize_columns(CHA_2022_4)
+CHA_2023_1 <- standardize_columns(CHA_2023_1)
+CHA_2023_2 <- standardize_columns(CHA_2023_2)
+CHA_2023_3 <- standardize_columns(CHA_2023_3)
+CHA_2023_4 <- standardize_columns(CHA_2023_4)
+
+# Combine all data frames
+combo <- rbind(CHA_2020_1, CHA_2020_4, CHA_2021_1, CHA_2021_2, CHA_2021_3, CHA_2021_4, CHA_2022_1, CHA_2022_2, CHA_2022_3, CHA_2022_4, CHA_2023_1, CHA_2023_2, CHA_2023_3, CHA_2023_4)
+
+
+```
