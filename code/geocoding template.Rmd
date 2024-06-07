@@ -1,0 +1,27 @@
+---
+title: "geocoding nil schools"
+output: html_notebook
+---
+
+## Geocode loans
+
+```{r}
+library(tidyverse)
+library(tidyr)
+#install.packages("ggmap")
+library(ggmap)
+register_google(key = "PUT YOUR GOOGLE API KEY HERE")
+
+df <- rio::import("import your data") %>% 
+#creates a single column with city and state separated by a comma
+  mutate(full_address = paste(City, State, sep = ", "))
+
+
+
+df<- df %>% 
+  mutate(geo = geocode(full_address)) 
+
+
+write.csv(df, "df.csv")
+
+```
