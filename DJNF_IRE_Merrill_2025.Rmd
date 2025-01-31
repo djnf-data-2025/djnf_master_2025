@@ -275,10 +275,10 @@ recently was a features editor.
 She previously worked as the Maryland editor for The Washington Times,
 and at the suburban Journal Newspapers as an editor and local government
 reporter. She also served as a professor at Sang Ji University in Won
-Ju, South Korea.
+Ju, South Korea.    
 
-**David Herzog**
-<img src="images/david_herzog.jpg" width="300" height="300"/>
+**David Herzog**  
+<img src="images/david_herzog.jpg" width="300" height="275"/>
 
 David Herzog is a veteran investigative reporter, data journalist and educator with more than 30 years of experience. He enjoys discovering how journalists can use data analysis tools to uncover the news better. Herzog teaches data journalism to student and professional journalists. He speaks frequently about investigative reporting, data journalism and access to information.
 
@@ -416,7 +416,7 @@ Quarterly and The Palm Beach Post.
 
 **Cheryl Thompson**
 
-<img src="images/cheryl_thompson.png" width="300" height="300"/>
+<img src="images/cheryl_thompson.webp" width="300" height="350"/>
 
 Cheryl W. Thompson is an investigative correspondent for NPR and senior editor overseeing Member station investigations.
 
