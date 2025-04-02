@@ -10,7 +10,8 @@ editor_options:
 
 ### Dow Jones News Fund \@ Merrill College
 
-#### Sunday, June 1 - Saturday, June 8, 2025
+#### Sunday, June 1 - Sunday, June 8, 2025
+(ver April 2, 2025)
 :::
 
 <br>  
@@ -27,7 +28,7 @@ editor_options:
 Rob Wells, director
 David Herzog, co-director
 Karen Denny, co-director  
-Aidan Hughes, assistant  
+Bridget Lang, assistant  
 ```
 :::
 
@@ -37,8 +38,8 @@ Aidan Hughes, assistant
 
 **Pre-Conference**
 
--   **By May 26**: Students will have [data assignments
-    described](https://docs.google.com/document/d/1A-dlzWX7ksOt6LRHYpuPDk7SPPWxyZEmGt2wC0lM7Mg/edit).
+-   **By Monday May 26**: Students will have [data assignments
+    described](https://docs.google.com/document/d/1NATRDMhUr8XSpkI-_bKfJCM8YVu9028QHKlk_7sbdw0/edit?usp=sharing).
 -   **By May 26**: Students will be sent a data starter kit to load
     relevant software on their laptops and test out their equipment.
 -   **Due Thursday May 29, 11:59 p.m.**: Students profiles due.
