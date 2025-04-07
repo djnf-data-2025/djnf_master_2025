@@ -11,7 +11,7 @@ editor_options:
 ### Dow Jones News Fund \@ Merrill College
 
 #### Sunday, June 1 - Sunday, June 8, 2025
-(ver April 2, 2025)
+(ver April 7, 2025)
 :::
 
 <br>  
@@ -97,7 +97,7 @@ Bridget Lang, assistant
         talk](https://docs.google.com/presentation/d/1zdlk2Ss9jE_SZL2HuHvUbZeUteEO0OBasFKpXtjuZIY/edit?usp=sharing)
 
 
--   **2:15 p.m.**: Using GitHub. All attend. (Mussenden) [GitHub
+-   **2:15 p.m.**: Using GitHub. All attend. (Mussenden?) [GitHub
         refresher](https://wellsdata.github.io/data_journalism_class/_book/github.html)
 
 -   **2:45 p.m.**: Workshop for [story pitch memo due at 11:59
