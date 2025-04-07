@@ -1,0 +1,68 @@
+---
+title: "Profiles from Spreadsheet Data"
+output: html_document
+date: "`r Sys.Date()`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(googlesheets4)  # For Google Sheets
+library(tidyverse)
+library(dplyr)   # For data manipulation
+library(stringr)  # For string operations
+library(janitor)
+```
+
+## Reading the Data
+
+```{r load_data}
+data <- read_sheet("https://docs.google.com/spreadsheets/d/1NyxCEdDLW3aSfeXNY-DRUU_MfUwg-nHXMRyJLabybzs/edit?usp=sharing", sheet="Summary_Interns") |> 
+  clean_names()
+
+```
+
+## Generating Profiles
+
+```{r generate_profiles}
+# Function to create a profile paragraph from a row of data
+create_profile <- function(row) {
+  # Basic profile template - customize as needed
+  profile <- paste0(
+    "**", row$name, "** studies at ", row$college_or_university_you_currently_attend, 
+    " and will intern with the ", row$newsroom, " newsroom.", "Summary of their data skills: ", row$which_data_journalism_or_data_visualization_tools_have_you_used_briefly_explain_how_you_used_them_and_how_they_helped_your_storytelling, "."
+  )
+  
+  # Return the formatted profile
+  return(profile)
+}
+
+# Apply the function to each row in the dataset - using a safer approach
+profiles <- vector("character", nrow(data))
+for (i in 1:nrow(data)) {
+  profiles[i] <- create_profile(data[i, ])
+}
+
+# Alternative approach using purrr if you prefer
+# library(purrr)
+# profiles <- purrr::map_chr(1:nrow(data), ~create_profile(data[.x, ]))
+
+# Display the first few profiles
+head(profiles)
+```
+
+## All Profiles
+
+```{r display_all_profiles, results='asis'}
+# Print all profiles, each in its own paragraph
+for(profile in profiles) {
+  cat(profile)
+  cat("\n\n") # Add two newlines for paragraph separation
+}
+```
+
+## Export Profiles
+
+```{r export, eval=FALSE}
+# Optionally save the profiles to a text file
+writeLines(profiles, "generated_profiles.txt")
+```

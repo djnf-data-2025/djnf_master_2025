@@ -1,0 +1,64 @@
+**Ethan James Hylton** studies at Goldsmiths, University of London and will intern with the IndyStar newsroom.Summary of their data skills: I've used Echarts, chart.js, and Flourish in my data journalism work. I used Echarts and chart.js to create an interactive refugee information dashboard. Using these tools I was able to integrate various customization options like tooltips and zoom features. This made it easier for users to explore the data at different granularities, enhancing the storytelling aspect by allowing them to engage directly with the data. 
+I used Flourish to create animated visualizations to illustrate the growing trend of journalist being killed globally in specific countries for the past 20 years. Flourish's variety of templates and customization options helped me transform raw data into visually appealing and engaging stories, with interactive elements like scroll-triggered animations that captured the audience’s attention and guided them through the data..
+**Apurva Mahajan** studies at University of Maryland and will intern with the The Detroit News newsroom.Summary of their data skills: Python - Since March, I've been developing a news application that displays every sponsored congressional trip taken since 2012. I used Python's Flask web framework for the backend, and HTML, CSS and some Javascript for the frontend. 
+
+In the spring, I coded a Python web scraper that gets University of Maryland Police Alerts and sends a message in Slack to alert reporters. Though this did not result in a public-facing story, I used this scraper to create an internal newsroom-wide tool. I also can do basic data analysis in Python.
+
+R - I am comfortable scraping, cleaning and analyzing data in R. At the moment, I primarily fact-check and edit other reporters' code, analysis and graphics, so I use R to run through someone's Excel or Python analysis and ensure I reach the same answer with a different process.
+
+HTML, CSS, JavaScript - I'm proficient in HTML and CSS and have used them for front-end design on multiple websites/apps and to customize tooltips and designs in third-party tools such as Flourish, Datawrapper and even Mailchimp. I am a beginner in JavaScript, but have used it to make news applications more interactive through features like fuzzy search/string matching. I've also used Javascript libraries such as Leaflet, Datatables and Chart.js for locator maps, tables and data visualizations in my news apps. I'm currently learning D3.js.
+
+Excel, Google Sheets - I use these tools to perform quick data analysis, and they help me add another level of reporting to otherwise quick-turn and straightforward stories by supplementing them with data to contextualize local news with nationwide trends.
+
+Flourish and Datawrapper - I used Flourish and Datawrapper to create graphics and supplement my reporting for daily stories at the Frederick News-Post that originally did not require me to do data analysis. For The Diamondback, I created graphics and maps for our election coverage and coded to create custom GeoJSONs to display mixed electoral seat allocation for a hexmap of U.S. election results.
+
+ArcGIS, QGIS - Though I have yet to apply my GIS skills for a story, I'm a GIS minor and have taken remote sensing coursework. I can comfortably analyze spatial data and satellite data using ArcGIS and QGIS.
+
+Adobe Illustrator - I have experience in creating static graphics in Adobe Illustrator and ai2html. This tool allows me to create custom graphics and execute designs that I could not otherwise with Flourish and Datawrapper's capacities..
+**Sophia Nabours** studies at University of Arkansas and will intern with the The Marshall Project newsroom.Summary of their data skills: I'm currently learning R and Python to better my data analyzation and cleaning skills. I have taken data sets to aid in my writing for stories about AI Child Sexual Abuse Material Law in Arkansas, Sexual Violence on College Campuses, Suicide Statistics in College Students, and, more recently, I have evaluated my University police Clery Report in 2024 and created a data visualization using Tableau and Adobe..
+**Emma Morgan Ferschweiler** studies at The College of New Jersey and will intern with the NJ Advance Media newsroom.Summary of their data skills: I frequently use Microsoft Excel to compile, organize, and analyze data. This tool helps me better understand datasets and apply them to the larger story. 
+
+I use SQL and Python for every step of a data-heavy project, including scraping, compiling, cleaning, analyzing, and visualization. These tools aid with datasets that are too big or complex for Excel. It has helped me uncover truth in datasets and make information more easily readable for audiences..
+**Patrick McCaslin** studies at University of Miami and will intern with the Baltimore Banner newsroom.Summary of their data skills: I've used R for datavis (charts and maps), Python to convert pdfs, Flourish to create interactive maps, Excel to manipulate CSV files, and Adobe Illustrator for class to create maps and various basic charts..
+**Lauren Lifke** studies at University of New Mexico and will intern with the Maryland Matters newsroom.Summary of their data skills: Tableau -- I created interactive maps of crimes that were reported at UNM. Readers can hover a mouse over color-coded spots where crimes were recorded to read more about where, when and what happened.
+
+Google Sheets/Excel -- I sorted crime data into refined umbrella categories. I used that data to create the Tableau maps.
+
+I used Google Sheets to sort out survey responses about which issues our readers care about the most. Respondents were given three questions about which issues they cared about the most, second-most, and third-most. I used Sheets to create a ranked-choice system that evaluated which issues readers care about overall, and I sorted that data by race, gender and other categories. 
+
+Datawrapper -- I created tables that listed election issues that readers care about. I also used Datawrapper to create bar graphs depicting crime data at UNM over time. 
+
+R -- I use this software to determine whether there are correlations between two or more data elements for my statistics classes. I create visualizations that depict the relationship between data, and I use the visualizations to interpret the significance of the data in simpler terms.
+
+JMP Statistical Software -- I use this software for the same purposes as R, but I create more simple and easy-to-interpret charts and graphs using this software..
+**Declan Bradley** studies at Reed College and will intern with the Howard Center, Univ of Maryland newsroom.Summary of their data skills: - R (tidyverse), Python (pandas): data analysis
+- Adobe Illustrator: visualization and illustration
+- Scraping, Browser Automation (rvest, Selenium, Playwright): data collection
+- Undocumented APIs: data collection
+- Flourish, ggplot2, Datawrapper, Illustrator, D3: data visualization and presentation
+- CSS, HTML, JS, jQuery, Flask: story production and web design
+- QGIS, Mapbox, Scrollama: visual storytelling
+- git, GitHub: source control, collaboration.
+**Olivia Borgula** studies at University of Maryland, College Park and will intern with the Advertising Specialty Institute newsroom.Summary of their data skills: R: I use R to clean large, messy datasets and analyze them for key findings to enhance my storytelling. In the Howard Center for Investigative Journalism, I web scrape train schedules and combine them into one CSV, join data frames for analysis, use the ggplot library to create graphs of my findings and write functions to create data frames of specific chemicals filtered out from a database of toxic substances traveling on trains.
+
+Flourish/Datawrapper: I visualize data with Flourish and Datawrapper and embed them into stories, adding a multimedia element that helps explain complicated information and figures in a way words cannot. I've created custom heat maps by uploading GeoJSON files, stacked bar charts, line graphs and more to explain figures and trends to readers. 
+
+Python: I used Python to interact with a Census API, retrieving detailed demographic information such as population statistics, income distribution and education levels.
+
+R SQLite: wrote SQL code and harnessed the SQLite library in R to pull data from a SQL database for the Howard Center for Investigative Journalism.
+
+HTML/CSS: used HTML and CSS for front-end design and to create my portfolio website..
+**Ava (Xiaoman) Hu** studies at University of California, Berkeley and will intern with the Houston Landing newsroom.Summary of their data skills: HTML/CSS/JavaScript: Used for coding interactive news packages. Created an online quiz with Visual Studio Code that showed readers which candidate aligned most closely with their views after completing the questions.
+
+DataWrapper / Knight Lab: Produced five campaign finance graphics for local elections, illustrating top donors, in-state versus out-of-state contributions, and support or opposition from local nonprofits.
+
+MyMaps: After a candidate forum, I mapped frequently mentioned district locations along with candidate comments. This map received positive feedback from my editor and was reused for the next forum..
+**Sasha Marie Allen** studies at University of Maryland College Park and will intern with the Connecticut Mirror newsroom.Summary of their data skills: I have used data visualization tools including DataWrapper, Flourish, Tableau and GG-Plot in R-Studio. I have used DataWrapper to create graphs, charts and maps for publication on Capital News Service to display numerous different datasets. This has aided my story, making sure I don't overwhelm the text with numbers that can be displayed in a visualization. I have made summary tables and created visualizations using GG-Plot in R-Studio, and made visualizations in Flourish and Tableau..
+**Yasmeen Emilie Saadi** studies at University of Missouri-Columbia and will intern with the Investigative Project on Race and Equity newsroom.Summary of their data skills: I have used Datawrapper to visualize how prevalent straw purchasing is when it comes to gun trafficking crimes committed by women. By making a bar graph, the graphic clearly showed the reader that the gun crime committed most frequently by women was straw purchasing, which supplemented the narrative aspects of the story.
+
+I have also used Datawrapper to map addresses in Oklahoma City that were offered less than the FCC's definition of broadband by internet providers. While this story did not run, the graphic was able to show that dots were clustered in certain parts of the city which correlated with other demographic factors..
+**Cooper Gunn Gant** studies at University of Arkansas and will intern with the Arkansas Democrat Gazette newsroom.Summary of their data skills: Flourish, used for contrasting The Associated Press' weekly basketball rankings of Arkansas men's basketball vs end-of-season placement. It brilliantly contrasted high expectations against low performances by the team over several years..
+**Nathaniel Harrington** studies at Syracuse University and will intern with the WHYY newsroom.Summary of their data skills: DataWrapper: helps visualize trends in population change within Syracuse in connection to environmental racism.
+**Hannah Bensen** studies at Stanford University and will intern with the Investigative Reporting Workshop (Washington Post) newsroom.Summary of their data skills: I have extensive experience in R and Excel for data analysis, acquisition, and visualization. I have used SQL for data acquisition and I have used Flourish and DataWrapper for data visualization. I am learning Python analysis and visualization, and I am learning Git for code version control..
+**Levi  (Lifei ) Jiang** studies at University of Washington and will intern with the Philadelphia Inquirer newsroom.Summary of their data skills: D3.js, Datawrapper, Flourish, Echarts.js, RAWGraphic, Infogram, Tableau
+As someone with a background in data, how to uncover invisible patterns and stories from massive amounts of data is my interest and specialty. When I want readers to pay attention to certain patterns or special events in a data set, I will create various data charts to support my interpretation. Or when the dataset is so large that a simple narrative can't give readers the full picture, I create infographics to make the data more accessible and logical..
