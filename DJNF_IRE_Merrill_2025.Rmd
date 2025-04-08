@@ -11,7 +11,7 @@ editor_options:
 ### Dow Jones News Fund \@ Merrill College
 
 #### Sunday, June 1 - Sunday, June 8, 2025
-(ver April 7, 2025)
+(ver April 8, 2025)
 :::
 
 <br>  
@@ -79,13 +79,13 @@ Bridget Lang, assistant
         
     -   Spreadsheet Track: Pivot Tables. (Herzog, IRE) 
         -   A powerful tool to summarize data         
-        -   Knight Hall Room 2105 
+        -   Knight Hall Room 2107 
         
 
 -   **10:30 a.m.**: Break. Coffee served. Lobby. 
 
 -   **11 a.m.**: Workshops: Use data to find stories. (Wells, Mussenden, Herzog).
-    Rooms 2103, 2105
+    Rooms 2103, 2107
 
 -   **12:30 p.m.**: Lunch in Knight Hall.
 
@@ -97,12 +97,12 @@ Bridget Lang, assistant
         talk](https://docs.google.com/presentation/d/1zdlk2Ss9jE_SZL2HuHvUbZeUteEO0OBasFKpXtjuZIY/edit?usp=sharing)
 
 
--   **2:15 p.m.**: Using GitHub. All attend. (Mussenden?) [GitHub
+-   **2:15 p.m.**: Using GitHub. All attend. (Wells/Lang) [GitHub
         refresher](https://wellsdata.github.io/data_journalism_class/_book/github.html)
 
 -   **2:45 p.m.**: Workshop for [story pitch memo due at 11:59
     p.m.](https://docs.google.com/document/d/1A-dlzWX7ksOt6LRHYpuPDk7SPPWxyZEmGt2wC0lM7Mg/edit)
-    (Wells, Denny, Herzog, TA coach). Rooms 2103, 2105
+    (Wells, Denny, Herzog, TA coach). Rooms 2103, 2107
 
 -   **4 p.m.**: Diversity is Good Journalism: Covering All of the Community. (Prof.
     Christoph Mergerson). All attend. Room 2103
@@ -142,7 +142,7 @@ Bridget Lang, assistant
         
     -   Spreadsheet Track: Data cleaning. (Herzog, IRE) 
         -   Use Google Sheets, Open Refine to clean data
-        -   Knight Hall Room 2105 
+        -   Knight Hall Room 2107 
 
 -   **3:00 p.m.-3:15 p.m. **: Break
 
@@ -151,7 +151,7 @@ Bridget Lang, assistant
         -   Make a map in Datawrapper.   
         -   Knight Hall Room 2103
     
-    -   Workshop on AI (Willis / Wells /Lang). Room 2105 
+    -   Workshop on AI (Willis / Wells /Lang). Room 2107 
 
 -   **4:15 p.m.-5:30 p.m. ** Workshop
 -   **5:30 p.m.**: Break
@@ -169,10 +169,10 @@ Bridget Lang, assistant
         
     -   Spreadsheet Track: File Types and Metadata. (Herzog, IRE) 
         -   Use Microsoft Visual Studio to identify file types
-        -   Knight Hall Room 2105 
+        -   Knight Hall Room 2107 
 
 -   **10:15 a.m.**: Break. Coffee served.
--   **10:30 a.m.**: Workshop. Open workshop on projects. (Wells, Herzog, Lang coach). Rooms 2103, 2105
+-   **10:30 a.m.**: Workshop. Open workshop on projects. (Wells, Herzog, Lang coach). Rooms 2103, 2107
 -   **12 p.m.**: Lunch in Knight Hall.
     -   Brief remarks by Alex Pyles, Associate Dean, Academic Affairs,
         Philip Merrill College of Journalism
@@ -182,7 +182,7 @@ Bridget Lang, assistant
 -   **2:15 p.m. - 3:15 p.m.** Connie Mitchell Ford on business reporting. All attend. Room 2103
     -   Three ways to get business and economic data and how to localize it.
 -   **3:15 p.m.**: Workshop. Connie Mitchell Ford workshop on project
-    proposals. (Wells, Lang, Herzog as coaches). Room 2103, 2105
+    proposals. (Wells, Lang, Herzog as coaches). Room 2103, 2107
 -   **5 p.m.**: Break
 -   **6:30 p.m.**: Dinner on campus
 -   **11:59 p.m.**: [Second draft of story pitch memos
