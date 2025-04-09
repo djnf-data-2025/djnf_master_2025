@@ -1,0 +1,1074 @@
+---
+title: "IRE and Merrill College Data Journalism Training"
+subtitle: "Dow Jones News Fund @ Merrill College"
+date: "Sunday, June 1 - Sunday, June 8, 2025 (ver April 8, 2025)"
+output: 
+  html_document:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc_float: true
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+<div class="text-center logo-section">
+<div class="row">
+  <div class="col-md-4">
+  <!-- <img src="images/DJNF_Logo.png" class="instructor-img" alt="DJNF Logo"> -->
+    <img src="images/DJNF_Logo.png" class="img-fluid logo" alt="DJNF Logo">
+    <img src="images/IRE_logo.png" class="img-fluid logo" alt="IRE Logo">
+    <img src="images/Merrill_logo.png" class="img-fluid logo" alt="Merrill Logo">
+
+  </div>
+</div>
+
+<div class="directors">
+Rob Wells, director  
+David Herzog, co-director  
+Karen Denny, co-director  
+Bridget Lang, assistant  
+</div>
+</div>
+
+## Itinerary {.section-header}
+
+<div class="accordion" id="scheduleAccordion">
+
+<div class="card schedule-card">
+<div class="card-header" id="day0">
+<h3 class="mb-0">
+<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#day0Content" aria-expanded="false" aria-controls="day0Content">
+Pre-Conference
+</button>
+</h3>
+</div>
+<div id="day0Content" class="collapse" aria-labelledby="day0" data-parent="#scheduleAccordion">
+<div class="card-body">
+- **May 26**: Students will have [data assignments described](https://docs.google.com/document/d/1NATRDMhUr8XSpkI-_bKfJCM8YVu9028QHKlk_7sbdw0/edit?usp=sharing).
+- **May 26**: Students will be sent a data starter kit to load relevant software on their laptops and test out their equipment.
+- **May 29**: Students profiles due, 11:59 p.m.
+</div>
+</div>
+
+<div class="card schedule-card">
+<div class="card-header" id="day1">
+<h3 class="mb-0">
+<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#day1Content" aria-expanded="false" aria-controls="day1Content">
+Sunday, June 1, 2025
+</button>
+</h3>
+</div>
+<div id="day1Content" class="collapse" aria-labelledby="day1" data-parent="#scheduleAccordion">
+<div class="card-body">
+- **2 p.m.**: Welcome at Knight Hall Eaton Theater. Wells, Herzog, Denny, Hughes and Shirley Carswell, DJNF Executive Director
+  - Logistics. The week ahead. Rooms meals.
+  - Student introductions.
+- **3:30 p.m.**: Use data to find stories.
+  - Spreadsheet track: Herzog. Eaton Theater  
+  - Coding track: Wells. Room 1109
+- **4:30 p.m.**: Break and then independent work
+  - [Students review data memos](https://docs.google.com/document/d/1A-dlzWX7ksOt6LRHYpuPDk7SPPWxyZEmGt2wC0lM7Mg/edit) for their assigned communities. Produce draft story ideas by 11:59 p.m.
+- **5:30 p.m.**: Break
+- **6:30 p.m.**: Dinner in Hyattsville - Busboys & Poets. (Meet at Knight Hall board van)
+- **11:59 p.m.**: Produce one paragraph draft story ideas by 11:59 p.m., emailed to Wells
+</div>
+</div>
+</div>
+
+<div class="card schedule-card">
+<div class="card-header" id="day2">
+<h3 class="mb-0">
+<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#day2Content" aria-expanded="false" aria-controls="day2Content">
+Monday, June 2, 2025
+</button>
+</h3>
+</div>
+<div id="day2Content" class="collapse" aria-labelledby="day2" data-parent="#scheduleAccordion">
+<div class="card-body">
+- **Breakfast**: On your own at dorm
+- **9 a.m.**: Meet at Knight Hall
+- **Skills sessions. Pick one**
+  - Coding Track: Data Driven Reporting. (Sean Mussenden, the Howard Center)
+    - Bring material into R and make sense of it.
+    - Basic webscraping, PDF data extraction
+    - Knight Hall Room 2103
+  - Spreadsheet Track: Pivot Tables. (Herzog, IRE) 
+    - A powerful tool to summarize data         
+    - Knight Hall Room 2107 
+- **10:30 a.m.**: Break. Coffee served. Lobby. 
+- **11 a.m.**: Workshops: Use data to find stories. (Wells, Mussenden, Herzog). Rooms 2103, 2107
+- **12:30 p.m.**: Lunch in Knight Hall.
+  - Speaker: TBA
+- **1:30 p.m.**: Writing a story pitch memo. All attend. (Denny). Room 2103
+  - [Slides for talk](https://docs.google.com/presentation/d/1zdlk2Ss9jE_SZL2HuHvUbZeUteEO0OBasFKpXtjuZIY/edit?usp=sharing)
+- **2:15 p.m.**: Using GitHub. All attend. (Wells/Lang) [GitHub refresher](https://wellsdata.github.io/data_journalism_class/_book/github.html)
+- **2:45 p.m.**: Workshop for [story pitch memo due at 11:59 p.m.](https://docs.google.com/document/d/1A-dlzWX7ksOt6LRHYpuPDk7SPPWxyZEmGt2wC0lM7Mg/edit) (Wells, Denny, Herzog, TA coach). Rooms 2103, 2107
+- **4 p.m.**: Diversity is Good Journalism: Covering All of the Community. (Prof. Christoph Mergerson). All attend. Room 2103
+  - [Readings before talk](https://drive.google.com/drive/folders/1VjenaNF-IahhdVl6TQHrQK5_ygELl2JD?usp=drive_link)
+- **5:30 p.m.**: Break
+- **6:30 p.m.**: Dinner on campus 
+- **11:59 p.m.**: [Draft story pitch memo](https://docs.google.com/document/d/1A-dlzWX7ksOt6LRHYpuPDk7SPPWxyZEmGt2wC0lM7Mg/edit), emailed to Wells and Herzog.
+</div>
+</div>
+</div>
+
+<div class="card schedule-card">
+<div class="card-header" id="day3">
+<h3 class="mb-0">
+<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#day3Content" aria-expanded="false" aria-controls="day3Content">
+Tuesday, June 3, 2025
+</button>
+</h3>
+</div>
+<div id="day3Content" class="collapse" aria-labelledby="day3" data-parent="#scheduleAccordion">
+<div class="card-body">
+-   **Breakfast**: On your own at dorm
+-   **9 a.m.-10:15 a.m.: Skills sessions**
+
+    -   Coding Track: Using AI with R. (Daniel Trielli, Merrill College)
+        -   Use R to link to a LLM and process data.
+        -   Knight Hall Room 2103
+        
+    -   Spreadsheet Track: File Types and Metadata. (Herzog, IRE) 
+        -   Use Microsoft Visual Studio to identify file types
+        -   Knight Hall Room 2107 
+
+-   **10:15 a.m.**: Break. Coffee served.
+-   **10:30 a.m.**: Workshop. Open workshop on projects. (Wells, Herzog, Lang coach). Rooms 2103, 2107
+-   **12 p.m.**: Lunch in Knight Hall.
+    -   Brief remarks by Alex Pyles, Associate Dean, Academic Affairs,
+        Philip Merrill College of Journalism
+-   **1 p.m. - 2:00 p.m.**: Covering Congress remotely, Ed Kachinske, U.S. House Press Gallery, via Zoom
+    -   Exercise TBA. 
+-   **2:00 p.m. - 2:15 p.m.**: Break
+-   **2:15 p.m. - 3:15 p.m.** Connie Mitchell Ford on business reporting. All attend. Room 2103
+    -   Three ways to get business and economic data and how to localize it.
+-   **3:15 p.m.**: Workshop. Connie Mitchell Ford workshop on project
+    proposals. (Wells, Lang, Herzog as coaches). Room 2103, 2107
+-   **5 p.m.**: Break
+-   **6:30 p.m.**: Dinner on campus
+-   **11:59 p.m.**: [Second draft of story pitch memos
+    due](https://docs.google.com/document/d/1A-dlzWX7ksOt6LRHYpuPDk7SPPWxyZEmGt2wC0lM7Mg/edit),
+    emailed to Wells and Herzog.
+
+</div>
+</div>
+</div>
+
+
+<div class="card schedule-card">
+<div class="card-header" id="day4">
+<h3 class="mb-0">
+<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#day4Content" aria-expanded="false" aria-controls="day4Content">
+Wednesday, June 4, 2025
+</button>
+</h3>
+</div>
+<div id="day4Content" class="collapse" aria-labelledby="day4" data-parent="#scheduleAccordion">
+<div class="card-body">
+-   **Breakfast**: On your own at dorm
+-   **9 a.m.-10:15 a.m.: Skills sessions**
+
+    -   Coding Track: Using AI with R. (Daniel Trielli, Merrill College)
+        -   Use R to link to a LLM and process data.
+        -   Knight Hall Room 2103
+        
+    -   Spreadsheet Track: File Types and Metadata. (Herzog, IRE) 
+        -   Use Microsoft Visual Studio to identify file types
+        -   Knight Hall Room 2107 
+
+-   **10:15 a.m.**: Break. Coffee served.
+-   **10:30 a.m.**: Workshop. Open workshop on projects. (Wells, Herzog, Lang coach). Rooms 2103, 2107
+-   **12 p.m.**: Lunch in Knight Hall.
+    -   Brief remarks by Alex Pyles, Associate Dean, Academic Affairs,
+        Philip Merrill College of Journalism
+-   **1 p.m. - 2:00 p.m.**: Covering Congress remotely, Ed Kachinske, U.S. House Press Gallery, via Zoom
+    -   Exercise TBA. 
+-   **2:00 p.m. - 2:15 p.m.**: Break
+-   **2:15 p.m. - 3:15 p.m.** Connie Mitchell Ford on business reporting. All attend. Room 2103
+    -   Three ways to get business and economic data and how to localize it.
+-   **3:15 p.m.**: Workshop. Connie Mitchell Ford workshop on project
+    proposals. (Wells, Lang, Herzog as coaches). Room 2103, 2107
+-   **5 p.m.**: Break
+-   **6:30 p.m.**: Dinner on campus
+-   **11:59 p.m.**: [Second draft of story pitch memos
+    due](https://docs.google.com/document/d/1A-dlzWX7ksOt6LRHYpuPDk7SPPWxyZEmGt2wC0lM7Mg/edit),
+    emailed to Wells and Herzog.
+
+</div>
+</div>
+</div>
+
+<div class="card schedule-card">
+<div class="card-header" id="day5">
+<h3 class="mb-0">
+<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#day5Content" aria-expanded="false" aria-controls="day5Content">
+Thursday, June 5, 2025
+</button>
+</h3>
+</div>
+<div id="day5Content" class="collapse" aria-labelledby="day5" data-parent="#scheduleAccordion">
+<div class="card-body">
+-   **Breakfast**: On your own at dorm
+-   **7:00 a.m.**: Meet at Knight Hall, board van, depart for College
+    Park Metro (Wells/Herzog driving)
+-   **9:00 a.m.**: Tour U.S. Capitol press galleries with Stephen Neukam, Axios and Ed Kachinske, U.S. House Press Gallery.
+-   **Noon**: Lunch in the U.S. Capitol. Meeting with other journalists.
+-   **2 p.m.**: Tour of AP D.C. bureau with Chad Day, AP's elections team. 
+-   **3:30 p.m.**: Wells leads **an adventure.**
+-   **6 p.m.**: Dinner in Washington D.C.
+
+</div>
+</div>
+</div>
+
+<div class="card schedule-card">
+<div class="card-header" id="day6">
+<h3 class="mb-0">
+<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#day6Content" aria-expanded="false" aria-controls="day6Content">
+Friday, June 6, 2025
+</button>
+</h3>
+</div>
+<div id="day6Content" class="collapse" aria-labelledby="day6" data-parent="#scheduleAccordion">
+<div class="card-body">
+-   **Breakfast**: On your own at dorm
+-   **9 a.m.: Gathering Public Records**
+    - All attend. (Herzog and Wells). room 2103
+-   **10:00 a.m. - 10:15 a.m.**: Break
+-   **10:15 a.m.**: Public records exercise. (Wells, Herzog, Lang coach)
+-   **11:00 a.m.**: Skills to survive in the newsroom. Time management, deadlines. All attend. (Denny) Room 2103.
+-   **12 p.m.**: Lunch in Knight Hall.
+    -   Speaker: Prof. Kevin Blackistone on racial justice in sports
+        business
+-   **1 p.m.**: Workshop on projects (Wells, Herzog, Denny, Lang coach)
+-   **3:30 p.m.**: Meet at Knight Hall, board van, depart for College
+    Park Metro, dinner in Washington D.C., attend a community jazz show
+    at [Westminster Church](https://westminsterdc.org/our-pastor). Meet
+    with TBA beforehand to discuss Southwest D.C.
+    history
+
+
+</div>
+</div>
+</div>
+
+<div class="card schedule-card">
+<div class="card-header" id="day7">
+<h3 class="mb-0">
+<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#day7Content" aria-expanded="false" aria-controls="day7Content">
+Saturday, June 7, 2025
+</button>
+</h3>
+</div>
+<div id="day7Content" class="collapse" aria-labelledby="day7" data-parent="#scheduleAccordion">
+<div class="card-body">
+-   **Breakfast**: On your own at dorm
+-   **10:00 a.m.**: [Students present web
+    pages](https://docs.google.com/document/d/1A-dlzWX7ksOt6LRHYpuPDk7SPPWxyZEmGt2wC0lM7Mg/edit),
+    story pitches, solicit feedback. Shirley Carswell, DJNF Executive
+    Director, visits
+-   **12:15 p.m.**: Lunch in Knight Hall
+-   **1 p.m.**: On the van for D.C.
+-   **2:30 p.m.**: Tour of African-American History Museum, D.C.
+-   **5:30 p.m.**: Dinner in Riverdale, La Fantome Food Hall (Meet at
+    Knight Hall board van)
+
+
+</div>
+</div>
+</div>
+
+<div class="card schedule-card">
+<div class="card-header" id="day8">
+<h3 class="mb-0">
+<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#day8Content" aria-expanded="false" aria-controls="day8Content">
+Sunday, June 8, 2025
+</button>
+</h3>
+</div>
+<div id="day8Content" class="collapse" aria-labelledby="day8" data-parent="#scheduleAccordion">
+<div class="card-body">
+-   Breakfast available at Yahentamitsi Dining Hall.
+-   Depart on your own schedule
+
+
+</div>
+</div>
+</div>
+
+## Instructors {.section-header}
+
+<div class="row instructor-row">
+
+<div class="col-md-4 mb-4">
+<div class="instructor-card">
+<img src="images/Kevin_Blackstone.jpeg" class="instructor-img" alt="Kevin Blackistone">
+<h3>Kevin Blackistone</h3>
+<p>Kevin Blackistone is a longtime national sports columnist now at The Washington Post, a panelist on ESPN's "Around the Horn," a contributor to National Public Radio and coauthor of "A Gift for Ron," a memoir by former NFL star Everson Walls published in November 2009 that details his kidney donation to onetime teammate Ron Springs.</p>
+<p>Blackistone was a sports columnist for AOL Fanhouse from October 2007 to March 2011 and an award-winning sports columnist for The Dallas Morning News from September 1990 to September 2006.</p>
+<p>Blackistone is a recipient of numerous awards, including awards for sports column writing from the Texas Associated Press Managing Editors, for investigative reporting from the Chicago Newspaper Guild and for enterprise reporting from the National Association of Black Journalists.</p>
+</div>
+</div>
+
+<div class="col-md-4 mb-4">
+<div class="instructor-card">
+<img src="images/Karen_Denny.jpg" class="instructor-img" alt="Karen Denny">
+<h3>Karen Denny</h3>
+<p>Karen Denny is Merrill College's director of internships and career development. She previously served as the Annapolis bureau director of the Capital News Service, until taking over leadership of the career center at the beginning of 2022. Denny is a former editor with the McClatchy-Tribune (formerly Knight Ridder/Tribune) News Service, where she founded the wire's Newsfeatures and International sections, and most recently was a features editor.</p>
+<p>She previously worked as the Maryland editor for The Washington Times, and at the suburban Journal Newspapers as an editor and local government reporter. She also served as a professor at Sang Ji University in Won Ju, South Korea.</p>
+</div>
+</div>
+
+<div class="col-md-4 mb-4">
+<div class="instructor-card">
+<img src="images/david_herzog.jpg" class="instructor-img" alt="David Herzog">
+<h3>David Herzog</h3>
+<p>David Herzog is a veteran investigative reporter, data journalist and educator with more than 30 years of experience. He enjoys discovering how journalists can use data analysis tools to uncover the news better. Herzog teaches data journalism to student and professional journalists. He speaks frequently about investigative reporting, data journalism and access to information.</p>
+<p>As the academic adviser to the National Institute for Computer-Assisted Reporting, he helps guide data services for Investigative Reporters and Editors. IRE is a global organization with more than 5,000 members based at the Journalism School. He helps direct the Dow Jones News Fund's data journalism residency program for IRE.</p>
+</div>
+</div>
+
+<div class="col-md-4 mb-4">
+<div class="instructor-card">
+<img src="images/Adam_Marton.jpg" class="instructor-img" alt="Adam Marton">
+<h3>Adam Marton</h3>
+<p>Adam Marton is an award-winning journalist and graphic designer who
+joined the Philip Merrill College of Journalism in 2018 after 13 years
+at The Baltimore Sun.</p>
+<p>Marton is focused on quality storytelling across media, using design and
+technology to tell rich, human stories. He is a visual journalist and
+designer specializing in the presentation of the news, including data
+visualization, front-end development and information graphics.</p>
+</div>
+</div>
+
+<div class="col-md-4 mb-4">
+<div class="instructor-card">
+<img src="images/Constance_Mitchell_Ford.jpg" class="instructor-img" alt="Constance Mitchell Ford">
+<h3>Constance Mitchell Ford</h3>
+<p>Most of those years were spent at The Wall Street Journal in New York,
+most recently as the Global Real Estate and Property Bureau Chief. Under
+her leadership, reporters in the real estate group won dozens of
+journalism awards. Ford personally received the Scripps Howard National
+Journalism Award for business and economics reporting in 2007 for
+stories about the subprime mortgage crisis.</p>
+</div>
+</div>
+
+<div class="col-md-4 mb-4">
+<div class="instructor-card">
+<img src="images/Sean_Mussenden.jpg" class="instructor-img" alt="Sean Mussenden">
+<h3>Sean Mussenden</h3>
+<p>Sean Mussenden, a former Washington correspondent, is the data editor for the Howard Center for Investigative Journalism. He previously oversaw an experiential, hands-on journalism training program at Merrill College that is integral to the college's "teaching hospital" model of professional instruction: Capital News Service.</p>
+<p>He also teaches traditional courses incorporating data visualization, programming, web development, web design, data analysis, social media and computational journalism. Mussenden was appointed to the rank of principal lecturer in 2023.</p>
+</div>
+</div>
+
+<div class="col-md-4 mb-4">
+<div class="instructor-card">
+<img src="images/bridget_lang.jpg" class="instructor-img" alt="Bridget Lang">
+<h3>Bridget Lang</h3>
+<p>Bridget Lang is a software developer for the University of Maryland. In 2024, she earned her bachelor's degree in computer science with an upper-level concentration in journalism. A Baltimore County native, Lang uses her skills in software development, data, and writing to tell stories in the best way possible.</p>
+<p>She has had articles published in the Baltimore Banner and Capital News Service and is assisting Wells on a research project about an influential conservative journalist.</p>
+</div>
+</div>
+
+<div class="col-md-4 mb-4">
+<div class="instructor-card">
+<img src="images/Christoph_Mergerson.jpg" class="instructor-img" alt="Christoph Mergerson">
+<h3>Christoph Mergerson</h3>
+<p>Christoph Mergerson, who completed his Ph.D. in Communication, Information and Media at Rutgers University, joined the Philip Merrill College of Journalism in Fall 2021 as a visiting assistant professor. He was appointed to the rank of assistant professor in Fall 2022.</p>
+<p>Mergerson's research and teaching interests include journalism history, weather journalism, race and media, and journalism and democracy. Mergerson arrived at Merrill with ongoing research that examines whether news media in the Southern United States are producing racially inclusive, public-service journalism.</p>
+</div>
+</div>
+
+<div class="col-md-4 mb-4">
+<div class="instructor-card">
+<img src="images/daniel_trielli.jpg" class="instructor-img" alt="Daniel Trielli">
+<h3>Daniel Trielli</h3>
+<p>Daniel Trielli joined the Philip Merrill College of Journalism's faculty in Fall 2023 as assistant professor of media and democracy.</p>
+<p>He researches the impact of algorithmic curation on journalism and political information, and studies how Google affects the news and the audiences that use it to search. He is interested in data and computational journalism, media literacy and algorithmic accountability. Trielli came to Merrill College as a master's student in 2015 after a 10-year career as a journalist in Brazil.</p>
+</div>
+</div>
+
+<div class="col-md-4 mb-4">
+<div class="instructor-card">
+<img src="images/Rob_Wells.jpg" class="instructor-img" alt="Rob Wells">
+<h3>Rob Wells</h3>
+<p>Rob Wells, a 2016 Ph.D. alum of Merrill College, returned to the university in the Spring 2022 semester after more than five years at the University of Arkansas, where he rose to the rank of associate professor and led Arkansas' journalism graduate program. Wells has more than two decades of business journalism experience at The Associated Press, Bloomberg News and The Wall Street Journal.</p>
+<p>Wells is the author of "The Enforcers: How Little-Known Trade Reporters Exposed the Keating Five and Advanced Business Journalism" (2019) and "The Insider: How the Kiplinger Newsletter Bridged Washington and Wall Street" (2021).</p>
+</div>
+</div>
+
+<div class="col-md-4 mb-4">
+<div class="instructor-card">
+<img src="images/Derek_Willis.jpg" class="instructor-img" alt="Derek Willis">
+<h3>Derek Willis</h3>
+<p>Derek Willis, one of the nation's leading data journalists and an experienced educator, joined the Philip Merrill College of Journalism in Fall 2021 as a lecturer in data and computational journalism.</p>
+<p>Willis came to Merrill College having spent 25 years winning awards at some of the top news outlets in the country. His latest stop was ProPublica, where he served as a news applications developer since 2015. He previously held interactive journalism roles with The New York Times and The Washington Post.</p>
+</div>
+</div>
+
+</div>
+
+## Guest Speakers {.section-header}
+
+<div class="row instructor-row">
+
+<div class="col-md-4 mb-4">
+<div class="instructor-card">
+<img src="images/cheryl_thompson.png" class="instructor-img" alt="Cheryl Thompson">
+<h3>Cheryl Thompson</h3>
+<p>Cheryl W. Thompson is an investigative correspondent for NPR and senior editor overseeing Member station investigations.</p>
+<p>Since becoming the inaugural editor of the stations investigations team in 2021, where she is a player/coach, she has collaborated with Member stations in Texas, California, Georgia, Illinois, Kentucky, Missouri, Montana, Oregon and Washington, and with Columbia University and several nonprofits, to do award-winning work, including "Hot Days: Heat's Mounting Death Toll on Workers in the U.S.," an investigation into how Black and brown workers in the U.S. were dying on the job for lack of water and shade breaks.</p>
+</div>
+</div>
+
+<div class="col-md-4 mb-4">
+<div class="instructor-card">
+<img src="images/chad_day.png" class="instructor-img" alt="Chad Day">
+<h3>Chad Day</h3>
+<p>Chad Day is <a href="https://blog.ap.org/chad-day-named-chief-elections-analyst">chief elections analyst at The Associated Press</a>. Day is a member of AP's Decision Desk and writes about politics and elections. Previously, he was a national political reporter for The Wall Street Journal in Washington and an investigative reporter at the Associated Press. He was part of a team at the Journal awarded the 2023 Pulitzer Prize in Investigative Reporting for a series of stories exposing federal conflicts of interest.</p>
+</div>
+</div>
+
+<div class="col-md-4 mb-4">
+<div class="instructor-card">
+<h3>Stephen Neukam</h3>
+<p>Neukam, a graduate of the Merrill College master's of journalism program, covers the U.S. Senate for Axios.</p>
+</div>
+</div>
+
+</div>
+
+## DJNF Data Interns {.section-header}
+
+**Below is a rough summary of the interns' background and data skills**
+
+<div class="accordion" id="internsAccordion">
+
+<div class="card intern-card">
+<div class="card-header" id="intern1">
+<h3 class="mb-0">
+<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#intern1Content" aria-expanded="true" aria-controls="intern1Content">
+Ethan James Hylton
+</button>
+</h3>
+</div>
+<div id="intern1Content" class="collapse" aria-labelledby="intern1" data-parent="#internsAccordion">
+<div class="card-body">
+Studies at Goldsmiths, University of London and will intern with the IndyStar newsroom. Summary of their data skills: I've used Echarts, chart.js, and Flourish in my data journalism work. I used Echarts and chart.js to create an interactive refugee information dashboard. Using these tools I was able to integrate various customization options like tooltips and zoom features. This made it easier for users to explore the data at different granularities, enhancing the storytelling aspect by allowing them to engage directly with the data. 
+I used Flourish to create animated visualizations to illustrate the growing trend of journalist being killed globally in specific countries for the past 20 years. Flourish's variety of templates and customization options helped me transform raw data into visually appealing and engaging stories, with interactive elements like scroll-triggered animations that captured the audience's attention and guided them through the data.
+</div>
+</div>
+</div>
+
+<div class="card intern-card">
+<div class="card-header" id="intern2">
+<h3 class="mb-0">
+<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#intern2Content" aria-expanded="false" aria-controls="intern2Content">
+Apurva Mahajan
+</button>
+</h3>
+</div>
+<div id="intern2Content" class="collapse" aria-labelledby="intern2" data-parent="#internsAccordion">
+<div class="card-body">
+Studies at University of Maryland and will intern with the The Detroit News newsroom. Summary of their data skills: Python - Since March, I've been developing a news application that displays every sponsored congressional trip taken since 2012. I used Python's Flask web framework for the backend, and HTML, CSS and some Javascript for the frontend. 
+
+In the spring, I coded a Python web scraper that gets University of Maryland Police Alerts and sends a message in Slack to alert reporters. Though this did not result in a public-facing story, I used this scraper to create an internal newsroom-wide tool. I also can do basic data analysis in Python.
+
+R - I am comfortable scraping, cleaning and analyzing data in R. At the moment, I primarily fact-check and edit other reporters' code, analysis and graphics, so I use R to run through someone's Excel or Python analysis and ensure I reach the same answer with a different process.
+</div>
+</div>
+</div>
+
+<div class="card intern-card">
+<div class="card-header" id="intern3">
+<h3 class="mb-0">
+<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#intern3Content" aria-expanded="false" aria-controls="intern3Content">
+Sophia Nabours
+</button>
+</h3>
+</div>
+<div id="intern3Content" class="collapse" aria-labelledby="intern3" data-parent="#internsAccordion">
+<div class="card-body">
+Studies at University of Arkansas and will intern with the The Marshall Project newsroom. Summary of their data skills: I'm currently learning R and Python to better my data analyzation and cleaning skills. I have taken data sets to aid in my writing for stories about AI Child Sexual Abuse Material Law in Arkansas, Sexual Violence on College Campuses, Suicide Statistics in College Students, and, more recently, I have evaluated my University police Clery Report in 2024 and created a data visualization using Tableau and Adobe.
+</div>
+</div>
+</div>
+
+<div class="card intern-card">
+<div class="card-header" id="intern4">
+<h3 class="mb-0">
+<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#intern4Content" aria-expanded="false" aria-controls="intern4Content">
+Emma Morgan Ferschweiler
+</button>
+</h3>
+</div>
+<div id="intern4Content" class="collapse" aria-labelledby="intern4" data-parent="#internsAccordion">
+<div class="card-body">
+Studies at The College of New Jersey and will intern with the NJ Advance Media newsroom. Summary of their data skills: I frequently use Microsoft Excel to compile, organize, and analyze data. This tool helps me better understand datasets and apply them to the larger story. 
+
+I use SQL and Python for every step of a data-heavy project, including scraping, compiling, cleaning, analyzing, and visualization. These tools aid with datasets that are too big or complex for Excel. It has helped me uncover truth in datasets and make information more easily readable for audiences.
+</div>
+</div>
+</div>
+
+<div class="card intern-card">
+<div class="card-header" id="intern5">
+<h3 class="mb-0">
+<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#intern5Content" aria-expanded="false" aria-controls="intern5Content">
+Patrick McCaslin
+</button>
+</h3>
+</div>
+<div id="intern5Content" class="collapse" aria-labelledby="intern5" data-parent="#internsAccordion">
+<div class="card-body">
+Studies at University of Miami and will intern with the Baltimore Banner newsroom. Summary of their data skills: I've used R for datavis (charts and maps), Python to convert pdfs, Flourish to create interactive maps, Excel to manipulate CSV files, and Adobe Illustrator for class to create maps and various basic charts.
+</div>
+</div>
+</div>
+
+<div class="card intern-card">
+<div class="card-header" id="intern6">
+<h3 class="mb-0">
+<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#intern6Content" aria-expanded="false" aria-controls="intern6Content">
+Lauren Lifke
+</button>
+</h3>
+</div>
+<div id="intern6Content" class="collapse" aria-labelledby="intern6" data-parent="#internsAccordion">
+<div class="card-body">
+Studies at University of New Mexico and will intern with the Maryland Matters newsroom. Summary of their data skills: Tableau -- I created interactive maps of crimes that were reported at UNM. Readers can hover a mouse over color-coded spots where crimes were recorded to read more about where, when and what happened.
+
+Google Sheets/Excel -- I sorted crime data into refined umbrella categories. I used that data to create the Tableau maps.
+
+I used Google Sheets to sort out survey responses about which issues our readers care about the most. Respondents were given three questions about which issues they cared about the most, second-most, and third-most. I used Sheets to create a ranked-choice system that evaluated which issues readers care about overall, and I sorted that data by race, gender and other categories. 
+
+Datawrapper -- I created tables that listed election issues that readers care about. I also used Datawrapper to create bar graphs depicting crime data at UNM over time. 
+
+R -- I use this software to determine whether there are correlations between two or more data elements for my statistics classes. I create visualizations that depict the relationship between data, and I use the visualizations to interpret the significance of the data in simpler terms.
+
+JMP Statistical Software -- I use this software for the same purposes as R, but I create more simple and easy-to-interpret charts and graphs using this software.
+</div>
+</div>
+</div>
+
+<div class="card intern-card">
+<div class="card-header" id="intern7">
+<h3 class="mb-0">
+<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#intern7Content" aria-expanded="false" aria-controls="intern7Content">
+Declan Bradley
+</button>
+</h3>
+</div>
+<div id="intern7Content" class="collapse" aria-labelledby="intern7" data-parent="#internsAccordion">
+<div class="card-body">
+Studies at Reed College and will intern with the Howard Center, Univ of Maryland newsroom. Summary of their data skills: - R (tidyverse), Python (pandas): data analysis
+- Adobe Illustrator: visualization and illustration
+- Scraping, Browser Automation (rvest, Selenium, Playwright): data collection
+- Undocumented APIs: data collection
+- Flourish, ggplot2, Datawrapper, Illustrator, D3: data visualization and presentation
+- CSS, HTML, JS, jQuery, Flask: story production and web design
+- QGIS, Mapbox, Scrollama: visual storytelling
+- git, GitHub: source control, collaboration.
+</div>
+</div>
+</div>
+
+<div class="card intern-card">
+<div class="card-header" id="intern8">
+<h3 class="mb-0">
+<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#intern8Content" aria-expanded="false" aria-controls="intern8Content">
+Olivia Borgula
+</button>
+</h3>
+</div>
+<div id="intern8Content" class="collapse" aria-labelledby="intern8" data-parent="#internsAccordion">
+<div class="card-body">
+Studies at University of Maryland, College Park and will intern with the Advertising Specialty Institute newsroom. Summary of their data skills: R: I use R to clean large, messy datasets and analyze them for key findings to enhance my storytelling. In the Howard Center for Investigative Journalism, I web scrape train schedules and combine them into one CSV, join data frames for analysis, use the ggplot library to create graphs of my findings and write functions to create data frames of specific chemicals filtered out from a database of toxic substances traveling on trains.
+
+Flourish/Datawrapper: I visualize data with Flourish and Datawrapper and embed them into stories, adding a multimedia element that helps explain complicated information and figures in a way words cannot. I've created custom heat maps by uploading GeoJSON files, stacked bar charts, line graphs and more to explain figures and trends to readers. 
+
+Python: I used Python to interact with a Census API, retrieving detailed demographic information such as population statistics, income distribution and education levels.
+
+R SQLite: wrote SQL code and harnessed the SQLite library in R to pull data from a SQL database for the Howard Center for Investigative Journalism.
+
+HTML/CSS: used HTML and CSS for front-end design and to create my portfolio website.
+</div>
+</div>
+</div>
+
+<div class="card intern-card">
+<div class="card-header" id="intern9">
+<h3 class="mb-0">
+<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#intern9Content" aria-expanded="false" aria-controls="intern9Content">
+Ava (Xiaoman) Hu
+</button>
+</h3>
+</div>
+<div id="intern9Content" class="collapse" aria-labelledby="intern9" data-parent="#internsAccordion">
+<div class="card-body">
+Studies at University of California, Berkeley and will intern with the Houston Landing newsroom. Summary of their data skills: HTML/CSS/JavaScript: Used for coding interactive news packages. Created an online quiz with Visual Studio Code that showed readers which candidate aligned most closely with their views after completing the questions.
+
+DataWrapper / Knight Lab: Produced five campaign finance graphics for local elections, illustrating top donors, in-state versus out-of-state contributions, and support or opposition from local nonprofits.
+
+MyMaps: After a candidate forum, I mapped frequently mentioned district locations along with candidate comments. This map received positive feedback from my editor and was reused for the next forum.
+</div>
+</div>
+</div>
+
+<div class="card intern-card">
+<div class="card-header" id="intern10">
+<h3 class="mb-0">
+<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#intern10Content" aria-expanded="false" aria-controls="intern10Content">
+Sasha Marie Allen
+</button>
+</h3>
+</div>
+<div id="intern10Content" class="collapse" aria-labelledby="intern10" data-parent="#internsAccordion">
+<div class="card-body">
+Studies at University of Maryland College Park and will intern with the Connecticut Mirror newsroom. Summary of their data skills: I have used data visualization tools including DataWrapper, Flourish, Tableau and GG-Plot in R-Studio. I have used DataWrapper to create graphs, charts and maps for publication on Capital News Service to display numerous different datasets. This has aided my story, making sure I don't overwhelm the text with numbers that can be displayed in a visualization. I have made summary tables and created visualizations using GG-Plot in R-Studio, and made visualizations in Flourish and Tableau.
+</div>
+</div>
+</div>
+
+<div class="card intern-card">
+<div class="card-header" id="intern11">
+<h3 class="mb-0">
+<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#intern11Content" aria-expanded="false" aria-controls="intern11Content">
+Yasmeen Emilie Saadi
+</button>
+</h3>
+</div>
+<div id="intern11Content" class="collapse" aria-labelledby="intern11" data-parent="#internsAccordion">
+<div class="card-body">
+Studies at University of Missouri-Columbia and will intern with the Investigative Project on Race and Equity newsroom. Summary of their data skills: I have used Datawrapper to visualize how prevalent straw purchasing is when it comes to gun trafficking crimes committed by women. By making a bar graph, the graphic clearly showed the reader that the gun crime committed most frequently by women was straw purchasing, which supplemented the narrative aspects of the story.
+
+I have also used Datawrapper to map addresses in Oklahoma City that were offered less than the FCC's definition of broadband by internet providers. While this story did not run, the graphic was able to show that dots were clustered in certain parts of the city which correlated with other demographic factors.
+</div>
+</div>
+</div>
+
+<div class="card intern-card">
+<div class="card-header" id="intern12">
+<h3 class="mb-0">
+<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#intern12Content" aria-expanded="false" aria-controls="intern12Content">
+Cooper Gunn Gant
+</button>
+</h3>
+</div>
+<div id="intern12Content" class="collapse" aria-labelledby="intern12" data-parent="#internsAccordion">
+<div class="card-body">
+Studies at University of Arkansas and will intern with the Arkansas Democrat Gazette newsroom. Summary of their data skills: Flourish, used for contrasting The Associated Press' weekly basketball rankings of Arkansas men's basketball vs end-of-season placement. It brilliantly contrasted high expectations against low performances by the team over several years.
+</div>
+</div>
+</div>
+
+<div class="card intern-card">
+<div class="card-header" id="intern13">
+<h3 class="mb-0">
+<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#intern13Content" aria-expanded="false" aria-controls="intern13Content">
+Nathaniel Harrington
+</button>
+</h3>
+</div>
+<div id="intern13Content" class="collapse" aria-labelledby="intern13" data-parent="#internsAccordion">
+<div class="card-body">
+Studies at Syracuse University and will intern with the WHYY newsroom. Summary of their data skills: DataWrapper: helps visualize trends in population change within Syracuse in connection to environmental racism.
+</div>
+</div>
+</div>
+
+<div class="card intern-card">
+<div class="card-header" id="intern14">
+<h3 class="mb-0">
+<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#intern14Content" aria-expanded="false" aria-controls="intern14Content">
+Hannah Bensen
+</button>
+</h3>
+</div>
+<div id="intern14Content" class="collapse" aria-labelledby="intern14" data-parent="#internsAccordion">
+<div class="card-body">
+Studies at Stanford University and will intern with the Investigative Reporting Workshop (Washington Post) newsroom. Summary of their data skills: I have extensive experience in R and Excel for data analysis, acquisition, and visualization. I have used SQL for data acquisition and I have used Flourish and DataWrapper for data visualization. I am learning Python analysis and visualization, and I am learning Git for code version control.
+</div>
+</div>
+</div>
+
+<div class="card intern-card">
+<div class="card-header" id="intern15">
+<h3 class="mb-0">
+<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#intern15Content" aria-expanded="false" aria-controls="intern15Content">
+Levi (Lifei) Jiang
+</button>
+</h3>
+</div>
+<div id="intern15Content" class="collapse" aria-labelledby="intern15" data-parent="#internsAccordion">
+<div class="card-body">
+Studies at University of Washington and will intern with the Philadelphia Inquirer newsroom. Summary of their data skills: D3.js, Datawrapper, Flourish, Echarts.js, RAWGraphic, Infogram, Tableau
+As someone with a background in data, how to uncover invisible patterns and stories from massive amounts of data is my interest and specialty. When I want readers to pay attention to certain patterns or special events in a data set, I will create various data charts to support my interpretation. Or when the dataset is so large that a simple narrative can't give readers the full picture, I create infographics to make the data more accessible and logical.
+</div>
+</div>
+</div>
+
+</div>
+
+## Resources {.section-header}
+
+<div class="resources-section">
+
+### Campus Map
+
+<img src="images/marked_campus_map.PNG" class="img-fluid">
+
+### Data Journalism Text
+
+[Data Journalism with R and the Tidyverse](https://wellsdata.github.io/data_journalism_class/_book/)
+
+### Important Contacts
+
+<div class="row">
+<div class="col-md-4">
+<div class="contact-card">
+<h4>Program Directors</h4>
+<p><strong>Rob Wells</strong><br>
+443-591-1189<br>
+Email: <a href="mailto:robwells@umd.edu">robwells@umd.edu</a></p>
+
+<p><strong>David Herzog</strong><br>
+573-356-3029<br>
+Email: <a href="mailto:herzogd@missouri.edu">herzogd@missouri.edu</a></p>
+
+<p><strong>Karen Denny</strong><br>
+301-775-8483<br>
+Email: <a href="mailto:kdenny12@umd.edu">kdenny12@umd.edu</a></p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="contact-card">
+<h4>Residence Halls & Campus</h4>
+<p><strong>Jennifer Bradley</strong><br>
+Senior Program Manager<br>
+Office: 301-314-0323<br>
+Mobile: 301-440-9276<br>
+Email: <a href="mailto:jarsen17@umd.edu">jarsen17@umd.edu</a></p>
+
+<p><strong>Rakshanda Hedawoo</strong><br>
+Assistant Program Manager<br>
+Mobile: 301-440-9277<br>
+Email: <a href="mailto:rhedawoo@umd.edu">rhedawoo@umd.edu</a></p>
+
+<p><strong>Queen Anne's Hall</strong><br>
+(For mail/key/access-related questions)<br>
+301-314-4455 (HILL)</p>
+
+<p><strong>Residential Facilities</strong><br>
+(To report an issue with your room/residence hall)<br>
+301-314-9675 (WORK)</p>
+
+<p><strong>Campus Information</strong><br>
+301-405-1000</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="contact-card">
+<h4>Medical/Emergency Contacts</h4>
+<p><strong>Emergency (University of Maryland Police)</strong><br>
+301-405-3333</p>
+
+<p><strong>Emergency (Prince George's County Police)</strong><br>
+911</p>
+
+<p><strong>Non-Emergency (University of Maryland Police)</strong><br>
+301-405-3555</p>
+
+<p><strong>University Health Center</strong><br>
+301-314-8180</p>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- Add a separate CSS file to be used with this RMarkdown document -->
+```{css styles.css, echo=FALSE}
+/* Custom CSS for the RMarkdown document */
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+h1.title {
+  font-size: 2.5rem;
+  color: #337DFF;
+  text-align: center;
+}
+
+h2.subtitle {
+  font-size: 1.8rem;
+  color: #337DFF;
+  text-align: center;
+}
+
+.date {
+  color: #337DFF;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.section-header {
+  color: #337DFF;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #337DFF;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+}
+
+.logo-section {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.logo {
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.directors {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Cards for schedule items */
+.schedule-card {
+  margin-bottom: 1rem;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.schedule-card .card-header {
+  background-color: #f1f8ff;
+  border-bottom: none;
+}
+
+.schedule-card .btn-link {
+  color: #337DFF;
+  font-weight: 600;
+  text-decoration: none;
+  width: 100%;
+  text-align: left;
+}
+
+.schedule-card .btn-link:hover {
+  text-decoration: none;
+  color: #0056b3;
+}
+
+.schedule-card .card-body {
+  padding: 1.5rem;
+}
+/* Bullet point styling */
+.schedule-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.schedule-list li {
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.schedule-list li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #337DFF;
+  font-size: 1.2rem;
+}
+
+/* Ensure the accordion cards have proper spacing */
+.card-body {
+  padding: 1.25rem;
+}
+
+/* Make the collapse transitions smooth */
+.collapse {
+  transition: all 0.3s ease;
+}
+
+/* Style for the collapse buttons */
+.card-header .btn-link {
+  color: #337DFF;
+  font-weight: 600;
+  text-decoration: none;
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+
+.card-header .btn-link:after {
+  content: '\f078';
+  font-family: 'Font Awesome 5 Free';
+  position: absolute;
+  right: 0;
+  transition: transform 0.3s ease;
+}
+
+.card-header .btn-link.collapsed:after {
+  transform: rotate(-90deg);
+}
+
+/* Style for instructors */
+.instructor-row {
+  margin-top: 2rem;
+}
+
+.instructor-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.instructor-card:hover {
+  transform: translateY(-5px);
+}
+
+.instructor-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.instructor-card h3 {
+  padding: 1rem 1rem 0.5rem;
+  color: #337DFF;
+}
+
+.instructor-card p {
+  padding: 0 1rem 1rem;
+  font-size: 0.95rem;
+}
+
+/* New image container for instructor images */
+.img-container {
+  height: 255px; /* 85% of 300px */
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instructor-img {
+  width: 85%;
+  height: 85%;
+  object-fit: cover;
+}
+
+/* Intern cards */
+.intern-card {
+  margin-bottom: 0.5rem;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.intern-card .card-header {
+  background-color: #f1f8ff;
+  border-bottom: none;
+}
+
+.intern-card .btn-link {
+  color: #337DFF;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.intern-card .btn-link:hover {
+  text-decoration: none;
+  color: #0056b3;
+}
+
+/* Contact cards */
+.contact-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  height: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.contact-card h4 {
+  color: #337DFF;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.contact-card p {
+  margin-bottom: 1.2rem;
+}
+
+.contact-card strong {
+  color: #444;
+}
+
+/* Resources section */
+.resources-section img {
+  margin-bottom: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* TOC styling */
+#TOC {
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: #fff;
+}
+
+#TOC .toc-content {
+  padding-left: 15px;
+}
+
+#TOC ul {
+  padding-left: 20px;
+}
+
+/* Add necessary Bootstrap JS at the end of the document for accordion functionality */
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+```
