@@ -1,0 +1,81 @@
+---
+title: "Demo_Sasha"
+output: html_document
+date: "2025-04-22"
+---
+
+A demo notebook for Dow Jones News Fund data interns
+
+During the week’s training, you will work on a project called Investigate Your Community to produce detailed story pitches relevant to their summer internship positions. The goal is to have the students research a topic relevant to your newsroom so they can get to work immediately at the internship. 
+
+Here are some examples from last year’s DJNF data journalism training:
+
+Hannah Rosenberger, at ASI Media/Counselor magazine, produced this analysis on name, image and likeness trends: https://hrosenberger.github.io/ASI-NIL-Project/
+
+Shifra Dayak, an intern at the Connecticut Mirror, produced this analysis of environment spill data: https://shifradayak.github.io/DJNF_Merrill/ct_env_spills.html.
+
+Michael Zhang, an intern at the Houston Landing, explored local election data: https://michaelzhangreporter.github.io/Houston_Campaign_Finance/
+
+
+Here's what your newsroom suggested for a project
+I thought it could be interesting for her to look at the Disconnected Youth issue, as it’s likely to be a topic this session. She could look at the Dalio report and perhaps this Next Generation Accountability report from the state that shows how well districts are preparing students for next steps.
+
+
+
+This notebook helps you get started
+
+# Load software libraries
+```{r}
+#install.packages("tidyverse")
+library(tidyverse)
+library(janitor)
+
+```
+
+
+# Load your data
+
+
+```{r}
+
+# 
+# YOUR_DATA <- read.csv("../data/XXXXX.csv") |> 
+#     clean_names()
+
+#https://data.ct.gov/Education/Next-Generation-Accountability-System/h28j-iix5/about_data
+next_gen <- read.csv("../data/Next_Generation_Accountability_System_20250422.csv") |> 
+    clean_names()
+
+
+```
+
+
+# Explore the data types
+```{r}
+
+#glimpse(YOUR_DATA)
+
+glimpse(next_gen)
+
+```
+
+# Data exploration
+
+```{r}
+
+# YOUR_data |> 
+#   count(date)
+
+next_gen |> 
+  count(schoolyear)
+
+```
+
+
+
+
+# Questions 
+
+Write down questions you want answered:
+
+
