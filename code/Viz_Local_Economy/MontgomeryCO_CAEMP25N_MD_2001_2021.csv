@@ -1,0 +1,34 @@
+GeoFIPS,GeoName,Region,TableName,LineCode,IndustryClassification,Description,Unit,2001,2011,2021
+" ""24031""","Montgomery, MD",2,CAEMP25N,10,...,Total employment (number of jobs) ,Number of jobs,607467,663362,709712
+" ""24031""","Montgomery, MD",2,CAEMP25N,80,..., Nonfarm employment ,Number of jobs,606501,662608,708836
+" ""24031""","Montgomery, MD",2,CAEMP25N,90,...,  Private nonfarm employment ,Number of jobs,520473,567004,608286
+" ""24031""","Montgomery, MD",2,CAEMP25N,20,..., Wage and salary employment ,Number of jobs,486991,490982,494634
+" ""24031""","Montgomery, MD",2,CAEMP25N,40,..., Proprietors employment ,Number of jobs,120476,172380,215078
+" ""24031""","Montgomery, MD",2,CAEMP25N,60,...,  Nonfarm proprietors employment 2/,Number of jobs,119919,171936,214629
+" ""24031""","Montgomery, MD",2,CAEMP25N,1200,54,"   Professional, scientific, and technical services ",Number of jobs,91762,101116,109565
+" ""24031""","Montgomery, MD",2,CAEMP25N,2000,...,  Government and government enterprises ,Number of jobs,86028,95604,100550
+" ""24031""","Montgomery, MD",2,CAEMP25N,1600,62,   Health care and social assistance ,Number of jobs,56162,72307,82465
+" ""24031""","Montgomery, MD",2,CAEMP25N,2001,...,   Federal civilian ,Number of jobs,41388,48649,50128
+" ""24031""","Montgomery, MD",2,CAEMP25N,700,44-45,   Retail trade ,Number of jobs,60174,52830,50065
+" ""24031""","Montgomery, MD",2,CAEMP25N,1100,53,   Real estate and rental and leasing ,Number of jobs,32719,43453,47216
+" ""24031""","Montgomery, MD",2,CAEMP25N,1400,56,   Administrative and support and waste management and remediation services ,Number of jobs,42781,45902,46548
+" ""24031""","Montgomery, MD",2,CAEMP25N,1900,81,   Other services (except government and government enterprises) ,Number of jobs,41399,46041,45991
+" ""24031""","Montgomery, MD",2,CAEMP25N,2010,...,   State and local ,Number of jobs,37785,39996,42202
+" ""24031""","Montgomery, MD",2,CAEMP25N,1000,52,   Finance and insurance ,Number of jobs,31440,38880,41764
+" ""24031""","Montgomery, MD",2,CAEMP25N,2012,...,    Local government ,Number of jobs,36431,38734,40949
+" ""24031""","Montgomery, MD",2,CAEMP25N,400,23,   Construction ,Number of jobs,37496,35418,40651
+" ""24031""","Montgomery, MD",2,CAEMP25N,1800,72,   Accommodation and food services ,Number of jobs,34053,34106,33129
+" ""24031""","Montgomery, MD",2,CAEMP25N,800,48-49,   Transportation and warehousing ,Number of jobs,7892,9313,27869
+" ""24031""","Montgomery, MD",2,CAEMP25N,1500,61,   Educational services ,Number of jobs,11747,16622,19417
+" ""24031""","Montgomery, MD",2,CAEMP25N,1700,71,"   Arts, entertainment, and recreation ",Number of jobs,13835,16426,15435
+" ""24031""","Montgomery, MD",2,CAEMP25N,500,31-33,   Manufacturing ,Number of jobs,19872,13192,15279
+" ""24031""","Montgomery, MD",2,CAEMP25N,900,51,   Information ,Number of jobs,21878,17280,13635
+" ""24031""","Montgomery, MD",2,CAEMP25N,600,42,   Wholesale trade ,Number of jobs,13177,12937,10131
+" ""24031""","Montgomery, MD",2,CAEMP25N,2002,...,   Military ,Number of jobs,6855,6959,8220
+" ""24031""","Montgomery, MD",2,CAEMP25N,1300,55,   Management of companies and enterprises ,Number of jobs,1942,9268,7564
+" ""24031""","Montgomery, MD",2,CAEMP25N,2011,...,    State government ,Number of jobs,1354,1262,1253
+" ""24031""","Montgomery, MD",2,CAEMP25N,70,111-112, Farm employment ,Number of jobs,966,754,876
+" ""24031""","Montgomery, MD",2,CAEMP25N,300,22,   Utilities ,Number of jobs,1125,659,840
+" ""24031""","Montgomery, MD",2,CAEMP25N,50,...,  Farm proprietors employment ,Number of jobs,557,444,449
+" ""24031""","Montgomery, MD",2,CAEMP25N,100,113-115,"   Forestry, fishing, and related activities ",Number of jobs,370,337,390
+" ""24031""","Montgomery, MD",2,CAEMP25N,200,21,"   Mining, quarrying, and oil and gas extraction ",Number of jobs,649,917,332
