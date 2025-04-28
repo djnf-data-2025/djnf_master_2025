@@ -11,7 +11,7 @@ editor_options:
 ### Dow Jones News Fund \@ Merrill College
 
 #### Sunday, June 1 - Sunday, June 8, 2025
-(ver April 8, 2025)
+(ver April 28, 2025)
 :::
 
 <br>  
@@ -42,7 +42,7 @@ Bridget Lang, assistant
     described](https://docs.google.com/document/d/1NATRDMhUr8XSpkI-_bKfJCM8YVu9028QHKlk_7sbdw0/edit?usp=sharing).
 -   **By May 26**: Students will be sent a data starter kit to load
     relevant software on their laptops and test out their equipment.
--   **Due Thursday May 29, 11:59 p.m.**: Students profiles due.
+-   **By May 29**: Students profiles due, 11:59 p.m.
 
 **Sunday, June 1, 2025**
 
@@ -59,14 +59,13 @@ Bridget Lang, assistant
         for their assigned communities. Produce draft story ideas by
         11:59 p.m.
 -   **5:30 p.m.**: Break
--   **6:30 p.m.**: Dinner in Hyattsville - Busboys & Poets. (Meet at
-    Knight Hall board van)
+-   **6:00 p.m.**: Dinner in Hyattsville - (Meet at Knight Hall board van)
 -   **11:59 p.m.**: Produce one paragraph draft story ideas by 11:59
     p.m., emailed to Wells
 
 **Monday, June 2, 2025**
 
--   **Breakfast**: On your own at dorm
+-   **Breakfast**: On your own
 
 -   **9 a.m.**: Meet at Knight Hall
 
@@ -88,8 +87,6 @@ Bridget Lang, assistant
     Rooms 2103, 2107
 
 -   **12:30 p.m.**: Lunch in Knight Hall.
-
-    -   Speaker: TBA
 
 -   **1:30 p.m.**: Writing a story pitch memo. All attend. (Denny). Room 2103
 
@@ -121,15 +118,14 @@ Bridget Lang, assistant
 
 **Tuesday June 3, 2025**
 
--   **Breakfast**: On your own at dorm
+-   **Breakfast**: On your own
 -   **Heather Taylor, DJ News Fund visiting** 
--   **9 a.m.**: Data Visualization. Using Datawrapper for data
-    visualization. (Adam Marton). All attend. Room 2103
+-   **9 a.m.-10:15 a.m.: Data Visualization. **. 
+    Using Datawrapper for data visualization. (Adam Marton). All attend. Room 2103
 -   **10:30 a.m.**: Break. Coffee served.
     -   Heather Taylor, manager of digital media and programs, Dow Jones
         News Fund.
--   **11 a.m.**: Workshop. Students work on R data gathering story
-    pitches. (Wells, Marton, TA as coaches). Room 1101
+-   **11 a.m.**: Workshop. Students work on data gathering story pitches. (Wells, Marton, TA as coaches). Room 1101
 -   **11:45 p.m. - 12:45 p.m.**: Keynote speaker: [Cheryl Thompson, NPR, Senior Editor, Member Station Investigations](https://www.npr.org/people/705265133/cheryl-w-thompson). All attend. Eaton Theater.  
     -  [Readings before Cheryl Thompson talk](https://docs.google.com/document/d/1P6RsrtnL0TJY0-jOc3QzAR8XFifecfQQSO5GTp0kRfA/edit?usp=sharing) 
 -   **12:45 p.m. - 1:30 p.m.** Lunch with Cheryl Thompson. Sandwiches served in Knight Hall.
@@ -155,12 +151,11 @@ Bridget Lang, assistant
 
 -   **4:15 p.m.-5:30 p.m. ** Workshop
 -   **5:30 p.m.**: Break
--   **6:30 p.m.**: Dinner in Hyattsville - Franklins. (Meet at Knight
-    Hall board van. Wells / Herzog driving)
+-   **6:30 p.m.**: Dinner in Hyattsville. (Meet at Knight Hall board van. Wells / Herzog driving)
 
 **Wednesday June 4, 2025**
 
--   **Breakfast**: On your own at dorm
+-   **Breakfast**: On your own 
 -   **9 a.m.-10:15 a.m.: Skills sessions**
 
     -   Coding Track: Using AI with R. (Daniel Trielli, Merrill College)
