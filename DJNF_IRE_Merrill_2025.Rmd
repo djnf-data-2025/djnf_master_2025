@@ -232,7 +232,7 @@ Bridget Lang, assistant
 -   Depart on your own schedule
 
 ::: {style="text-align: center; color: #337DFF;"}
-# Instructors
+# <a href="https://djnf-data-2025.github.io/djnf_master_2025/Intructors.html" >target="_blank">Instructors</a>
 :::
 
 **Kevin Blackistone**
