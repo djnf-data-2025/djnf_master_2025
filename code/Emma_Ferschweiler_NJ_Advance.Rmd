@@ -35,8 +35,13 @@ https://www.hcnj.us/finance/tax-assessments/
 # Load software libraries
 ```{r}
 #install.packages("tidyverse")
+#install.packages("janitor")
+#install.packages("readxl")
+#install.packages("rvest")
 library(tidyverse)
 library(janitor)
+library(readxl)
+library(rvest)
 
 ```
 

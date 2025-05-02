@@ -1,0 +1,157 @@
+---
+title: "Cooper Gant"
+output: html_document
+date: "2025-05-01"
+---
+
+A demo notebook for Dow Jones News Fund data interns
+
+During the week’s training, you will work on a project called Investigate Your Community to produce detailed story pitches relevant to their summer internship positions. The goal is to have the students research a topic relevant to your newsroom so they can get to work immediately at the internship. 
+
+Here are some examples from last year’s DJNF data journalism training:
+
+Hannah Rosenberger, at ASI Media/Counselor magazine, produced this analysis on name, image and likeness trends: https://hrosenberger.github.io/ASI-NIL-Project/
+
+Shifra Dayak, an intern at the Connecticut Mirror, produced this analysis of environment spill data: https://shifradayak.github.io/DJNF_Merrill/ct_env_spills.html.
+
+Michael Zhang, an intern at the Houston Landing, explored local election data: https://michaelzhangreporter.github.io/Houston_Campaign_Finance/
+
+
+Here's what your newsroom suggested for a project
+
+Here are a couple stories Cooper could pursue for us during his internship.
+Two things are possible data-driven news stories, one involves Buc-ee's.
+
+Thing one: Broadband service 
+I'd like to see us produce a story that evaluates the status of broadband data service in Arkansas.
+All we've really reported is that there are rural areas [and some decent size cities] that remain years behind because of expense and challenging terrain.
+Broadband service providers face the same challenges that slowed the creation of roads, electric service and phone service in Arkansas.
+But we could go deeper than that, and try to explain why data speeds for many homes seem to be painfully slow, and not really broadband.
+
+There's a state Broadband Office: broadband.arkansas.gov
+It has a nifty map display: register.broadband.arkansas.gov/register/bead/map
+
+Thing two: Electric vehicles
+It would be interesting to compare the registration numbers for electric and electric hybrid vehicles in Arkansas.
+Is Arkansas keeping up with the smaller comparable states, neighboring states, national average?
+Same could be asked about creation of charging stations.
+
+The Arkansas Department of Finance and Administration has all the data. We'd have to ask them for it.
+The state charges a $200 a year fee for each electric vehicle, to make up for "lost" gas tax revenue, so there's probably data for the past few years to examine.
+
+Thing three: Buc-ee's mania
+Arkansas' first Buc-ee's is set to open later this year in relatively urban Benton, a suburb city of Little Rock.
+Seems like many of the outsized Buc-ee's stores are built rural areas and those governments probably see measurable tax revenue boosts when they open.
+Not sure where to go in the Buc-ee's infested states to find data to measure this Buc-ee's bump.
+It may be too difficult to ascertain. 
+Based on our metrics, any story with the word Buc-ee's in it will be extremely popular.
+
+
+
+This notebook helps you get started on the electic vehicles
+
+# Load software libraries
+```{r}
+#install.packages("tidyverse")
+#install.packages("janitor")
+#install.packages("readxl")
+#install.packages("rvest")
+library(tidyverse)
+library(janitor)
+library(readxl)
+library(rvest)
+
+```
+
+
+# Load your data
+
+2024
+
+```{r}
+
+# 
+# YOUR_DATA <- read.csv("../data/XXXXX.csv") |> 
+#     clean_names()
+
+# data <- read_excel("../data/2024-12-Revenue.xlsx", skip=2) |> 
+#     clean_names()
+
+data <- read.csv("../data/ark_electric_hybrid.csv") |> 
+    clean_names()
+
+
+```
+
+Data details:
+
+
+# Explore the data types
+```{r}
+
+#glimpse(YOUR_DATA)
+
+glimpse(data)
+
+```
+# pct of whole
+```{r}
+data <- data |> 
+  mutate(pct = fully_electric/(hybrid+fully_electric))
+```
+
+
+# National context: All vehicle registrations
+https://afdc.energy.gov/vehicle-registration
+
+Scraper:
+
+```{r}
+#this pulls in data from that table
+
+url2 <- "https://afdc.energy.gov/vehicle-registration"
+test  <- url2 %>%
+  read_html() %>%
+  html_table() 
+
+car_registrations <- test[[1]] %>%
+  clean_names() 
+
+```
+
+
+#Clean headings
+```{r}
+new_headers <- as.character(car_registrations[1, ])
+car_registrations_clean <- car_registrations[-(1), ] # Remove the first two rows
+colnames(car_registrations_clean) <- new_headers
+
+# Clear the row names
+rownames(car_registrations_clean) <- NULL
+
+car_registrations <- car_registrations_clean |> 
+  clean_names()
+
+
+```
+
+
+# Part 2: Buc-ee's
+
+Jim had a great idea about Buc-ee's. Make some calls to the county / city economic development officials to see what you can find about economic impact, tax revenue from opening a Buc-ee's store. Locations: https://buc-ees.com/locations/
+
+It would be great to nail down the dollar impact in some of these communities.
+
+https://communityplaymaker.com/discoveries/the-buc-ees-effect/#:~:text=When%20a%20community%20leader%20sees,million%20in%20indirect%20sales%20tax.
+
+
+
+# Questions 
+
+Write down questions you want answered:
+
+
+
+# Data Details
+
+
