@@ -1,0 +1,127 @@
+---
+title: "Nate Harrington WHYY"
+output: html_document
+date: "2025-05-5"
+---
+
+A demo notebook for Dow Jones News Fund data interns
+
+During the week’s training, you will work on a project called Investigate Your Community to produce detailed story pitches relevant to their summer internship positions. The goal is to have the students research a topic relevant to your newsroom so they can get to work immediately at the internship. 
+
+Here are some examples from last year’s DJNF data journalism training:
+
+Hannah Rosenberger, at ASI Media/Counselor magazine, produced this analysis on name, image and likeness trends: https://hrosenberger.github.io/ASI-NIL-Project/
+
+Shifra Dayak, an intern at the Connecticut Mirror, produced this analysis of environment spill data: https://shifradayak.github.io/DJNF_Merrill/ct_env_spills.html.
+
+Michael Zhang, an intern at the Houston Landing, explored local election data: https://michaelzhangreporter.github.io/Houston_Campaign_Finance/
+
+
+Here's what your newsroom suggested for a project
+Here are some newsroom-wide projects coming up that we welcome data journalism contributions from our future DJ interns.
+ 
+Aging in the region – tentative project title is “Growing Golden: Aging with Purpose.” Numerous stories about aging and thriving in retirement will cover a range of financial, health, housing, dying, family coping and planning for retirement story topics. This is an explanatory journalism project.
+ 
+Developing project on Black Women in the region – inspired by the election of Philadelphia’s first woman mayor and Black woman mayor. Areas of storytelling will include: politics, education and health
+ 
+Philadelphia neighborhood guides is a project coming from Billy Penn.
+ 
+An existing project on education is such, and we will continue to produce stories through mid-summer -- Creativity Sparks Success Project https://whyy.org/series/creativity-sparks-success/
+
+
+
+This notebook helps you get started on the Growing Golden project.
+
+
+# Load software libraries
+```{r}
+#install.packages("tidyverse")
+#install.packages("janitor")
+#install.packages("readxl")
+#install.packages("rvest")
+library(tidyverse)
+library(janitor)
+library(readxl)
+library(rvest)
+
+```
+
+
+# Load your data
+
+Check Census Reporter for ideas. Here's a start
+https://censusreporter.org/data/table/?table=B01001&primary_geo_id=16000US4260000&geo_ids=16000US4260000,05000US42101,31000US37980,04000US42,01000US
+
+
+```{r}
+
+# 
+# YOUR_DATA <- read.csv("../data/XXXXX.csv") |> 
+#     clean_names()
+
+# data <- read_excel("../data/2024-12-Revenue.xlsx", skip=2) |> 
+#     clean_names()
+
+data <- read.csv("../data/acs2023_1yr_B01001_04000US42.csv") |> 
+    clean_names() 
+```
+
+Restructure the table for 
+
+```{r}
+
+
+demographic_table <- data %>%
+  # First select just the relevant columns
+  select(name, starts_with("b01001")) %>%
+  # Pivot to make each b01001 variable a row
+  pivot_longer(cols = starts_with("b01001"),
+               names_to = "variable",
+               values_to = "value") %>%
+  # Then pivot to make each location a column
+  pivot_wider(names_from = name,
+              values_from = value) %>%
+  # Clean up column names if needed
+  rename_with(~ gsub(", PA$", "", .x), matches("Philadelphia County")) %>%
+  rename_with(~ gsub(" Metro Area$", "", .x), matches("Philadelphia-Camden")) |> 
+  clean_names()
+
+```
+
+Data details:
+
+
+# Explore the data types
+```{r}
+
+#glimpse(YOUR_DATA)
+
+glimpse(data)
+
+```
+# Fix dates
+```{r}
+data <- data |> 
+  mutate(date = lubridate::mdy(contribution_date))
+```
+
+
+
+# Data exploration: dates
+
+```{r}
+data |> 
+   count(date) |> 
+  arrange(desc(n))
+```
+
+
+
+
+# Questions 
+
+Write down questions you want answered:
+
+
+
+# Data Details
