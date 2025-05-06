@@ -1,0 +1,268 @@
+---
+title: "Moley Scrape2 Dec 16"
+author: "Rob Wells"
+date: "2024-12-17"
+output: html_document
+---
+
+f the data frame is empty after extracting the information using XPath, it means that the XPath expression "//tr[td/@title='Expand/Collapse']" did not find any matching elements in the HTML. In that case, we'll need to inspect the HTML structure of the web page and adjust the XPath or CSS selector accordingly.
+Please run the script and provide the printed output so we can further investigate the issue.
+
+
+```{r}
+# Install and load the required packages
+# install.packages("rvest")
+# install.packages("dplyr")
+library(rvest)
+library(dplyr)
+library(tidyverse)
+library(stringr)
+library(readr)
+```
+
+
+```{r}
+
+# Read the HTML file from the URL
+url <- "https://hoover.aeon.atlas-sys.com/aeon.dll?Action=10&Form=31&Value=https://voro.cdlib.org/oac-ead/prime2002/hoover/reg_084.xml"
+html <- read_html(url)
+
+# Extract the relevant information using XPath
+data <- html %>%
+  html_nodes(xpath = "//tr[td/@title='Expand/Collapse']") %>%
+  html_nodes("td") %>%
+  html_text() %>%
+  matrix(ncol = 4, byrow = TRUE) %>%
+  as.data.frame(stringsAsFactors = FALSE)
+
+print("Data after extracting information:")
+print(head(data))
+
+# Assign column names
+colnames(data) <- c("Category", "Subject", "Box", "Folder")
+
+print("Data after assigning column names:")
+print(head(data))
+
+# Filter rows starting from "DIARIES AND TELEPHONE BOOKS 1931-1940"
+start_index <- which(data$Category == "DIARIES AND TELEPHONE BOOKS 1931-1940")[1]
+if (is.na(start_index)) {
+  start_index <- 1
+}
+data <- data[start_index:nrow(data),]
+
+print("Data after filtering rows:")
+print(head(data))
+
+# Remove leading/trailing whitespace from the data
+data <- data %>%
+  mutate(across(everything(), trimws))
+
+print("Data after removing whitespace:")
+print(head(data))
+
+# Populate the Category column with the appropriate values
+if (any(!is.na(data$Category))) {
+  data$Category <- data$Category[cumsum(!is.na(data$Category))]
+}
+
+print("Data after populating Category column:")
+print(head(data))
+
+# Write the data to a CSV file
+write.csv(data, "raymond_moley_index.csv", row.names = FALSE)
+```
+
+
+
+```{r}
+
+# Load necessary library
+library(stringr)
+
+library(stringr)
+library(dplyr)
+
+# Read the text file
+text <- readLines("/Users/robwells/Code/Moley/speeches_hoover_index.txt", warn = FALSE)
+```
+
+```{r}
+library(stringr)
+library(dplyr)
+
+# Read the text file
+text <- readLines("/Users/robwells/Code/Moley/speeches_hoover_index.txt", warn = FALSE)
+
+# Create empty vectors to store data
+box_folders <- c()
+subjects <- c()
+dates <- c()
+
+# Go through the text line by line
+for(i in 1:length(text)) {
+  # If line contains box and folder
+  if(grepl("box \\d+, folder \\d+", text[i])) {
+    box_folders <- c(box_folders, text[i])
+    # Get next line for subject (if it exists)
+    if(i < length(text)) {
+      subjects <- c(subjects, text[i + 1])
+    }
+  }
+}
+
+# Clean box_folders
+box_folders <- str_extract(box_folders, "box \\d+, folder \\d+")
+
+# Extract dates from subjects
+dates <- str_extract(subjects, "(January|February|March|April|May|June|July|August|September|October|November|December)\\s+\\d{1,2},\\s+\\d{4}")
+dates[is.na(dates)] <- ""
+
+# Create data frame
+df <- data.frame(
+  box_folder = box_folders,
+  subject = subjects,
+  date = dates,
+  stringsAsFactors = FALSE
+)
+
+# Write to CSV
+write.csv(df, "Updated_moley_speeches_index.csv", row.names = FALSE, quote = TRUE)
+
+# Print first few rows to verify
+print(head(df))
+```
+
+
+
+(works but dates need fixing)
+```{r}
+
+# Combine all lines into a single string
+text_combined <- paste(text, collapse = "\n")
+
+# Create a pattern to match each entry
+pattern <- "(?:box (\\d+), folder (\\d+))\\s*([^\"\\n]+?)\\s*(?=(January|February|March|April|May|June|July|August|September|October|November|December)\\s+\\d{1,2},\\s+\\d{4}|$)\\s*(?:(January|February|March|April|May|June|July|August|September|October|November|December)\\s+\\d{1,2},\\s+\\d{4})?"
+
+# Extract all matches
+matches <- str_match_all(text_combined, pattern)[[1]]
+
+# Create a data frame
+data <- data.frame(
+  box = matches[,2],
+  folder = matches[,3],
+  subject = str_trim(matches[,4]),
+  date = matches[,5],
+  stringsAsFactors = FALSE
+)
+
+# Clean up the data
+data <- data %>%
+  mutate(
+    box_folder = paste("box", box, "folder", folder),
+    subject = str_replace_all(subject, "\\s+", " "),
+    subject = str_trim(subject)
+  ) %>%
+  select(box_folder, subject, date)
+
+# Write to CSV
+# write.csv(data, "speeches_index.csv", row.names = FALSE, quote = TRUE)
+# # Write to CSV
+# write.csv(data, "speeches.csv", row.names = FALSE)
+
+# Print the data frame to verify
+print(data)
+
+```
+
+
+```{r}
+data <- df |> 
+  mutate(subject1 = subject,
+         date1 = date)
+
+
+# Function to extract month and year from subject
+extract_date <- function(subject) {
+  # Try different date patterns
+  patterns <- c(
+    # Full dates with month year
+    "(January|February|March|April|May|June|July|August|September|October|November|December)\\s+\\d{4}",
+    # Just year
+    "\\b\\d{4}\\b",
+    # Season and year
+    "Summer\\s+\\d{4}",
+    # Date ranges
+    "(January|February|March|April|May|June|July|August|September|October|November|December)\\s+\\d{1,2}-\\d{1,2},\\s+\\d{4}",
+    # Month range and year
+    "(?:January|February|March|April|May|June|July|August|September|October|November|December)\\s+to\\s+(?:January|February|March|April|May|June|July|August|September|October|November|December)\\s+\\d{4}",
+    # Years range
+    "\\d{4}-\\d{4}",
+    # Decade
+    "\\d{4}s"
+  )
+  
+  for(pattern in patterns) {
+    match <- str_extract(subject, pattern)
+    if(!is.na(match)) {
+      return(match)
+    }
+  }
+  return("")
+}
+
+# Update empty dates with extracted dates from subject
+df <- df %>%
+  mutate(
+    date = ifelse(date == "" | is.na(date), 
+                 sapply(subject, extract_date),
+                 date)
+  )
+
+# Extract year from date field
+extract_year <- function(date_string) {
+  # Extract 4-digit year regardless of format
+  year <- str_extract(date_string, "\\d{4}")
+  return(year)
+}
+
+# Example usage with your data frame
+df$year <- sapply(df$date, extract_year)
+
+write.csv(df, "Updated_moley_speeches_index.csv", row.names = FALSE, quote = TRUE)
+
+```
+
+
+# Define the input text
+text <- "
+box 119, folder 1
+Cleveland City Club Address October 15, 1932
+
+box 119, folder 2
+Rochester Chamber of Commerce Address January 16, 1933
+
+box 119, folder 3
+Columbia Alumni Address February 13, 1933
+
+box 119, folder 4
+Cincinnati Address March 17, 1933
+
+box 119, folder 5
+Radio Address on London Conference May 20, 1933
+
+box 119, folder 6
+Welfare Council Address May 23, 1933
+
+box 119, folder 7
+Liberal Conference Address September 8, 1933
+
+box 119, folder 8
+Cleveland Address October 31, 1933
+
+box 119, folder 9
+American Institute of Banking (Cleveland) Address, (?) (no text or notes) November 1, 1933
+
+box 119, folder 10
+Barnard Alumnae Association Address November 2, 1933
+"

@@ -1,0 +1,162 @@
+---
+title: "Diego Perdomo - Futuro Media"
+output: html_document
+date: "2025-04-22"
+---
+
+A demo notebook for Dow Jones News Fund data interns
+
+During the week’s training, you will work on a project called Investigate Your Community to produce detailed story pitches relevant to their summer internship positions. The goal is to have the students research a topic relevant to your newsroom so they can get to work immediately at the internship. 
+
+Here are some examples from last year’s DJNF data journalism training:
+
+Hannah Rosenberger, at ASI Media/Counselor magazine, produced this analysis on name, image and likeness trends: https://hrosenberger.github.io/ASI-NIL-Project/
+
+Shifra Dayak, an intern at the Connecticut Mirror, produced this analysis of environment spill data: https://shifradayak.github.io/DJNF_Merrill/ct_env_spills.html.
+
+Michael Zhang, an intern at the Houston Landing, explored local election data: https://michaelzhangreporter.github.io/Houston_Campaign_Finance/
+
+
+Here's what your newsroom suggested for a project:
+The team has decided to request Diego research people paying taxes to the IRS via ITIN number.  
+Please let me know if you have any questions. 
+Have a great weekend!
+Yolanda 
+
+
+This notebook helps you get started by extracting data from Table 1 of this report: https://itep.org/undocumented-immigrants-taxes-2024/
+
+# Load software libraries
+```{r}
+#install.packages("tidyverse")
+#install.packages("janitor")
+#install.packages("readxl")
+#install.packages("rvest")
+library(tidyverse)
+library(janitor)
+library(readxl)
+library(rvest)
+```
+
+# Scrape a table from this website
+https://itep.org/undocumented-immigrants-taxes-2024/
+APPENDIX TABLE 1.
+
+State and Local Tax Contributions by the Undocumented Immigrant Population in 2022
+```{r}
+
+# Read the HTML file from the URL
+url <- "https://itep.org/undocumented-immigrants-taxes-2024/"
+html <- read_html(url)
+
+# Extract the relevant information using XPath
+# I'll show you how to do this.
+data <- html %>%
+  html_nodes(xpath = "/html/body/div/div/div[2]/div/div[1]/div[1]/div[4]/table") %>%
+  html_nodes("td") %>%
+  html_text() %>%
+  matrix(ncol = 7, byrow = TRUE) %>%
+  as.data.frame(stringsAsFactors = FALSE)
+
+# Assign column names
+
+new_headers <- as.character(data[1, ])
+data_clean <- data[-1, ] # Remove the first row
+colnames(data_clean) <- new_headers
+```
+
+
+# Cleaning
+```{r}
+data <- data_clean |> 
+  clean_names() |> 
+  #remove dollar signs
+  mutate(
+    sales_and_excise_taxes=as.numeric(parse_number(sales_and_excise_taxes)),
+    property_taxes=as.numeric(parse_number(property_taxes)),
+    personal_and_business_income_taxes=as.numeric(parse_number(personal_and_business_income_taxes)),
+    other_taxes=as.numeric(parse_number(other_taxes)),
+    total_state_and_local_taxes=as.numeric(parse_number(total_state_and_local_taxes)),
+     effective_tax_rate=as.numeric(parse_number(effective_tax_rate)),
+    )
+
+write.csv(data, "../data/state_local_tax_undoc_2022.csv")
+
+#Remember to credit the source in your articles: Institute on Taxation and Economic Policy
+```
+
+
+#BACKUP CODE FOR LATER
+```{r}
+# Load your data
+
+# YOUR_DATA <- read.csv("../data/XXXXX.csv") |> 
+#     clean_names()
+
+# data <- read_excel("../data/2024-12-Revenue.xlsx", skip=2) |> 
+#     clean_names()
+
+```
+
+
+
+Data details:
+
+
+# Explore the data types
+```{r}
+
+#glimpse(YOUR_DATA)
+
+glimpse(data)
+
+```
+# Code for later Fix dates
+```{r}
+# data <- data |> 
+#   mutate(date = lubridate::mdy(contribution_date))
+```
+
+
+
+# Data exploration: taxes paid
+
+```{r}
+data |> 
+  select(state, total_state_and_local_taxes) |> 
+  arrange(desc(total_state_and_local_taxes))
+```
+
+
+
+
+# Questions 
+
+Write down questions you want answered:
+
+
+
+# Data Details
+
+You will want to read this article carefully and you will probably want to scrape more data from it. 
+https://itep.org/undocumented-immigrants-taxes-2024/
+
+
+A very good article about the issue
+https://unidosus.org/blog/2025/03/24/when-dhs-requests-itin-tax-data-why-every-american-should-be-concerned/
+
+Background on ITIN
+https://www.irs.gov/tin/itin/individual-taxpayer-identification-number-itin
+If you're a resident alien, nonresident alien or their spouse or dependent, you can apply for an ITIN regardless of immigration status.
+
+Resident alien or nonresident alien
+
+If you're not a U.S. citizen, your tax status can be either:
+
+Resident alien – If you were present in the U.S. for more than 183 days* (substantial presence test) or you’re a lawful permanent resident of the U.S. (green card test)
+Nonresident alien – If you don’t meet either the green card or substantial presence test for resident alien status.
+*Special day-counting rules apply to certain foreign government-related individuals, teachers, trainees and students who are temporarily present in the U.S. under certain U.S. visas.
+
+Determining your tax residency status
+
+U.S. Tax Guide for Aliens, Publication 519
