@@ -25,6 +25,8 @@ https://github.com/smussenden/declan_railstate
 
 After unzipping, either delete the zip file OR add it to the gitignore for the repo
 
+Declan will need to clone the repo and run the script
+
 
 
 
