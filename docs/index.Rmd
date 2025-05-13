@@ -11,7 +11,7 @@ editor_options:
 ### Dow Jones News Fund \@ Merrill College
 
 #### Sunday, June 1 - Sunday, June 8, 2025
-(ver May 12, 2025)
+(ver May 13, 2025)
 :::
 
 <br>  
@@ -56,6 +56,14 @@ Bridget Lang, assistant
     Denny, Hughes and Shirley Carswell, DJNF Executive Director
     -   Logistics. The week ahead. Rooms meals.
     -   Student introductions.
+     -   Investigate your community: Wells
+        -   [GitHub
+            Slides](https://docs.google.com/presentation/d/1GofR1mONJ611ozikg08F-uuGalVoq2nua1j9sYfkJzo/edit?usp=sharing)
+        -   Link to [DJNF GitHub
+            repositories](https://github.com/orgs/djnf-data-2025/repositories)
+        -   [Investigate your
+            community](https://docs.google.com/document/d/1NATRDMhUr8XSpkI-_bKfJCM8YVu9028QHKlk_7sbdw0/edit?tab=t.0)
+            memo
 -   **3:30 p.m.**: Use data to find stories.
     -   Spreadsheet track: Herzog. Eaton Theater  
     -   Coding track: Wells. Room 1109
@@ -67,7 +75,20 @@ Bridget Lang, assistant
 -   **5:30 p.m.**: Break
 -   **6:00 p.m.**: Dinner in Hyattsville - (Meet at Knight Hall board van)
 -   **11:59 p.m.**: Produce one paragraph draft story ideas by 11:59
-    p.m., emailed to Wells
+    p.m., emailed to Wells & Herzog
+
+> **Handouts, Readings for Sunday**
+>
+> -   [GitHub
+>     Slides](https://docs.google.com/presentation/d/1GofR1mONJ611ozikg08F-uuGalVoq2nua1j9sYfkJzo/edit?usp=sharing)
+>
+> -   Link to [DJNF GitHub
+>     repositories](https://github.com/orgs/djnf-data-2025/repositories)
+>
+> -   [Investigate your
+>     community](https://docs.google.com/document/d/1NATRDMhUr8XSpkI-_bKfJCM8YVu9028QHKlk_7sbdw0/edit?tab=t.0)
+>     memo
+
 
 **Monday, June 2, 2025**
 
@@ -121,6 +142,7 @@ Bridget Lang, assistant
     memo](https://docs.google.com/document/d/1A-dlzWX7ksOt6LRHYpuPDk7SPPWxyZEmGt2wC0lM7Mg/edit),
       emailed to Wells and Herzog.
 
+> **Handouts, Readings for Monday** - TK
 
 **Tuesday June 3, 2025**
 
@@ -159,6 +181,8 @@ Bridget Lang, assistant
 -   **5:30 p.m.**: Break
 -   **6:30 p.m.**: Dinner in Hyattsville. (Meet at Knight Hall board van. Wells / Herzog driving)
 
+> **Handouts, Readings for Tuesday** - TK
+
 **Wednesday June 4, 2025**
 
 -   **Breakfast**: On your own 
@@ -190,6 +214,8 @@ Bridget Lang, assistant
     due](https://docs.google.com/document/d/1A-dlzWX7ksOt6LRHYpuPDk7SPPWxyZEmGt2wC0lM7Mg/edit),
     emailed to Wells and Herzog.
 
+> **Handouts, Readings for Wednesday** - TK
+
 **Thursday June 5, 2025**
 
 -   **Breakfast**: On your own at dorm
@@ -198,6 +224,8 @@ Bridget Lang, assistant
 -   **Noon**: Lunch.
 -   **1:30 p.m.**: Tour U.S. Capitol press galleries with Stephen Neukam, Axios and Ed Kachinske, U.S. House Press Gallery.
 -   **6 p.m.**: Dinner in Washington D.C.
+
+> **Handouts, Readings for Thursday** - TK
 
 **Friday June 6, 2025**
 
@@ -216,6 +244,9 @@ Bridget Lang, assistant
     at [Westminster Church](https://westminsterdc.org/our-pastor). Meet
     with TBA beforehand to discuss Southwest D.C.
     history
+    
+    
+> **Handouts, Readings for Friday** - TK
 
 **Saturday June 7, 2025**
 
@@ -229,10 +260,12 @@ Bridget Lang, assistant
 -   **2:30 p.m.**: Tour of African-American History Museum, D.C.
 -   **5:30 p.m.**: Dinner in Riverdale, La Fantome Food Hall (Meet at
     Knight Hall board van)
+    
+> **Handouts, Readings for Saturday** - TK
 
 **Sunday June 8, 2025**
 
--   Breakfast available at Yahentamitsi Dining Hall.
+-   Breakfast on your own.
 -   Depart on your own schedule
 
 # Resources

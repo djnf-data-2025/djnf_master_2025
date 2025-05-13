@@ -52,7 +52,7 @@ Bridget Lang, assistant
     -   Logistics. The week ahead. Rooms meals.
     -   Student introductions.
     -   Investigate your community: Wells
-        -    [GitHub
+        -   [GitHub
             Slides](https://docs.google.com/presentation/d/1GofR1mONJ611ozikg08F-uuGalVoq2nua1j9sYfkJzo/edit?usp=sharing)
         -   Link to [DJNF GitHub
             repositories](https://github.com/orgs/djnf-data-2025/repositories)
