@@ -11,15 +11,16 @@ editor_options:
 ### Dow Jones News Fund \@ Merrill College
 
 #### Sunday, June 1 - Sunday, June 8, 2025
-(ver May 12, 2025)
+
+(ver May 13, 2025)
 :::
 
-<br>  
+<br>
 
 ::: {style="text-align: center;"}
-<img src="../images/DJNF_Logo.png" width="370" height="125"/>  
+<img src="../images/DJNF_Logo.png" width="370" height="125"/>
 
-<img src="../images/IRE_logo.png" width="370" height="200"/>  
+<img src="../images/IRE_logo.png" width="370" height="200"/>\
 <img src="../images/Merrill_logo.png" width="370" height="200"/>
 :::
 
@@ -34,7 +35,7 @@ Bridget Lang, assistant
 
 :::{style="text-align:center"}
 <button><a href="https://djnf-data-2025.github.io/djnf_master_2025/Instructors">Instructors</a></button>
-<button><a href="https://djnf-data-2025.github.io/djnf_master_2025/GuestSpeakers">Guest Speakers</a></button>
+<button><a href="https://djnf-data-2025.github.io/djnf_master_2025/GuestSpeakers">Guest Speakers</a></button>E
 <button><a href="https://djnf-data-2025.github.io/djnf_master_2025/Interns">Interns</a></button>
 :::
 
@@ -56,8 +57,15 @@ Bridget Lang, assistant
     Denny, Hughes and Shirley Carswell, DJNF Executive Director
     -   Logistics. The week ahead. Rooms meals.
     -   Student introductions.
+    -   Investigate your community: Wells - [GitHub
+        Slides](https://docs.google.com/presentation/d/1GofR1mONJ611ozikg08F-uuGalVoq2nua1j9sYfkJzo/edit?usp=sharing) -
+        Link to [DJNF GitHub
+        repositories](https://github.com/orgs/djnf-data-2025/repositories) -
+        [Investigate your
+        community](https://docs.google.com/document/d/1NATRDMhUr8XSpkI-_bKfJCM8YVu9028QHKlk_7sbdw0/edit?tab=t.0)
+        memo
 -   **3:30 p.m.**: Use data to find stories.
-    -   Spreadsheet track: Herzog. Eaton Theater  
+    -   Spreadsheet track: Herzog. Eaton Theater\
     -   Coding track: Wells. Room 1109
 -   **4:30 p.m.**: Break and then independent work
     -   [Students review data
@@ -65,9 +73,22 @@ Bridget Lang, assistant
         for their assigned communities. Produce draft story ideas by
         11:59 p.m.
 -   **5:30 p.m.**: Break
--   **6:00 p.m.**: Dinner in Hyattsville - (Meet at Knight Hall board van)
+-   **6:00 p.m.**: Dinner in Hyattsville - (Meet at Knight Hall board
+    van)
 -   **11:59 p.m.**: Produce one paragraph draft story ideas by 11:59
-    p.m., emailed to Wells
+    p.m., emailed to Wells & Herzog
+
+> **Handouts, Readings for Sunday**
+>
+> -   [GitHub
+>     Slides](https://docs.google.com/presentation/d/1GofR1mONJ611ozikg08F-uuGalVoq2nua1j9sYfkJzo/edit?usp=sharing)
+>
+> -   Link to [DJNF GitHub
+>     repositories](https://github.com/orgs/djnf-data-2025/repositories)
+>
+> -   [Investigate your
+>     community](https://docs.google.com/document/d/1NATRDMhUr8XSpkI-_bKfJCM8YVu9028QHKlk_7sbdw0/edit?tab=t.0)
+>     memo
 
 **Monday, June 2, 2025**
 
@@ -75,138 +96,180 @@ Bridget Lang, assistant
 
 -   **9 a.m.**: Meet at Knight Hall
 
--   **Skills sessions. Pick one**    
+-   **Skills sessions. Pick one**
 
-    -   Coding Track: Data Driven Reporting. (Sean Mussenden, the Howard Center)
+    -   Coding Track: Data Driven Reporting. (Sean Mussenden, the Howard
+        Center)
         -   Bring material into R and make sense of it.
         -   Basic webscraping, PDF data extraction
         -   Knight Hall Room 2103
-        
-    -   Spreadsheet Track: Pivot Tables. (Herzog, IRE) 
-        -   A powerful tool to summarize data         
-        -   Knight Hall Room 2107 
-        
+    -   Spreadsheet Track: Pivot Tables. (Herzog, IRE)
+        -   A powerful tool to summarize data\
+        -   Knight Hall Room 2107
 
--   **10:30 a.m.**: Break. Coffee served. Lobby. 
+-   **10:30 a.m.**: Break. Coffee served. Lobby.
 
--   **11 a.m.**: Workshops: Use data to find stories. (Wells, Mussenden, Herzog).
-    Rooms 2103, 2107
+-   **11 a.m.**: Workshops: Use data to find stories. (Wells, Mussenden,
+    Herzog). Rooms 2103, 2107
 
 -   **12:30 p.m.**: Lunch in Knight Hall.
 
--   **1:30 p.m.**: Writing a story pitch memo. All attend. (Denny). Room 2103
+-   **1:30 p.m.**: Writing a story pitch memo. All attend. (Denny). Room
+    2103
 
     -   [Slides for
         talk](https://docs.google.com/presentation/d/1zdlk2Ss9jE_SZL2HuHvUbZeUteEO0OBasFKpXtjuZIY/edit?usp=sharing)
 
-
 -   **2:15 p.m.**: Using GitHub. All attend. (Wells/Lang) [GitHub
-        refresher](https://wellsdata.github.io/data_journalism_class/_book/github.html)
+    refresher](https://wellsdata.github.io/data_journalism_class/_book/github.html)
 
 -   **2:45 p.m.**: Workshop for [story pitch memo due at 11:59
     p.m.](https://docs.google.com/document/d/1A-dlzWX7ksOt6LRHYpuPDk7SPPWxyZEmGt2wC0lM7Mg/edit)
     (Wells, Denny, Herzog, TA coach). Rooms 2103, 2107
 
--   **4 p.m.**: Diversity is Good Journalism: Covering All of the Community. (Prof.
-    Christoph Mergerson). All attend. Room 2103
-    
+-   **4 p.m.**: Diversity is Good Journalism: Covering All of the
+    Community. (Prof. Christoph Mergerson). All attend. Room 2103
+
     -   [Readings before
         talk](https://drive.google.com/drive/folders/1VjenaNF-IahhdVl6TQHrQK5_ygELl2JD?usp=drive_link)
 
 -   **5:30 p.m.**: Break
 
--   **6:30 p.m.**: Dinner on campus 
+-   **6:30 p.m.**: Dinner on campus
 
 -   **11:59 p.m.**: [Draft story pitch
     memo](https://docs.google.com/document/d/1A-dlzWX7ksOt6LRHYpuPDk7SPPWxyZEmGt2wC0lM7Mg/edit),
-      emailed to Wells and Herzog.
+    emailed to Wells and Herzog.
 
+> **Handouts, Readings for Monday** - TK
 
 **Tuesday June 3, 2025**
 
 -   **Breakfast**: On your own
--   **Heather Taylor, DJ News Fund visiting** 
--   **9 a.m.-10:15 a.m.: Data Visualization. **. 
-    Using Datawrapper for data visualization. (Adam Marton). All attend. Room 2103
+
+-   **Heather Taylor, DJ News Fund visiting**
+
+-   **9 a.m.-10:15 a.m.: Data Visualization.** . Using Datawrapper for
+    data visualization. (Adam Marton). All attend. Room 2103
+
 -   **10:30 a.m.**: Break. Coffee served.
+
     -   Heather Taylor, manager of digital media and programs, Dow Jones
         News Fund.
--   **11 a.m.**: Workshop. Students work on data gathering story pitches. (Wells, Marton, TA as coaches). Room 1101
--   **11:45 p.m. - 12:45 p.m.**: Keynote speaker: [Cheryl Thompson, NPR, Senior Editor, Member Station Investigations](https://www.npr.org/people/705265133/cheryl-w-thompson). All attend. Eaton Theater.  
-    -  [Readings before Cheryl Thompson talk](https://docs.google.com/document/d/1P6RsrtnL0TJY0-jOc3QzAR8XFifecfQQSO5GTp0kRfA/edit?usp=sharing) 
--   **12:45 p.m. - 1:30 p.m.** Lunch with Cheryl Thompson. Sandwiches served in Knight Hall.
+
+-   **11 a.m.**: Workshop. Students work on data gathering story
+    pitches. (Wells, Marton, TA as coaches). Room 1101
+
+-   **11:45 p.m. - 12:45 p.m.**: Keynote speaker: [Cheryl Thompson, NPR,
+    Senior Editor, Member Station
+    Investigations](https://www.npr.org/people/705265133/cheryl-w-thompson).
+    All attend. Eaton Theater.
+
+    -   [Readings before Cheryl Thompson
+        talk](https://docs.google.com/document/d/1P6RsrtnL0TJY0-jOc3QzAR8XFifecfQQSO5GTp0kRfA/edit?usp=sharing)
+
+-   **12:45 p.m. - 1:30 p.m.** Lunch with Cheryl Thompson. Sandwiches
+    served in Knight Hall.
 
 -   **1:30 p.m. - 3:00 p.m.: Skills sessions**
 
     -   Coding Track: Using AI with R. (Derek Willis, the Howard Center)
         -   Use R to link to a LLM and process data.
         -   Knight Hall Room 2103
-        
-    -   Spreadsheet Track: Data cleaning. (Herzog, IRE) 
+    -   Spreadsheet Track: Data cleaning. (Herzog, IRE)
         -   Use Google Sheets, Open Refine to clean data
-        -   Knight Hall Room 2107 
+        -   Knight Hall Room 2107
 
--   **3:00 p.m.-3:15 p.m. **: Break
+-   **3:00 p.m.-3:15 p.m.** : Break
 
--   **3:15 p.m.-4:15 p.m. **   
-    -   Mapping. Herzog. 
-        -   Make a map in Datawrapper.   
+-   **3:15 p.m.-4:15 p.m.**
+
+    -   Mapping. Herzog.
+        -   Make a map in Datawrapper.\
         -   Knight Hall Room 2103
-    
-    -   Workshop on AI (Willis / Wells /Lang). Room 2107 
+    -   Workshop on AI (Willis / Wells /Lang). Room 2107
 
--   **4:15 p.m.-5:30 p.m. ** Workshop
+-   **4:15 p.m.-5:30 p.m.** Workshop
+
 -   **5:30 p.m.**: Break
--   **6:30 p.m.**: Dinner in Hyattsville. (Meet at Knight Hall board van. Wells / Herzog driving)
+
+-   **6:30 p.m.**: Dinner in Hyattsville. (Meet at Knight Hall board
+    van. Wells / Herzog driving)
+
+> **Handouts, Readings for Tuesday** - TK
 
 **Wednesday June 4, 2025**
 
--   **Breakfast**: On your own 
+-   **Breakfast**: On your own
+
 -   **9 a.m.-10:15 a.m.: Skills sessions**
 
     -   Coding Track: Using AI with R. (Daniel Trielli, Merrill College)
         -   Use R to link to a LLM and process data.
         -   Knight Hall Room 2103
-        
-    -   Spreadsheet Track: File Types and Metadata. (Herzog, IRE) 
+    -   Spreadsheet Track: File Types and Metadata. (Herzog, IRE)
         -   Use Microsoft Visual Studio to identify file types
-        -   Knight Hall Room 2107 
+        -   Knight Hall Room 2107
 
 -   **10:15 a.m.**: Break. Coffee served.
--   **10:30 a.m.**: Workshop. Open workshop on projects. (Wells, Herzog, Lang coach). Rooms 2103, 2107
+
+-   **10:30 a.m.**: Workshop. Open workshop on projects. (Wells, Herzog,
+    Lang coach). Rooms 2103, 2107
+
 -   **12 p.m.**: Lunch in Knight Hall.
+
     -   Brief remarks by Alex Pyles, Associate Dean, Academic Affairs,
         Philip Merrill College of Journalism
--   **1 p.m. - 2:00 p.m.**: Covering Congress remotely, Ed Kachinske, U.S. House Press Gallery, via Zoom
-    -   Exercise TBA. 
+
+-   **1 p.m. - 2:00 p.m.**: Covering Congress remotely, Ed Kachinske,
+    U.S. House Press Gallery, via Zoom
+
+    -   Exercise TBA.
+
 -   **2:00 p.m. - 2:15 p.m.**: Break
--   **2:15 p.m. - 3:15 p.m.** Connie Mitchell Ford on business reporting. All attend. Room 2103
-    -   Three ways to get business and economic data and how to localize it.
+
+-   **2:15 p.m. - 3:15 p.m.** Connie Mitchell Ford on business
+    reporting. All attend. Room 2103
+
+    -   Three ways to get business and economic data and how to localize
+        it.
+
 -   **3:15 p.m.**: Workshop. Connie Mitchell Ford workshop on project
     proposals. (Wells, Lang, Herzog as coaches). Room 2103, 2107
+
 -   **5 p.m.**: Break
+
 -   **6:30 p.m.**: Dinner on campus
+
 -   **11:59 p.m.**: [Second draft of story pitch memos
     due](https://docs.google.com/document/d/1A-dlzWX7ksOt6LRHYpuPDk7SPPWxyZEmGt2wC0lM7Mg/edit),
     emailed to Wells and Herzog.
 
+> **Handouts, Readings for Wednesday** - TK
+
 **Thursday June 5, 2025**
 
 -   **Breakfast**: On your own at dorm
--   **8:15 a.m.**: Meet at Knight Hall, board van, depart for College Park Metro (Wells/Herzog driving)
--   **10 a.m.**: Tour of AP D.C. bureau with Chad Day, AP's elections team. 
+-   **8:15 a.m.**: Meet at Knight Hall, board van, depart for College
+    Park Metro (Wells/Herzog driving)
+-   **10 a.m.**: Tour of AP D.C. bureau with Chad Day, AP's elections
+    team.
 -   **Noon**: Lunch.
--   **1:30 p.m.**: Tour U.S. Capitol press galleries with Stephen Neukam, Axios and Ed Kachinske, U.S. House Press Gallery.
+-   **1:30 p.m.**: Tour U.S. Capitol press galleries with Stephen
+    Neukam, Axios and Ed Kachinske, U.S. House Press Gallery.
 -   **6 p.m.**: Dinner in Washington D.C.
+
+> **Handouts, Readings for Thursday** - TK
 
 **Friday June 6, 2025**
 
 -   **Breakfast**: On your own at dorm
 -   **9 a.m.: Gathering Public Records**
-    - All attend. (Herzog and Wells). room 2103
+    -   All attend. (Herzog and Wells). room 2103
 -   **10:00 a.m. - 10:15 a.m.**: Break
 -   **10:15 a.m.**: Public records exercise. (Wells, Herzog, Lang coach)
--   **11:00 a.m.**: Skills to survive in the newsroom. Time management, deadlines. All attend. (Denny) Room 2103.
+-   **11:00 a.m.**: Skills to survive in the newsroom. Time management,
+    deadlines. All attend. (Denny) Room 2103.
 -   **12 p.m.**: Lunch in Knight Hall.
     -   Speaker: Prof. Kevin Blackistone on racial justice in sports
         business
@@ -214,8 +277,9 @@ Bridget Lang, assistant
 -   **3:30 p.m.**: Meet at Knight Hall, board van, depart for College
     Park Metro, dinner in Washington D.C., attend a community jazz show
     at [Westminster Church](https://westminsterdc.org/our-pastor). Meet
-    with TBA beforehand to discuss Southwest D.C.
-    history
+    with TBA beforehand to discuss Southwest D.C. history
+
+> **Handouts, Readings for Friday** - TK
 
 **Saturday June 7, 2025**
 
@@ -230,12 +294,15 @@ Bridget Lang, assistant
 -   **5:30 p.m.**: Dinner in Riverdale, La Fantome Food Hall (Meet at
     Knight Hall board van)
 
+> **Handouts, Readings for Saturday** - TK
+
 **Sunday June 8, 2025**
 
--   Breakfast available at Yahentamitsi Dining Hall.
+-   Breakfast on your own.
 -   Depart on your own schedule
 
 # Resources
+
 :::
 
 **Campus Map**
