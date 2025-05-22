@@ -5,47 +5,80 @@ editor_options:
     wrap: 72
 ---
 
-::: {style="text-align: center; color: #337DFF;"}
-# IRE and Merrill College Data Journalism Training
+::: {style="text-align: center; color: #2ba9dc;"}
+# Dow Jones News Fund Data Guest Speakers 2025
 
-### Dow Jones News Fund \@ Merrill College
-
-#### Sunday, June 1 - Sunday, June 8, 2025
-(ver April 28, 2025)
+[(ver May 22, 2025)]{style="font-size: 8pt;"}
 :::
 
-<br>  
-
-
-::: {style="font-weight:bold;"}
-``` markdown
-Rob Wells, director
-David Herzog, co-director
-Karen Denny, co-director  
-Bridget Lang, assistant  
-```
-:::
-
-::: {style="text-align: center; color: #337DFF;"}
-# Guest Speakers
+::: {style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 30px;"}
+<img src="../images/DJNF_Logo.png" style="height: 170px; width: auto;"/>
+<img src="../images/IRE_logo.png" style="height: 110px; width: auto;"/>
+<img src="../images/Merrill_logo.png" style="height: 130px; width: auto;"/>
 :::
 
 **Cheryl Thompson**
 
 <img src="../images/cheryl_thompson.png" width="295" height="240"/>
 
-Cheryl W. Thompson is an investigative correspondent for NPR and senior editor overseeing Member station investigations.
+Cheryl W. Thompson is an investigative correspondent for NPR and senior
+editor overseeing Member station investigations.
 
-Since becoming the inaugural editor of the stations investigations team in 2021, where she is a player/coach, she has collaborated with Member stations in Texas, California, Georgia, Illinois, Kentucky, Missouri, Montana, Oregon and Washington, and with Columbia University and several nonprofits, to do award-winning work, including "Hot Days: Heat's Mounting Death Toll on Workers in the U.S.," an investigation into how Black and brown workers in the U.S. were dying on the job for lack of water and shade breaks. That series won several awards in 2022, including an IRE and National Headliner. An examination of racial covenants still on the books throughout the U.S. won a National Headliner award and an award from the National Association of Black Journalists. An investigation into deaths at tribal jails won awards from PMJA and the Native American Journalists Association. And an investigation into ballot drop boxes in Georgia after the 2020 presidential election won a 2023 NABJ award.
+Since becoming the inaugural editor of the stations investigations team
+in 2021, where she is a player/coach, she has collaborated with Member
+stations in Texas, California, Georgia, Illinois, Kentucky, Missouri,
+Montana, Oregon and Washington, and with Columbia University and several
+nonprofits, to do award-winning work, including "Hot Days: Heat's
+Mounting Death Toll on Workers in the U.S.," an investigation into how
+Black and brown workers in the U.S. were dying on the job for lack of
+water and shade breaks. That series won several awards in 2022,
+including an IRE and National Headliner. An examination of racial
+covenants still on the books throughout the U.S. won a National
+Headliner award and an award from the National Association of Black
+Journalists. An investigation into deaths at tribal jails won awards
+from PMJA and the Native American Journalists Association. And an
+investigation into ballot drop boxes in Georgia after the 2020
+presidential election won a 2023 NABJ award.
 
-She also served as the investigative reporting coach on the No Compromise podcast that won the 2021 Pulitzer Prize for Audio Reporting. That same year, NPR honored her with the Public Service Journalism award given annually to one journalist. She served as a Pulitzer juror for investigative reporting in 2022 and chaired the jury in 2023.
+She also served as the investigative reporting coach on the No
+Compromise podcast that won the 2021 Pulitzer Prize for Audio Reporting.
+That same year, NPR honored her with the Public Service Journalism award
+given annually to one journalist. She served as a Pulitzer juror for
+investigative reporting in 2022 and chaired the jury in 2023.
 
-Prior to joining NPR in January 2019, Thompson spent 22 years at The Washington Post, where she wrote extensively about law enforcement, political corruption and guns, and was a White House correspondent during Barack Obama's first term. Her investigative series that traced the guns used to kill more than 500 police officers in the U.S. earned her an Emmy, a National Headliner, an IRE, a White House News Photographers Association and other awards. In 2015, her reporting found that nearly one person a week died in the U.S. after being Tasered by police. The story was part of a yearlong series on police shootings in the U.S. that won the Pulitzer Prize for national reporting.
+Prior to joining NPR in January 2019, Thompson spent 22 years at The
+Washington Post, where she wrote extensively about law enforcement,
+political corruption and guns, and was a White House correspondent
+during Barack Obama's first term. Her investigative series that traced
+the guns used to kill more than 500 police officers in the U.S. earned
+her an Emmy, a National Headliner, an IRE, a White House News
+Photographers Association and other awards. In 2015, her reporting found
+that nearly one person a week died in the U.S. after being Tasered by
+police. The story was part of a yearlong series on police shootings in
+the U.S. that won the Pulitzer Prize for national reporting.
 
-In 2017, her examination of Howard University Hospital revealed myriad problems with the storied facility, including that it had a higher rate of death lawsuits per bed than the five other D.C. hospitals. Her project published in the Washington Post Sunday Magazine in May 2018 investigated the unsolved serial murders of six Black girls in the nation's capital nearly 50 years ago; it later won an SPJ DC award for magazine feature writing and an NABJ award for investigative reporting. She has won numerous other national awards, and was named NABJ's Educator of the Year in 2017 for her teaching and mentoring at George Washington University. She was part of the Washington Post team that won the Pulitzer Prize for national reporting in 2002 for coverage of Sept. 11.
+In 2017, her examination of Howard University Hospital revealed myriad
+problems with the storied facility, including that it had a higher rate
+of death lawsuits per bed than the five other D.C. hospitals. Her
+project published in the Washington Post Sunday Magazine in May 2018
+investigated the unsolved serial murders of six Black girls in the
+nation's capital nearly 50 years ago; it later won an SPJ DC award for
+magazine feature writing and an NABJ award for investigative reporting.
+She has won numerous other national awards, and was named NABJ's
+Educator of the Year in 2017 for her teaching and mentoring at George
+Washington University. She was part of the Washington Post team that won
+the Pulitzer Prize for national reporting in 2002 for coverage of Sept.
+11.
 
-Thompson is the past president of Investigative Reporters and Editors, a 6,000-member organization whose mission is to improve the quality of investigative journalism. In 2018, she became the first Black elected president in its 43-year history and served for three terms before being elected board chairman in 2021. She also teaches investigative reporting as an associate professor at GWU, where she founded a student NABJ chapter in 2014, and is a member of Alpha Kappa Alpha Sorority, Inc.
+Thompson is the past president of Investigative Reporters and Editors, a
+6,000-member organization whose mission is to improve the quality of
+investigative journalism. In 2018, she became the first Black elected
+president in its 43-year history and served for three terms before being
+elected board chairman in 2021. She also teaches investigative reporting
+as an associate professor at GWU, where she founded a student NABJ
+chapter in 2014, and is a member of Alpha Kappa Alpha Sorority, Inc.
 
+<br>
 
 **Chad Day**
 
@@ -66,10 +99,29 @@ former investigative reporter for the Arkansas Democrat-Gazette. He
 earned a Bachelor's degree in journalism from the University of Missouri
 at Columbia.
 
+<br>
+
 **Stephen Neukam**
 
-Neukam, a graduate of the Merrill College master's of journalism program, covers the U.S. Senate for Axios.
+<img src="../images/neukam.png" width="300" height="300"/>
 
+Neukam, a graduate of the Merrill College master's of journalism
+program, has covered Congress for Axios since 2024. Prior to that, he
+was a congressional reporter for The Messenger, The Hill and an intern
+for the Texas Tribune. Neukam was a fellow at the Howard Center for
+Investigative Journalism. He holds a bachelor's degree in journalism
+from Rider University in New Jersey.
 
+<br>
 
+**Edward Kachinske**
 
+<img src="../images/headshot.jpg" width="300" height="300"/>
+
+Kachinske is assistant director of the U.S. House Press Gallery. The
+press gallery staff helps to facilitate coverage of the House for the
+daily print and online media. Prior to this role, he worked for
+Microsoft Corp. as a virutal technology solutions professional and wrote
+numerous books about customer relationship management. He has delivered
+lectures to journalists about how to cover the Capitol and how to
+navigate the many databases in Congress.
