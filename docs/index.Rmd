@@ -33,12 +33,9 @@ Bridget Lang, assistant
 ```
 :::
 
-::: {style="text-align:center"}
-<button><a href="https://djnf-data-2025.github.io/djnf_master_2025/Intructors">Instructors</a></button>
-
-<button><a href="https://djnf-data-2025.github.io/djnf_master_2025/GuestSpeakers">Guest
-Speakers</a></button>
-
+:::{style="text-align:center"}
+<button><a href="https://djnf-data-2025.github.io/djnf_master_2025/Instructors">Instructors</a></button>
+<button><a href="https://djnf-data-2025.github.io/djnf_master_2025/GuestSpeakers">Guest Speakers</a></button>
 <button><a href="https://djnf-data-2025.github.io/djnf_master_2025/Interns">Interns</a></button>
 :::
 
