@@ -5,23 +5,20 @@ editor_options:
     wrap: 72
 ---
 
-::: {style="text-align: center; color: #337DFF;"}
+::: {style="text-align: center; color: #2ba9dc;"}
 # IRE and Merrill College Data Journalism Training
 
 ### Dow Jones News Fund \@ Merrill College
 
 #### Sunday, June 1 - Sunday, June 8, 2025
 
-(ver May 13, 2025)
+<span style="font-size: 8pt;">(ver May 22, 2025)</span>
 :::
 
-<br>
-
-::: {style="text-align: center;"}
-<img src="../images/DJNF_Logo.png" width="370" height="125"/>
-
-<img src="../images/IRE_logo.png" width="370" height="200"/>\
-<img src="../images/Merrill_logo.png" width="370" height="200"/>
+::: {style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 30px;"}
+<img src="../images/DJNF_Logo.png" style="height: 170px; width: auto;"/>
+<img src="../images/IRE_logo.png" style="height: 110px; width: auto;"/>
+<img src="../images/Merrill_logo.png" style="height: 130px; width: auto;"/>
 :::
 
 ::: {style="font-weight:bold;"}
@@ -33,13 +30,16 @@ Bridget Lang, assistant
 ```
 :::
 
-:::{style="text-align:center"}
+::: {style="text-align:center"}
 <button><a href="https://djnf-data-2025.github.io/djnf_master_2025/Instructors">Instructors</a></button>
-<button><a href="https://djnf-data-2025.github.io/djnf_master_2025/GuestSpeakers">Guest Speakers</a></button>
+
+<button><a href="https://djnf-data-2025.github.io/djnf_master_2025/GuestSpeakers">Guest
+Speakers</a></button>
+
 <button><a href="https://djnf-data-2025.github.io/djnf_master_2025/Interns">Interns</a></button>
 :::
 
-::: {style="text-align: center; color: #337DFF;"}
+::: {style="text-align: center; color: #2ba9dc;"}
 # Itinerary
 :::
 

@@ -5,28 +5,16 @@ editor_options:
     wrap: 72
 ---
 
-::: {style="text-align: center; color: #337DFF;"}
-# IRE and Merrill College Data Journalism Training
+::: {style="text-align: center; color: #2ba9dc;"}
+# Dow Jones News Fund Data Instructors
 
-### Dow Jones News Fund \@ Merrill College
-
-#### Sunday, June 1 - Sunday, June 8, 2025
-(ver April 28, 2025)
+[(ver May 22, 2025)]{style="font-size: 8pt;"}
 :::
 
-<br>  
-
-
-::: {style="font-weight:bold;"}
-``` markdown
-Rob Wells, director
-David Herzog, co-director
-Karen Denny, co-director  
-Bridget Lang, assistant  
-```
-:::
-::: {style="text-align: center; color: #337DFF;"}
-# <a href="http://www.ucsb.edu/" target="_blank">Instructors</a>
+::: {style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 30px;"}
+<img src="../images/DJNF_Logo.png" style="height: 170px; width: auto;"/>
+<img src="../images/IRE_logo.png" style="height: 110px; width: auto;"/>
+<img src="../images/Merrill_logo.png" style="height: 130px; width: auto;"/>
 :::
 
 **Kevin Blackistone**
@@ -48,6 +36,7 @@ sports column writing from the Texas Associated Press Managing Editors,
 for investigative reporting from the Chicago Newspaper Guild and for
 enterprise reporting from the National Association of Black Journalists.
 
+<br>
 
 **Karen Denny**
 
@@ -64,18 +53,37 @@ recently was a features editor.
 She previously worked as the Maryland editor for The Washington Times,
 and at the suburban Journal Newspapers as an editor and local government
 reporter. She also served as a professor at Sang Ji University in Won
-Ju, South Korea.    
+Ju, South Korea.
 
-**David Herzog**  
+<br>
+
+**David Herzog**\
 <img src="../images/david_herzog.jpg" width="300" height="275"/>
 
-David Herzog is a veteran investigative reporter, data journalist and educator with more than 30 years of experience. He enjoys discovering how journalists can use data analysis tools to uncover the news better. Herzog teaches data journalism to student and professional journalists. He speaks frequently about investigative reporting, data journalism and access to information.
+David Herzog is a veteran investigative reporter, data journalist and
+educator with more than 30 years of experience. He enjoys discovering
+how journalists can use data analysis tools to uncover the news better.
+Herzog teaches data journalism to student and professional journalists.
+He speaks frequently about investigative reporting, data journalism and
+access to information.
 
-As the academic adviser to the National Institute for Computer-Assisted Reporting, he helps guide data services for Investigative Reporters and Editors. IRE is a global organization with more than 5,000 members based at the Journalism School. He helps direct the Dow Jones News Fund’s data journalism residency program for IRE.
+As the academic adviser to the National Institute for Computer-Assisted
+Reporting, he helps guide data services for Investigative Reporters and
+Editors. IRE is a global organization with more than 5,000 members based
+at the Journalism School. He helps direct the Dow Jones News Fund’s data
+journalism residency program for IRE.
 
-He is part of the interdisciplinary team that launched the online M.S. in Data Science and Analytics program at the University of Missouri. He developed and teaches a data journalism class geared toward professionals for the program.
+He is part of the interdisciplinary team that launched the online M.S.
+in Data Science and Analytics program at the University of Missouri. He
+developed and teaches a data journalism class geared toward
+professionals for the program.
 
-He’s reported for The Providence Journal, The Baltimore Sun, and The Morning Call in Allentown, Pa. He’s won or shared in national, regional and state awards for investigations into political corruption, child lead poisoning and lax workplace safety.
+He’s reported for The Providence Journal, The Baltimore Sun, and The
+Morning Call in Allentown, Pa. He’s won or shared in national, regional
+and state awards for investigations into political corruption, child
+lead poisoning and lax workplace safety.
+
+<br>
 
 **Adam Marton**
 
@@ -89,6 +97,8 @@ Marton is focused on quality storytelling across media, using design and
 technology to tell rich, human stories. He is a visual journalist and
 designer specializing in the presentation of the news, including data
 visualization, front-end development and information graphics.
+
+<br>
 
 **Constance Mitchell Ford**
 
@@ -105,6 +115,8 @@ journalism awards. Ford personally received the Scripps Howard National
 Journalism Award for business and economics reporting in 2007 for
 stories about the subprime mortgage crisis.
 
+<br>
+
 **Sean Mussenden**
 
 <img src="../images/Sean_Mussenden.jpg" width="300" height="300"/>
@@ -120,17 +132,21 @@ programming, web development, web design, data analysis, social media
 and computational journalism. Mussenden was appointed to the rank of
 principal lecturer in 2023.
 
+<br>
+
 **Bridget Lang**
 
 <img src="../images/bridget_lang.jpg" width="262" height="265"/>
 
-Bridget Lang is a software developer for the University of Maryland. In 2024, 
-she earned her bachelor’s degree in computer science with an upper-level 
-concentration in journalism. A Baltimore County native, Lang uses her skills in 
-software development, data, and writing to tell stories in the best way 
-possible. She has had articles published in the Baltimore Banner and Capital 
-News Service and is assisting Wells on a research project about an influential
-conservative journalist. 
+Bridget Lang is a software developer for the University of Maryland. In
+2024, she earned her bachelor’s degree in computer science with an
+upper-level concentration in journalism. A Baltimore County native, Lang
+uses her skills in software development, data, and writing to tell
+stories in the best way possible. She has had articles published in the
+Baltimore Banner and Capital News Service and is assisting Wells on a
+research project about an influential conservative journalist.
+
+<br>
 
 **Christoph Mergerson**
 
@@ -149,6 +165,8 @@ inclusive, public-service journalism. He brings award-winning classroom
 experience from teaching courses at Rutgers, including Communication Law
 and Global News.
 
+<br>
+
 **Daniel Trielli**
 
 <img src="../images/daniel_trielli.jpg" width="300" height="300"/>
@@ -164,6 +182,8 @@ Trielli came to Merrill College as a master's student in 2015 after a
 10-year career as a journalist in Brazil at the national newspaper, O
 Estado de S. Paulo, and the regional newspaper, Diário do Grande ABC.
 
+<br>
+
 **Rob Wells**
 
 <img src="../images/Rob_Wells.jpg" width="300" height="300"/>
@@ -178,8 +198,9 @@ Bloomberg News and The Wall Street Journal.
 Wells is the author of “The Enforcers: How Little-Known Trade Reporters
 Exposed the Keating Five and Advanced Business Journalism” (2019) and
 "The Insider: How the Kiplinger Newsletter Bridged Washington and Wall
-Street" (2021).
+Street" (2022).
 
+<br>
 
 **Derek Willis**
 
@@ -197,4 +218,3 @@ He previously held interactive journalism roles with The New York Times
 and The Washington Post, after working as a database reporter for The
 Washington Post, The Center for Public Integrity, Congressional
 Quarterly and The Palm Beach Post.
-

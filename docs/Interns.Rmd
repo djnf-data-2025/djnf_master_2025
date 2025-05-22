@@ -5,13 +5,19 @@ editor_options:
     wrap: 72
 ---
 
-::: {style="text-align: center; color: #337DFF;"}
+::: {style="text-align: center; color: #2ba9dc;"}
 # Dow Jones News Fund Data Interns 2025
 
-(ver May 22, 2025)
+<span style="font-size: 8pt;">(ver May 22, 2025)</span>
 :::
 
-::: {style="text-align: center; color: #337DFF;"}
+::: {style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 30px;"}
+<img src="../images/DJNF_Logo.png" style="height: 170px; width: auto;"/>
+<img src="../images/IRE_logo.png" style="height: 110px; width: auto;"/>
+<img src="../images/Merrill_logo.png" style="height: 130px; width: auto;"/>
+:::
+
+::: {style="text-align: center; color: #2ba9dc;"}
 :::
 
 ::: {style="float:right; padding:10px;"}
@@ -68,7 +74,7 @@ will intern with the Houston Chronicle.
 will intern with the Indianapolis Star.
 :::
 
-::::::::::: {style="float:right; padding:10px;"}
+:::::::::: {style="float:right; padding:10px;"}
 <img src="../images/interns/Levi Jiang.jpg" width="25%" height="25%" align="left" style="padding:10px;"/>
 **Levi Jiang** studies at University of Washington and will intern with
 the Philadelphia Inquirer.
@@ -83,7 +89,8 @@ with the Maryland Matters newsroom.
 
 ::: {style="float:right; padding:10px;"}
 <img src="../images/interns/Apurva Mahajan.png" width="25%" height="25%" align="left" style="padding:10px;"/>
-**Apurva Mahajan** studies at University of Maryland and will intern with the The Detroit News.
+**Apurva Mahajan** studies at University of Maryland and will intern
+with the The Detroit News.
 :::
 
 ::: {style="float:right; padding:10px;"}
@@ -98,14 +105,17 @@ the Baltimore Banner.
 with the The Marshall Project.
 :::
 
-::: {style="float:right; padding:10px;"}
+:::: {style="float:right; padding:10px;"}
 <img src="../images/interns/Diego Perdomo.jpg" width="25%" height="25%" align="left" style="padding:10px;"/>
-**Diego Perdomo** studies at University of Florida and will intern with the Futuro Media.
+**Diego Perdomo** studies at University of Florida and will intern with
+the Futuro Media.
 
 ::: {style="float:right; padding:10px;"}
 <img src="../images/interns/Yasmeen Saadi.jpg" width="25%" height="25%" align="left" style="padding:10px;"/>
 **Yasmeen Saadi** studies at University of Missouri-Columbia and will
 intern with the Investigative Project on Race and Equity newsroom.
 :::
+::::
 
-:::::::::::
+</div>
+::::::::::
