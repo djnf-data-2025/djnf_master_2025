@@ -5,7 +5,7 @@ editor_options:
     wrap: 72
 ---
 
-::: {style="text-align: center; color: #2ba9dc;"}
+::: {style="text-align: center; color: #036ffc;"}
 # Dow Jones News Fund Data Instructors
 
 [(ver May 22, 2025)]{style="font-size: 8pt;"}

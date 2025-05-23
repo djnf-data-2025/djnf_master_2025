@@ -5,7 +5,7 @@ editor_options:
     wrap: 72
 ---
 
-::: {style="text-align: center; color: #2ba9dc;"}
+::: {style="text-align: center; color: #036ffc;"}
 # IRE and Merrill College Data Journalism Training
 
 ### Dow Jones News Fund \@ Merrill College
@@ -39,7 +39,7 @@ Speakers</a></button>
 <button><a href="https://djnf-data-2025.github.io/djnf_master_2025/Interns">Interns</a></button>
 :::
 
-::: {style="text-align: center; color: #2ba9dc;"}
+::: {style="text-align: center; color: #036ffc;"}
 # Itinerary
 :::
 
@@ -88,7 +88,14 @@ Speakers</a></button>
 >
 > -   [Investigate your
 >     community](https://docs.google.com/document/d/1NATRDMhUr8XSpkI-_bKfJCM8YVu9028QHKlk_7sbdw0/edit?tab=t.0)
->     memo
+>     memo. 
+>
+> -   Link to [Jefferson, T. Letter to Edward Carrington, Paris, January 16, 1787](https://drive.google.com/file/d/1RowEaSMNvcNCNyH4XyftSSnMisDe8wg8/view?usp=sharing)
+>   
+> -   Link to [The Commission on the Freedom of the Press. Chapter 2: The requirements, pp. 20-29.]https://drive.google.com/file/d/10FTgerZaMsgyxulhX9dNJPOUoWyA8ieR/view?usp=sharing)
+>     
+
+
 
 **Monday, June 2, 2025**
 
@@ -130,8 +137,11 @@ Speakers</a></button>
 -   **4 p.m.**: Diversity is Good Journalism: Covering All of the
     Community. (Prof. Christoph Mergerson). All attend. Room 2103
 
-    -   [Readings before
-        talk](https://drive.google.com/drive/folders/1VjenaNF-IahhdVl6TQHrQK5_ygELl2JD?usp=drive_link)
+>
+> -   Link to Jefferson, T. Letter to Edward Carrington, Paris, January 16, 1787](https://drive.google.com/file/d/1RowEaSMNvcNCNyH4XyftSSnMisDe8wg8/view?usp=sharing)
+>   
+> -   Link to [The Commission on the Freedom of the Press [The Hutchins Commission]. (1947).  A free and responsible press. The University of Chicago Press. (Chapter 2: The requirements, pp. 20-29.)](https://drive.google.com/file/d/10FTgerZaMsgyxulhX9dNJPOUoWyA8ieR/view?usp=sharing)
+
 
 -   **5:30 p.m.**: Break
 
@@ -274,10 +284,14 @@ Speakers</a></button>
     -   Speaker: Prof. Kevin Blackistone on racial justice in sports
         business
 -   **1 p.m.**: Workshop on projects (Wells, Herzog, Denny, Lang coach)
--   **3:30 p.m.**: Meet at Knight Hall, board van, depart for College
+-   **3:00 p.m.**: Meet at Knight Hall, board van, depart for College
     Park Metro, dinner in Washington D.C., attend a community jazz show
     at [Westminster Church](https://westminsterdc.org/our-pastor). Meet
-    with TBA beforehand to discuss Southwest D.C. history
+    with Rev. Brian Hamilton beforehand to discuss Southwest D.C. history. 
+-   **6 p.m.** Jazz show and dinner at Westminister Church: The Organization. 
+    Greg Hatza, organ; Brian Kooken, guitar; Robert Shahid, drums; 
+    Dred Scott, vocals
+    
 
 > **Handouts, Readings for Friday** - TK
 

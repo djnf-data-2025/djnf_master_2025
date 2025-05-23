@@ -5,7 +5,7 @@ editor_options:
     wrap: 72
 ---
 
-::: {style="text-align: center; color: #2ba9dc;"}
+::: {style="text-align: center; color: #036ffc;"}
 # Dow Jones News Fund Data Guest Speakers 2025
 
 [(ver May 22, 2025)]{style="font-size: 8pt;"}
@@ -111,6 +111,22 @@ was a congressional reporter for The Messenger, The Hill and an intern
 for the Texas Tribune. Neukam was a fellow at the Howard Center for
 Investigative Journalism. He holds a bachelor's degree in journalism
 from Rider University in New Jersey.
+
+<br>
+
+**Rev. Brian Hamilton**
+
+<img src="../images/brian_hamilton.jpg" width="300" height="350"/>
+
+Hamilton is [pastor and preacher at the Westminister Presbyterian Church
+(USA)](https://westminsterdc.org/our-pastor) in Southwest Washington,
+D.C. Hamilton serves the community as President of the SW Renaissance
+Development Corporation that runs Westminster's Jazz and Blues ministry
+that resulted in the award-winning programs Friday Night Jazz, Blue
+Monday Blues, Thinking About Jazz, SW Catering and more. He has lived
+and worked in the community for nearly three decades and is passionate
+about improving community relations and the social and economic
+conditions of Southwest residents.
 
 <br>
 
