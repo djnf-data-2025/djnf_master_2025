@@ -12,7 +12,7 @@ editor_options:
 
 #### Sunday, June 1 - Sunday, June 8, 2025
 
-<span style="font-size: 8pt;">(ver May 22, 2025)</span>
+[(ver May 22, 2025)]{style="font-size: 8pt;"}
 :::
 
 ::: {style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 30px;"}
@@ -78,28 +78,31 @@ Speakers</a></button>
 -   **11:59 p.m.**: Produce one paragraph draft story ideas by 11:59
     p.m., emailed to Wells & Herzog
 
-> **Handouts, Readings for Sunday**
->
-> -   [GitHub
->     Slides](https://docs.google.com/presentation/d/1GofR1mONJ611ozikg08F-uuGalVoq2nua1j9sYfkJzo/edit?usp=sharing)
->
-> -   Link to [DJNF GitHub
->     repositories](https://github.com/orgs/djnf-data-2025/repositories)
->
-> -   [Investigate your
->     community](https://docs.google.com/document/d/1NATRDMhUr8XSpkI-_bKfJCM8YVu9028QHKlk_7sbdw0/edit?tab=t.0)
->     memo. 
->
-> -   Link to [Jefferson, T. Letter to Edward Carrington, Paris, January 16, 1787](https://drive.google.com/file/d/1RowEaSMNvcNCNyH4XyftSSnMisDe8wg8/view?usp=sharing)
->   
-> -   Link to [The Commission on the Freedom of the Press. Chapter 2: The requirements, pp. 20-29.]https://drive.google.com/file/d/10FTgerZaMsgyxulhX9dNJPOUoWyA8ieR/view?usp=sharing)
->     
+>  **Handouts, Readings for Sunday**
 
+-   [GitHub
+    Slides](https://docs.google.com/presentation/d/1GofR1mONJ611ozikg08F-uuGalVoq2nua1j9sYfkJzo/edit?usp=sharing)
 
+-   Link to [DJNF GitHub
+    repositories](https://github.com/orgs/djnf-data-2025/repositories)
+
+-   [Investigate your
+    community](https://docs.google.com/document/d/1NATRDMhUr8XSpkI-_bKfJCM8YVu9028QHKlk_7sbdw0/edit?tab=t.0)
+    memo.
+
+-   Link to [Jefferson, T. Letter to Edward Carrington, Paris, January
+    16,
+    1787](https://drive.google.com/file/d/1RowEaSMNvcNCNyH4XyftSSnMisDe8wg8/view?usp=sharing)
+
+-   Link to [The Commission on the Freedom of the Press. Chapter 2: The
+    requirements, pp.
+    20-29.](https://drive.google.com/file/d/10FTgerZaMsgyxulhX9dNJPOUoWyA8ieR/view?usp=sharing)
+
+------------------------------------------------------------------------
 
 **Monday, June 2, 2025**
 
--   **Breakfast**: On your own
+-   **Breakfast**: At Knight Hall
 
 -   **9 a.m.**: Meet at Knight Hall
 
@@ -137,11 +140,13 @@ Speakers</a></button>
 -   **4 p.m.**: Diversity is Good Journalism: Covering All of the
     Community. (Prof. Christoph Mergerson). All attend. Room 2103
 
->
-> -   Link to Jefferson, T. Letter to Edward Carrington, Paris, January 16, 1787](https://drive.google.com/file/d/1RowEaSMNvcNCNyH4XyftSSnMisDe8wg8/view?usp=sharing)
->   
-> -   Link to [The Commission on the Freedom of the Press [The Hutchins Commission]. (1947).  A free and responsible press. The University of Chicago Press. (Chapter 2: The requirements, pp. 20-29.)](https://drive.google.com/file/d/10FTgerZaMsgyxulhX9dNJPOUoWyA8ieR/view?usp=sharing)
+    -   Link to [Jefferson, T. Letter to Edward Carrington, Paris,
+        January 16,
+        1787](https://drive.google.com/file/d/1RowEaSMNvcNCNyH4XyftSSnMisDe8wg8/view?usp=sharing)
 
+    -   Link to [The Commission on the Freedom of the Press. Chapter 2:
+        The requirements, pp.
+        20-29](https://drive.google.com/file/d/10FTgerZaMsgyxulhX9dNJPOUoWyA8ieR/view?usp=sharing)
 
 -   **5:30 p.m.**: Break
 
@@ -153,9 +158,13 @@ Speakers</a></button>
 
 > **Handouts, Readings for Monday** - TK
 
+------------------------------------------------------------------------
+
+<br>
+
 **Tuesday June 3, 2025**
 
--   **Breakfast**: On your own
+-   **Breakfast**: At Knight Hall
 
 -   **Heather Taylor, DJ News Fund visiting**
 
@@ -208,9 +217,14 @@ Speakers</a></button>
 
 > **Handouts, Readings for Tuesday** - TK
 
+------------------------------------------------------------------------
+
+<br> 
+
+
 **Wednesday June 4, 2025**
 
--   **Breakfast**: On your own
+-   **Breakfast**: At Knight Hall
 
 -   **9 a.m.-10:15 a.m.: Skills sessions**
 
@@ -257,9 +271,13 @@ Speakers</a></button>
 
 > **Handouts, Readings for Wednesday** - TK
 
+------------------------------------------------------------------------
+
+<br> 
+
 **Thursday June 5, 2025**
 
--   **Breakfast**: On your own at dorm
+-   **Breakfast**: At Knight Hall
 -   **8:15 a.m.**: Meet at Knight Hall, board van, depart for College
     Park Metro (Wells/Herzog driving)
 -   **10 a.m.**: Tour of AP D.C. bureau with Chad Day, AP's elections
@@ -271,9 +289,13 @@ Speakers</a></button>
 
 > **Handouts, Readings for Thursday** - TK
 
+------------------------------------------------------------------------
+
+<br>
+
 **Friday June 6, 2025**
 
--   **Breakfast**: On your own at dorm
+-   **Breakfast**: At Knight Hall 
 -   **9 a.m.: Gathering Public Records**
     -   All attend. (Herzog and Wells). room 2103
 -   **10:00 a.m. - 10:15 a.m.**: Break
@@ -287,17 +309,21 @@ Speakers</a></button>
 -   **3:00 p.m.**: Meet at Knight Hall, board van, depart for College
     Park Metro, dinner in Washington D.C., attend a community jazz show
     at [Westminster Church](https://westminsterdc.org/our-pastor). Meet
-    with Rev. Brian Hamilton beforehand to discuss Southwest D.C. history. 
--   **6 p.m.** Jazz show and dinner at Westminister Church: The Organization. 
-    Greg Hatza, organ; Brian Kooken, guitar; Robert Shahid, drums; 
-    Dred Scott, vocals
-    
+    with Rev. Brian Hamilton beforehand to discuss Southwest D.C.
+    history.
+-   **6 p.m.** Jazz show and dinner at Westminister Church: The
+    Organization. Greg Hatza, organ; Brian Kooken, guitar; Robert
+    Shahid, drums; Dred Scott, vocals
 
 > **Handouts, Readings for Friday** - TK
 
+------------------------------------------------------------------------
+
+<br>
+
 **Saturday June 7, 2025**
 
--   **Breakfast**: On your own at dorm
+-   **Breakfast**: At Knight Hall
 -   **10:00 a.m.**: [Students present web
     pages](https://docs.google.com/document/d/1A-dlzWX7ksOt6LRHYpuPDk7SPPWxyZEmGt2wC0lM7Mg/edit),
     story pitches, solicit feedback. Shirley Carswell, DJNF Executive
@@ -309,6 +335,10 @@ Speakers</a></button>
     Knight Hall board van)
 
 > **Handouts, Readings for Saturday** - TK
+
+------------------------------------------------------------------------
+
+<br>
 
 **Sunday June 8, 2025**
 
@@ -334,17 +364,17 @@ Tidyverse](https://wellsdata.github.io/data_journalism_class/_book/)
 
 <br>
 
-**Rob Wells, 443-591-1189. email:
+**Rob Wells, (443) 591-1189. email:
 [robwells\@umd.edu](mailto:robwells@umd.edu){.email}**
 
 <br>
 
-**David Herzog, TBA. email:
+**David Herzog, (573) 356-3029. email:
 [herzogd\@missouri.edu](mailto:herzogd@missouri.edu){.email}**
 
 <br>
 
-**Karen Denny, TBA. email:
+**Karen Denny, (301) 775-8483. email:
 [kdenny12\@umd.edu](mailto:kdenny12@umd.edu){.email}**
 
 **Residence Halls & Campus**
