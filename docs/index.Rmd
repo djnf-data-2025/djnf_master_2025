@@ -78,7 +78,7 @@ Speakers</a></button>
 -   **11:59 p.m.**: Produce one paragraph draft story ideas by 11:59
     p.m., emailed to Wells & Herzog
 
->  **Handouts, Readings for Sunday**
+> **Handouts, Readings for Sunday**
 
 -   [GitHub
     Slides](https://docs.google.com/presentation/d/1GofR1mONJ611ozikg08F-uuGalVoq2nua1j9sYfkJzo/edit?usp=sharing)
@@ -156,11 +156,13 @@ Speakers</a></button>
     memo](https://docs.google.com/document/d/1A-dlzWX7ksOt6LRHYpuPDk7SPPWxyZEmGt2wC0lM7Mg/edit),
     emailed to Wells and Herzog.
 
-> **Handouts, Readings for Monday** - 
+> **Handouts, Readings for Monday** -
 
--  [Readings for Cheryl W. Thompson talk](https://docs.google.com/document/d/1P6RsrtnL0TJY0-jOc3QzAR8XFifecfQQSO5GTp0kRfA/edit?usp=sharing)
-        
--   [Slides for Karen Denny       talk](https://docs.google.com/presentation/d/1zdlk2Ss9jE_SZL2HuHvUbZeUteEO0OBasFKpXtjuZIY/edit?usp=sharing)
+-   [Readings for Cheryl W. Thompson
+    talk](https://docs.google.com/document/d/1P6RsrtnL0TJY0-jOc3QzAR8XFifecfQQSO5GTp0kRfA/edit?usp=sharing)
+
+-   [Slides for Karen Denny
+    talk](https://docs.google.com/presentation/d/1zdlk2Ss9jE_SZL2HuHvUbZeUteEO0OBasFKpXtjuZIY/edit?usp=sharing)
 
 ------------------------------------------------------------------------
 
@@ -183,8 +185,10 @@ Speakers</a></button>
 -   **11 a.m.**: Workshop. Students work on data gathering story
     pitches. (Wells, Marton, TA as coaches). Room 1101
 
--   **11:45 p.m. - 12:45 p.m.**: Keynote speaker: [Cheryl W. Thompson,  investigative correspondent for NPR](https://www.npr.org/people/705265133/cheryl-w-thompson).
-    All attend. Eaton Theater.
+-   **11:45 p.m. - 12:45 p.m.**: Guest speaker: [Cheryl W. Thompson,
+    investigative correspondent for
+    NPR](https://www.npr.org/people/705265133/cheryl-w-thompson). All
+    attend. Eaton Theater.
 
     -   [Readings before Cheryl Thompson
         talk](https://docs.google.com/document/d/1P6RsrtnL0TJY0-jOc3QzAR8XFifecfQQSO5GTp0kRfA/edit?usp=sharing)
@@ -217,12 +221,14 @@ Speakers</a></button>
 -   **6:30 p.m.**: Dinner in Hyattsville. (Meet at Knight Hall board
     van. Wells / Herzog driving)
 
-> **Handouts, Readings for Tuesday** - TK
+> **Handouts, Readings for Tuesday** -
+
+-   [Slides from Cheryl W. Thompson
+    talk](https://docs.google.com/presentation/d/1nO41TYeSyoC-p0Xdn7pH872OVkZxdr3M/edit?usp=sharing&ouid=102324743793755798467&rtpof=true&sd=true)
 
 ------------------------------------------------------------------------
 
-<br> 
-
+<br>
 
 **Wednesday June 4, 2025**
 
@@ -275,7 +281,7 @@ Speakers</a></button>
 
 ------------------------------------------------------------------------
 
-<br> 
+<br>
 
 **Thursday June 5, 2025**
 
@@ -297,7 +303,7 @@ Speakers</a></button>
 
 **Friday June 6, 2025**
 
--   **Breakfast**: At Knight Hall 
+-   **Breakfast**: At Knight Hall
 -   **9 a.m.: Gathering Public Records**
     -   All attend. (Herzog and Wells). room 2103
 -   **10:00 a.m. - 10:15 a.m.**: Break
@@ -349,13 +355,7 @@ Speakers</a></button>
 
 # Resources
 
-:::
-
-**Campus Map**
-
-<img src="../images/marked_campus_map.PNG"/>
-
-<br> **Data Journalism Text**
+::: <br> **Data Journalism Text**
 
 [Data Journalism with R and the
 Tidyverse](https://wellsdata.github.io/data_journalism_class/_book/)
@@ -383,15 +383,30 @@ Tidyverse](https://wellsdata.github.io/data_journalism_class/_book/)
 
 <div>
 
+-   You are staying in Dorchester Hall, a very short walk to Knight
+    Hall. The 24-hospitality (check-in/out) desk is located in Queen
+    Anne’s Hall, a short walk to the south. The desk phone number is
+    301-314-4455 (HILL) for key- and access-related questions. The Stamp
+    Student Union, with a food court and various retail, is near
+    Dorchester Hall.
+
+**Campus Map**
+
+<img src="../images/campus_map_2025.PNG"/>
+
+<br>
+
+**Residence Hall Contacts**
+
 -   Jennifer Bradley Senior Program Manager Office:301-314-0323 Mobile:
     301-440-9276 Email:
     [jarsen17\@umd.edu](mailto:jarsen17@umd.edu){.email}
 
--   Rakshanda Hedawoo Assistant Program Manager Mobile: 301-440-9277
-    Email: [rhedawoo\@umd.edu](mailto:rhedawoo@umd.edu){.email}
+-   Emely Victoria Munoz-Ramos, Assistant Program Manager: 301-314-3888.
+    Email: [emramos\@umd.edu](mailto:emramos@umd.edu){.email}
 
--   Queen Anne’s Hall (For mail/key/access-related questions):
-    301-314-4455 (HILL)
+-   Jed Silverman, Assistant Program Manager. Email:
+    [jed\@umd.edu](mailto:jed@umd.edu){.email}
 
 -   Residential Facilities (To report an issue with your room/residence
     hall) 301-314-9675 (WORK) Campus Information 301-405-1000
