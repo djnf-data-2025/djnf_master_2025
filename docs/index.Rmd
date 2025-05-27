@@ -174,7 +174,7 @@ Speakers</a></button>
 
 -   **Heather Taylor, DJ News Fund visiting**
 
--   **9 a.m.-10:15 a.m.: Data Visualization.** . Using Datawrapper for
+-   **9 a.m.-10:15 a.m.: Data Visualization.** Using Datawrapper for
     data visualization. (Adam Marton). All attend. Room 2103
 
 -   **10:30 a.m.**: Break. Coffee served.
@@ -199,7 +199,7 @@ Speakers</a></button>
 -   **1:30 p.m. - 3:00 p.m.: Skills sessions**
 
     -   Coding Track: Using AI with R. (Derek Willis, the Howard Center)
-        -   Use R to link to a LLM and process data.
+        -   Using AI to extract information from PDFs/images/video/audio
         -   Knight Hall Room 2103
     -   Spreadsheet Track: Data cleaning. (Herzog, IRE)
         -   Use Google Sheets, Open Refine to clean data
