@@ -52,6 +52,8 @@ Speakers</a></button>
 -   Join [GroupMe for DJNF Data
     Journalism.](https://groupme.com/join_group/107365175/V7owSQCn)
 
+------------------------------------------------------------------------
+
 **Sunday, June 1, 2025**
 
 -   **2 p.m.**: [Welcome at Knight Hall Eaton
@@ -67,7 +69,11 @@ Speakers</a></button>
             Wells
             -   Link to [DJNF GitHub
                 repositories](https://github.com/orgs/djnf-data-2025/repositories)
+
+<!-- -->
+
 -   **3:30 p.m.**: Use data to find stories.
+
     -   Spreadsheet track: Herzog. Emma Ferschweiler, Cooper Gant, Nate
         Harrington,\
         Ava Hu, Ethan Hylton, Levi Jiang, Sophia Nabours, Yasmeen Emilie
@@ -75,41 +81,52 @@ Speakers</a></button>
     -   Coding track: Wells. Sasha Allen; Hannah Bensen; Olivia Borgula;
         Declan Bradley; Lauren Lifke; Apurva Mahajan; Patrick McCaslin;
         Diego Perdomo. Room 2103
--   **4:30 p.m.**: Break and then independent work
-    -   [Students review data
-        memos](https://docs.google.com/document/d/1A-dlzWX7ksOt6LRHYpuPDk7SPPWxyZEmGt2wC0lM7Mg/edit)
-        for their assigned communities. Produce draft story ideas by
-        11:59 p.m.
+        -   [Handout for Coding Track
+            talk](https://docs.google.com/document/d/1wBIYilNkrB19WCQOeQKyLkLpw8z5Mx6O915BA4A9SpY/edit?usp=sharing)
+
+-   **4:30 p.m.**: Break and then independent work - [Students review
+    data
+    memos](https://docs.google.com/document/d/1A-dlzWX7ksOt6LRHYpuPDk7SPPWxyZEmGt2wC0lM7Mg/edit)
+    for their assigned communities. Produce draft story ideas by 11:59
+    p.m.
+
 -   **5:30 p.m.**: Break
+
 -   **6:00 p.m.**: Dinner at Franklins in Hyattsville - (Meet at Knight
     Hall, board van)
--   **11:59 p.m.**: Produce one paragraph draft story ideas by 11:59
+
+-   **11:59 p.m.**: Produce one paragraph draft story idea by 11:59
     p.m., emailed to Wells & Herzog
 
 > **Handouts, Readings for Sunday**
->
-> -   [Welcome
->     Slides](https://docs.google.com/presentation/d/13qVZOvplZblQLnlemfldcXSob73DVL-IlBBwuWBJxX8/edit?usp=sharing)
->
-> -   Link to [DJNF GitHub
->     repositories](https://github.com/orgs/djnf-data-2025/repositories)
->
-> -   [Investigate your
->     community](https://docs.google.com/document/d/1NATRDMhUr8XSpkI-_bKfJCM8YVu9028QHKlk_7sbdw0/edit?tab=t.0)
->     memo.
->
-> -   Link to [Jefferson, T. Letter to Edward Carrington, Paris, January
->     16,
->     1787](https://drive.google.com/file/d/1RowEaSMNvcNCNyH4XyftSSnMisDe8wg8/view?usp=sharing)
->
-> -   Link to [The Commission on the Freedom of the Press. Chapter 2:
->     The requirements, pp.
->     20-29.](https://drive.google.com/file/d/10FTgerZaMsgyxulhX9dNJPOUoWyA8ieR/view?usp=sharing)
->
-> -   [GitHub
->     Slides](https://docs.google.com/presentation/d/1GofR1mONJ611ozikg08F-uuGalVoq2nua1j9sYfkJzo/edit?usp=sharing)
+
+-   [Welcome
+    Slides](https://docs.google.com/presentation/d/13qVZOvplZblQLnlemfldcXSob73DVL-IlBBwuWBJxX8/edit?usp=sharing)
+
+-   Link to [DJNF GitHub
+    repositories](https://github.com/orgs/djnf-data-2025/repositories)
+
+-   [Investigate your
+    community](https://docs.google.com/document/d/1NATRDMhUr8XSpkI-_bKfJCM8YVu9028QHKlk_7sbdw0/edit?tab=t.0)
+    memo.
+
+-   Link to [Jefferson, T. Letter to Edward Carrington, Paris, January
+    16,
+    1787](https://drive.google.com/file/d/1RowEaSMNvcNCNyH4XyftSSnMisDe8wg8/view?usp=sharing)
+
+-   Link to [The Commission on the Freedom of the Press. Chapter 2: The
+    requirements, pp.
+    20-29.](https://drive.google.com/file/d/10FTgerZaMsgyxulhX9dNJPOUoWyA8ieR/view?usp=sharing)
+
+-   [GitHub
+    Slides](https://docs.google.com/presentation/d/1GofR1mONJ611ozikg08F-uuGalVoq2nua1j9sYfkJzo/edit?usp=sharing)
+
+-   [Handout for Coding Track
+    talk](https://docs.google.com/document/d/1wBIYilNkrB19WCQOeQKyLkLpw8z5Mx6O915BA4A9SpY/edit?usp=sharing)
 
 ------------------------------------------------------------------------
+
+<br>
 
 **Monday, June 2, 2025**
 
@@ -141,9 +158,14 @@ Speakers</a></button>
     -   [Slides for
         talk](https://docs.google.com/presentation/d/1zdlk2Ss9jE_SZL2HuHvUbZeUteEO0OBasFKpXtjuZIY/edit?usp=sharing)
 
--   **2:15 p.m.**: Using GitHub. All attend. (Wells/Lang) [GitHub
-    refresher](https://wellsdata.github.io/data_journalism_class/_book/github.html).
-    Eaton Theater
+-   **2:15 p.m.**: Hosting a webpage on GitHub. All attend.
+    (Wells/Lang). Eaton Theater
+
+    -   [Web page hosting
+        tutorial](https://docs.google.com/document/d/1m6WrprX3BshPV3r0YVrx5fol8reB2azS8Mb19lN6qkg/edit?tab=t.0#heading=h.ahlwvelrtcgr)
+
+    -   [GitHub
+        refresher](https://wellsdata.github.io/data_journalism_class/_book/github.html).
 
 -   **2:45 p.m.**: Workshop for [story pitch memo due at 11:59
     p.m.](https://docs.google.com/document/d/1A-dlzWX7ksOt6LRHYpuPDk7SPPWxyZEmGt2wC0lM7Mg/edit)
@@ -176,6 +198,9 @@ Speakers</a></button>
 
 -   [Slides for Karen Denny
     talk](https://docs.google.com/presentation/d/1zdlk2Ss9jE_SZL2HuHvUbZeUteEO0OBasFKpXtjuZIY/edit?usp=sharing)
+
+-   [Web page hosting
+    tutorial](https://docs.google.com/document/d/1m6WrprX3BshPV3r0YVrx5fol8reB2azS8Mb19lN6qkg/edit?tab=t.0#heading=h.ahlwvelrtcgr)
 
 ------------------------------------------------------------------------
 
