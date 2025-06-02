@@ -200,6 +200,8 @@ Speakers</a></button>
 
 -   [Web page hosting
     tutorial](https://docs.google.com/document/d/1m6WrprX3BshPV3r0YVrx5fol8reB2azS8Mb19lN6qkg/edit?tab=t.0#heading=h.ahlwvelrtcgr)
+    
+-   [Sean Mussenden R Intro](https://go.umd.edu/djnf_r_intro)
 
 ------------------------------------------------------------------------
 
@@ -374,8 +376,8 @@ Speakers</a></button>
 -   **9:00 a.m. Breakfast**: At Knight Hall
 -   **10:00 a.m.**: [Students present web
     pages](https://docs.google.com/document/d/1A-dlzWX7ksOt6LRHYpuPDk7SPPWxyZEmGt2wC0lM7Mg/edit),
-    story pitches, solicit feedback. Shirley Carswell, DJNF Executive
-    Director, visits
+    story pitches, solicit feedback. 
+    
 -   **12:15 p.m.**: Lunch in Knight Hall
 -   **1 p.m.**: On the van for D.C.
 -   **2:15 p.m.**: Tour of African-American History Museum, D.C.
