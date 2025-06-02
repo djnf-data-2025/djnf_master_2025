@@ -1,0 +1,114 @@
+---
+title: "Hannah Bensen - Investigative Reporting Workshop"
+output: html_document
+date: "2025-05-09"
+---
+
+A demo notebook for Dow Jones News Fund data interns
+
+During the week’s training, you will work on a project called Investigate Your Community to produce detailed story pitches relevant to their summer internship positions. The goal is to have the students research a topic relevant to your newsroom so they can get to work immediately at the internship. 
+
+Here are some examples from last year’s DJNF data journalism training:
+
+Hannah Rosenberger, at ASI Media/Counselor magazine, produced this analysis on name, image and likeness trends: https://hrosenberger.github.io/ASI-NIL-Project/
+
+Shifra Dayak, an intern at the Connecticut Mirror, produced this analysis of environment spill data: https://shifradayak.github.io/DJNF_Merrill/ct_env_spills.html.
+
+Michael Zhang, an intern at the Houston Landing, explored local election data: https://michaelzhangreporter.github.io/Houston_Campaign_Finance/
+
+
+Here's what your newsroom suggested for a project
+I'm afraid we don't have a specific data set or topic for Hannah Bensen to examine. We're continuing to work on projects related to long-term health effects of lead and government accountability related to cleanup regarding lead paint. We also have several police-use-of-force stories underway and are nearing completion on one related to police-surveillance tools and analytics. Aarushi has talked to Hannah about the pitch process and our interests so Hannah may be looking into a few ideas. 
+
+
+
+Blood Lead Levels (µg/dL) among U.S. Children <72 Months of Age, by State, Year, and Blood Lead Level (BLL)
+
+This notebook helps you get started
+
+# Load software libraries
+```{r}
+#install.packages("tidyverse")
+#install.packages("janitor")
+#install.packages("readxl")
+#install.packages("rvest")
+library(tidyverse)
+library(janitor)
+library(readxl)
+library(rvest)
+
+```
+
+
+# Load your data
+
+2024
+
+```{r}
+
+# 
+# YOUR_DATA <- read.csv("../data/XXXXX.csv") |> 
+#     clean_names()
+
+data <- read_excel("../data/cbls-national-data-508.xlsx", skip=2) |> 
+     clean_names()
+
+
+
+```
+
+Data details:
+https://www.cdc.gov/lead-prevention/php/data/national-surveillance-data.html
+BLL - Blood Lead Level, SD - Indicates non-zero counts fewer than 6 have been suppressed to protect confidentiality													
+† - Partial annual data submission													
+* - Indicates program did not receive childhood lead poisoning prevention funding from CDC													
+‡ - Indicates data not currently available													
+ǁ - Includes all popluation data in table													
+Population estimates data source: CDC NCHS Bridged Race Single Year of Age population (U.S. Census Populations With Bridged Race Categories https://www.cdc.gov/nchs/nvss/bridged_race.htm#data).													
+ - For years 2017-2019, the data use each respective Vintage year for the denominator data (e.g., 2017 data uses the 2017 Vintage bridged race postcensal population estimates).													
+ - For years 2020-2021, due to data availability at the time of processing, Vintage 2020 was used for data years 2020 and 2021. 													
+ - This will be updated with future data updates to align with pre-2020 years (e.g., 2021 data will use the 2021 Vintage postcensal population estimates, etc.).													
+The current Blood Lead Reference Value of 3.5 µg/dL was enacted by CDC in October 2021. Categorizations of blood lead levels above and below this value will be used in blood lead surveillance tables starting with 2022 data. 				
+
+
+From ChatGPT:
+According to the Centers for Disease Control and Prevention (CDC), any blood lead level (BLL) of 5 µg/dL or higher is considered elevated and requires public health actions.
+
+Here's a summary of the danger zones based on the image and your description:
+
+BLLs ≥5 µg/dL: This is the threshold where lead exposure becomes concerning and may require intervention.
+BLLs ≥10 µg/dL: This level indicates more significant lead exposure and is considered dangerous.
+BLLs 5-9 µg/dL: While lower than 10 µg/dL, this range is still concerning and above the CDC's reference level.
+BLLs 10-14 µg/dL: This is a dangerous zone and indicates elevated lead exposure.
+BLLs 15-19 µg/dL: This level is considered dangerous and requires intervention.
+BLLs 20-24 µg/dL: This is a dangerous level of lead exposure.
+BLLs 25-44 µg/dL: This is a significantly dangerous level and poses serious health risks.
+BLLs ≥45 µg/dL: This is extremely dangerous and requires immediate medical attention.
+
+# Explore the data types
+```{r}
+
+#glimpse(YOUR_DATA)
+
+glimpse(data)
+
+```
+
+# Data exploration: states with most dangerous levels
+
+```{r}
+data |> 
+  select(year, state, number_of_children_with_confirmed_bl_ls_45_mg_d_l) |> 
+  filter(number_of_children_with_confirmed_bl_ls_45_mg_d_l >0 ) |> 
+  arrange(desc(year))
+```
+
+# Questions 
+
+Write down questions you want answered:
+
+
+
+# Data Details
+I'd consider converting the SD to 1 and running a sum for all levels above 10 ug/dl.
+"SD - Indicates non-zero counts fewer than 6 have been suppressed to protect confidentiality." So SD equals something between 1 and 6. Converting to 1 would be a conservative estimate 		

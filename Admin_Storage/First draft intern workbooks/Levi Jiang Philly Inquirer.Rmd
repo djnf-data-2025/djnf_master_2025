@@ -1,0 +1,202 @@
+---
+title: "Levi Jiang - Philly Inquirer"
+output: html_document
+date: "2025-05-05"
+---
+
+A demo notebook for Dow Jones News Fund data interns
+
+During the week’s training, you will work on a project called Investigate Your Community to produce detailed story pitches relevant to their summer internship positions. The goal is to have the students research a topic relevant to your newsroom so they can get to work immediately at the internship. 
+
+Here are some examples from last year’s DJNF data journalism training:
+
+Hannah Rosenberger, at ASI Media/Counselor magazine, produced this analysis on name, image and likeness trends: https://hrosenberger.github.io/ASI-NIL-Project/
+
+Shifra Dayak, an intern at the Connecticut Mirror, produced this analysis of environment spill data: https://shifradayak.github.io/DJNF_Merrill/ct_env_spills.html.
+
+Michael Zhang, an intern at the Houston Landing, explored local election data: https://michaelzhangreporter.github.io/Houston_Campaign_Finance/
+
+
+Here's what your newsroom suggested for a project:
+I think in terms of topics, we are fairly open and were planning on having a conversation with Levi when they get here to figure out specific stories they will tackle. This is mostly because the desk here is general-assignment and more approach-driven, the stories Levi would work on would massively depend on their level of technical skills.
+
+That said, everything we do has to have a local angle. We cover Philadelphia and the adjoining counties (including those in New Jersey). I also know that Levi had a big interest in sports and over Levi's time here the Sixers should have a relatively high draft pick and we're planning on doing something like that. Some kind of simulated draft situation. Additionally we'll be in the thick of another Phillies season and have always wanted to do something around a team's odds of making it to the playoffs.
+
+Elsewhere we're going to be focused on the New Jersey Governor's race, the recently announced SEPTA service cuts, and how national politics are impacting Philadelphia.
+
+Sorry this isn't that specific but I hope that helps.
+
+Sam Morris
+Interactives Editor
+
+We start with campaign contribution data from the top three candidates in the Democratic primary for governor: Stephen Sweeney, Mikie Sherrill and Joshua Gottheimer
+
+https://www.njelecefilesearch.com/SummaryData?eid=466303
+
+https://www.njelecefilesearch.com/searchcandidatereports
+
+
+# Load software libraries
+```{r}
+#install.packages("tidyverse")
+#install.packages("janitor")
+#install.packages("readxl")
+#install.packages("rvest")
+library(tidyverse)
+library(janitor)
+library(readxl)
+library(rvest)
+
+```
+
+
+# Load your data
+
+
+```{r}
+# YOUR_DATA <- read.csv("../data/XXXXX.csv") |> 
+#     clean_names()
+# data <- read_excel("../data/2024-12-Revenue.xlsx", skip=2) |> 
+#     clean_names()
+
+
+sherrill <- read.csv("../data/sherrill_mikie_Cont_638821188859939969.csv") |> 
+    clean_names() 
+sweeney <- read.csv("../data/sweeney_stephen_Cont_638821191659704440.csv") |> 
+    clean_names() 
+gottheimer <- read.csv("../data/Gottheimer_Joshua_Cont_638821186179029147.csv") |> 
+    clean_names() 
+```
+
+combine all three
+
+```{r}
+
+combo <- rbind(gottheimer, sherrill, sweeney)
+
+
+```
+
+Data details:
+
+
+# Explore the data types
+```{r}
+
+#glimpse(YOUR_DATA)
+
+glimpse(combo)
+
+```
+# Fix dates
+```{r}
+combo <- combo |> 
+  mutate(date = lubridate::mdy(contribution_date))
+```
+
+
+
+# Data exploration: totals by candidate
+
+```{r}
+combo |> 
+  select(entity_name, contribution_amount) |> 
+  group_by(entity_name) |> 
+   summarize(total = sum(contribution_amount)) |> 
+  arrange(desc(total))
+```
+
+
+
+
+# Questions 
+
+Write down questions you want answered:
+
+
+
+# Data Details
+
+You'll want to get results of the county democratic conventions. 
+https://datawrapper.dwcdn.net/Ho3TT/3/
+I contacted Ballotpedia for the source. https://ballotpedia.org/Contact_us
+And they provided these details:
+Ballotpedia Editor <editor@ballotpedia.org>
+12:35 AM (6 hours ago)
+to me
+
+Hi Rob,
+
+
+
+Thank you for reaching out! I’ve checked with our editors, and they’ve provided a list of the following sources we used for the referenced graphic:
+
+
+
+Atlantic: https://newjerseyglobe.com/campaigns/sweeney-wins-atlantic-county-convention/
+
+Bergen: https://newjerseyglobe.com/governor/gottheimer-scores-massive-win-at-bergen-democratic-convention/
+
+Burlington: https://newjerseyglobe.com/governor/sweeney-wins-burlington-democratic-convention/
+
+Camden: https://newjerseyglobe.com/local/camden-democrats-back-sweeney-shuffle-county-commissioner-slate/
+
+Cape May: https://newjerseyglobe.com/governor/cape-may-democrats-wont-take-sides-in-governors-race/
+
+Cumberland: https://newjerseyglobe.com/governor/sweeney-wins-cumberland-endorsement/
+
+Essex: https://newjerseyglobe.com/governor/sherrill-wins-essex-democratic-convention/
+
+Gloucester: https://newjerseyglobe.com/governor/sweeney-wins-gloucester-dem-convention-unanimously/
+
+Hudson: https://newjerseyglobe.com/governor/hudson-democrats-flip-from-gottheimer-to-sherrill-in-governors-race/
+
+Hunterdon: https://newjerseyglobe.com/governor/sherrill-wins-hunterdon-county-democratic-convention/
+
+Mercer: https://newjerseyglobe.com/governor/sherrill-wins-mercer-democratic-convention-with-56/
+
+Middlesex: https://newjerseyglobe.com/governor/sherrill-wins-gargantuan-victory-in-middlesex/
+
+Monmouth: https://newjerseyglobe.com/governor/sherrill-wins-monmouth-convention/
+
+Morris: https://newjerseyglobe.com/governor/sherrill-wins-morris-democratic-convention-by-wide-margin/
+
+Ocean: https://newjerseyglobe.com/governor/governors-race-no-winner-on-ocean-county/
+
+Passaic: https://newjerseyglobe.com/governor/sherrill-wins-passaic-dem-endorsement-in-bid-for-governor/
+
+Salem: https://newjerseyglobe.com/governor/sweeney-wins-salem-county-democratic-convention-in-landslide/
+
+Somerset: https://newjerseyglobe.com/local/five-of-six-candidates-for-governor-may-use-somerset-dem-slogan/
+
+Sussex: https://newjerseyglobe.com/governor/sherrill-wins-sussex-democratic-convention/
+
+Union: https://newjerseyglobe.com/campaigns/onyema-defeats-tucker-to-win-union-county-dem-endorsement-sherrill-wins-union-county/ 
+
+Warren: https://newjerseyglobe.com/governor/gottheimer-wins-big-at-warren-dem-convention/
+
+
+Please let me know if you have any further questions. We appreciate you being a reader!
+
+
+
+Best,
+
+Nathaniel
+
+
+ 
+--
+
+Ballotpedia The Encyclopedia of American Politics
+8383 Greenway Blvd., Suite 600
+Middleton, WI 53562
+
+More on New Jersey governor's race
+https://ballotpedia.org/New_Jersey_gubernatorial_and_lieutenant_gubernatorial_election,_2025_(June_10_Democratic_primary)
+
+https://www.realclearpolling.com/stories/analysis/exclusive-new-jersey-gubernatorial-republican-primary-poll
+
+
+Sports:
+Derek Willis, one of the data instructors, is strong on sports data. You should speak to him about the Phillies and Sixers story ideas. Something to start with: https://sports.betmgm.com/en/blog/mlb/phillies-playoff-odds-bracket-seed-bm23/

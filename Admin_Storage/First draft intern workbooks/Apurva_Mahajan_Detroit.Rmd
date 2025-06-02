@@ -1,0 +1,98 @@
+---
+title: "Apurva Mahajan - Detroit"
+output: html_document
+date: "2025-04-22"
+---
+
+A demo notebook for Dow Jones News Fund data interns
+
+During the week’s training, you will work on a project called Investigate Your Community to produce detailed story pitches relevant to their summer internship positions. The goal is to have the students research a topic relevant to your newsroom so they can get to work immediately at the internship. 
+
+Here are some examples from last year’s DJNF data journalism training:
+
+Hannah Rosenberger, at ASI Media/Counselor magazine, produced this analysis on name, image and likeness trends: https://hrosenberger.github.io/ASI-NIL-Project/
+
+Shifra Dayak, an intern at the Connecticut Mirror, produced this analysis of environment spill data: https://shifradayak.github.io/DJNF_Merrill/ct_env_spills.html.
+
+Michael Zhang, an intern at the Houston Landing, explored local election data: https://michaelzhangreporter.github.io/Houston_Campaign_Finance/
+
+
+Here's what your newsroom suggested for a project:
+
+Wondering if you could explore trends of our vaccination rates, especially considering we’re dealing with measles here.https://www.detroitnews.com/story/news/local/michigan/2025/04/24/michigan-headed-toward-worst-year-for-measles-in-decades-chief-medical-exec-says/83214966007/
+ 
+This website explains the different Series numbers for the sets of vaccines: https://www.michigan.gov/mdhhs/adult-child-serv/childrenfamilies/immunizations/data-statistics/countyimmsreportcards 
+ 
+If you or our intern have any questions, you can contact Lynn Sutfin at the Michigan Department of Health and Human Services at SutfinL1@michigan.gov. 
+
+
+
+
+This notebook helps you get started
+
+# Load software libraries
+```{r}
+#install.packages("tidyverse")
+#install.packages("janitor")
+#install.packages("readxl")
+#install.packages("rvest")
+library(tidyverse)
+library(janitor)
+library(readxl)
+library(rvest)
+
+```
+
+
+# Load your data
+
+
+```{r}
+
+# 
+# YOUR_DATA <- read.csv("../data/XXXXX.csv") |> 
+#     clean_names()
+
+data <- read_excel("../data/Report_card_All_data_20250313.xlsx") |> 
+    clean_names()
+
+
+```
+
+Data details:
+
+
+# Explore the data types
+```{r}
+
+#glimpse(YOUR_DATA)
+
+glimpse(data)
+
+```
+
+
+# Data exploration: dates
+
+```{r}
+data |> 
+   count(year) |> 
+  arrange(desc(n))
+```
+
+
+
+
+# Questions 
+
+Write down questions you want answered:
+
+
+
+# Data Details
+Source:
+https://www.michigan.gov/mdhhs/adult-child-serv/childrenfamilies/immunizations/data-statistics/countyimmsreportcards
+
+Documentation:
+https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Adult-and-Childrens-Services/Children-and-Families/Immunization-Information/LHD/Immunization-Report-Cards/Report_Card_Defs__FAQs_2021.pdf?rev=93e4ac10b66c4c10abcd3c02a6b55982&hash=EA6122E84CB516E9E6D335CC73BDB5CF
+

@@ -1,0 +1,120 @@
+---
+title: "Pitch-Ava Hu - Houston Chronicle"
+output: html_document
+date: "2025-06-01"
+---
+# Pitch: How Houston’s Job Market Deviates From the Texas Norm
+
+Using occupational wage and employment data, I analyzed how Houston's job market compares with the rest of Texas.I will identify which occupations earn significantly more or less in Houston than the state average, which low-paying jobs dominate Houston’s employment, and which niche occupations offer high pay but employ very few people.
+
+# My findings: 
+- High-skilled or managerial roles are some of the most underpaid occupations in Houston, compared to the rest of Texas. Chief Executives, Neurologists, Lawyers, and Marketing Managers all earn significantly less in Houston than the statewide average. 
+#rsw comment: wow. let's provide a few details. that's a great finding. but let's dig further by industry and see if there are some industries where CEOs are underpaid and are pulling down the average
+
+- Occupations that earn significantly more in Houston are medical roles. General Internal Medicine Physicians, Psychiatrists, Radiologists, and Pathologists see some of the biggest wage premiums in Houston. 
+
+- Food preparation, cleaning and maintenance, and healthcare support roles pay less than the state average, yet make up a huge share of Houston’s workforce.
+#rsw comment: huge share? specific please.
+
+-Rail Transportation Workers, Hydrologic Technicians, and Craft Artists—pay significantly more than the state average but employ very few people. 
+
+
+# 1. Occupation compare between Houston and Texas overall
+
+#rsw comment: - "houston" and " houston_below_texas" "wage_compare" dataframes haven't been imported / created so I can't run this code. so please add the code that creates these dfs  and I'll look at it again
+
+```{r}
+houston <- houston |> 
+  mutate(
+    soc_code = str_extract(occupation_soc_code, "\\d{2}-\\d{4}"),
+    hourly_mean = as.numeric(hourly_mean_wage)
+  )
+
+texas <- texas |> 
+  mutate(
+    soc_code = str_trim(occ_code),
+    hourly_mean = as.numeric(h_mean)
+  )
+
+wage_compare <- inner_join(
+  houston, texas, by = "soc_code", suffix = c("_houston", "_texas")
+)
+wage_compare <- wage_compare |> 
+  distinct(soc_code, .keep_all = TRUE)
+
+houston_below_texas <- wage_compare |> 
+  filter(hourly_mean_houston < hourly_mean_texas) |> 
+  select(
+    soc_code,
+    occ_title,
+    hourly_mean_houston,
+    hourly_mean_texas
+  ) |> 
+  arrange(desc(hourly_mean_texas))
+
+print(houston_below_texas)
+
+```
+# 2. Top 10 largest underpayment gaps
+
+```{r}
+top10_gap <- houston_below_texas |> 
+  mutate(wage_gap = hourly_mean_texas - hourly_mean_houston) |> 
+  arrange(desc(wage_gap)) |> 
+  slice(1:10)
+
+#View top 10
+print(top10_gap)
+```
+
+# 3. Top 10 largest above payment gaps
+
+```{r}
+top10_houston_above_texas <- wage_compare |> 
+  mutate(wage_gap = hourly_mean_houston - hourly_mean_texas) |> 
+  filter(wage_gap > 0) |> 
+  arrange(desc(wage_gap)) |> 
+  distinct(soc_code, .keep_all = TRUE) |>  
+  slice(1:10) |> 
+  select(soc_code, occ_title, hourly_mean_houston, hourly_mean_texas, wage_gap)
+
+print(top10_houston_above_texas)
+
+```
+# 4. Which low-wage occupations have the highest employment in Houston?
+food preparation, retail, and personal care
+
+```{r}
+top10_low_paid_high_employment <- wage_compare |> 
+  filter(hourly_mean_houston < hourly_mean_texas) |> 
+  mutate(
+    wage_gap = hourly_mean_texas - hourly_mean_houston,
+    employment = as.numeric(employment_1)
+  ) |> 
+  filter(!is.na(employment)) |> 
+  arrange(desc(employment)) |> 
+  distinct(soc_code, .keep_all = TRUE) |> 
+  slice(1:10) |> 
+  select(soc_code, occ_title, hourly_mean_houston, hourly_mean_texas, wage_gap, employment)
+
+print(top10_low_paid_high_employment)
+```
+
+# 5. Houston niche highpay 
+Top 10 occupations in Houston with higher wages than the Texas average but very low employment
+
+```{r}
+top10_high_paid_low_employment <- wage_compare |> 
+  filter(hourly_mean_houston > hourly_mean_texas) |> 
+  mutate(
+    wage_gap = hourly_mean_houston - hourly_mean_texas,
+    employment = as.numeric(employment_1)
+  ) |> 
+  filter(!is.na(employment)) |> 
+  arrange(employment) |>  # 从小到大
+  distinct(soc_code, .keep_all = TRUE) |> 
+  slice(1:10) |> 
+  select(soc_code, occ_title, hourly_mean_houston, hourly_mean_texas, wage_gap, employment)
+
+print(top10_high_paid_low_employment)
+```

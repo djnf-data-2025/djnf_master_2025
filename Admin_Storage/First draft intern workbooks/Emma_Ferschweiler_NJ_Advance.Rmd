@@ -1,0 +1,145 @@
+---
+title: "Demo_Sasha"
+output: html_document
+date: "2025-04-22"
+---
+
+A demo notebook for Dow Jones News Fund data interns
+
+During the week’s training, you will work on a project called Investigate Your Community to produce detailed story pitches relevant to their summer internship positions. The goal is to have the students research a topic relevant to your newsroom so they can get to work immediately at the internship. 
+
+Here are some examples from last year’s DJNF data journalism training:
+
+Hannah Rosenberger, at ASI Media/Counselor magazine, produced this analysis on name, image and likeness trends: https://hrosenberger.github.io/ASI-NIL-Project/
+
+Shifra Dayak, an intern at the Connecticut Mirror, produced this analysis of environment spill data: https://shifradayak.github.io/DJNF_Merrill/ct_env_spills.html.
+
+Michael Zhang, an intern at the Houston Landing, explored local election data: https://michaelzhangreporter.github.io/Houston_Campaign_Finance/
+
+
+Here's what your newsroom suggested for a project
+I thought it could be interesting for her to look at the Disconnected Youth issue, as it’s likely to be a topic this session. She could look at the Dalio report and perhaps this Next Generation Accountability report from the state that shows how well districts are preparing students for next steps.
+
+
+
+This notebook helps you get started
+
+From your editor
+Investigate Your Community
+Take a closer look at property tax and income disparity in Hudson County. Hudson is the most densely populated counties in New Jersey and home to multi-million-dollar condominiums and low-income housing, often in close proximity to each other.
+Property values have impacted taxes and affordability in communities like Jersey City and Hoboken, with many longtime residents raising concerns about being pushed out as costs continue to rise.
+ 
+https://www.hcnj.us/finance/tax-assessments/
+
+
+# Load software libraries
+```{r}
+#install.packages("tidyverse")
+#install.packages("janitor")
+#install.packages("readxl")
+#install.packages("rvest")
+library(tidyverse)
+library(janitor)
+library(readxl)
+library(rvest)
+
+```
+
+
+# Load your data
+
+
+```{r}
+
+# 
+# YOUR_DATA <- read.csv("../data/XXXXX.csv") |> 
+#     clean_names()
+
+data <- read.csv("../data/NJ_Assessment_Records_Search_4_24_2025.csv") |> 
+    clean_names()
+
+
+```
+
+Data details:
+
+
+# Explore the data types
+```{r}
+glimpse(data)
+
+```
+# Fix dates
+```{r}
+data <- data |> 
+  mutate(date = lubridate::ymd(sale_date))
+```
+
+
+
+# Data exploration: dates
+
+```{r}
+data |> 
+   count(date) |> 
+  arrange(desc(n))
+```
+
+
+
+
+# Questions 
+
+Write down questions you want answered:
+
+
+
+# Data Details
+https://www.hcnj.us/finance/tax-assessments/
+–13986 Records Found for Download
+Data as of 04/23/25
+
+--https://www.hcnj.us/finance/tax-assessments/
+
+
+
+
+# Memo from editor
+I’ve included an idea for Emma below. If you have any questions, please let me know.
+ 
+Best regards,
+Craig
+ 
+Investigate Your Community
+Take a closer look at property tax and income disparity in Hudson County. Hudson is the most densely populated counties in New Jersey and home to multi-million-dollar condominiums and low-income housing, often in close proximity to each other.
+Property values have impacted taxes and affordability in communities like Jersey City and Hoboken, with many longtime residents raising concerns about being pushed out as costs continue to rise.
+ 
+https://www.hcnj.us/finance/tax-assessments/
+–13986 Records Found for Download
+Data as of 04/23/25
+Click Here to Open Zip File
+ 
+https://www.census.gov/quickfacts/fact/table/hudsoncountynewjersey/PST045224
+ 
+https://www.nj.gov/treasury/taxation/lpt/localtax.shtml
+ 
+https://www.nj.com/politics/2025/03/average-nj-property-tax-bill-hits-10k-see-towns-by-town-costs.html
+ 
+https://www.nj.com/data/2025/03/see-njs-31-bargain-towns-where-property-taxes-average-less-than-5k.html
+ 
+https://www.nj.com/news/2025/03/njs-29-towns-with-the-highest-property-tax-bills-ranked.html
+ 
+ 
+ 
+Local journalism needs your support. Subscribe at nj.com/supporter.
+ 
+- - -
+ 
+Craig Turpin, Managing Producer
+NJ Advance Media
+485 Route 1 South, Building E
+Suite 300
+Iselin, NJ 08830-3009
+p: 908-581-1276
+e: cturpin@njadvancemedia.com
+

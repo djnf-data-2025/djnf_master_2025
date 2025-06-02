@@ -1,0 +1,146 @@
+---
+title: "Patrick McCaslin - Baltimore Banner"
+output: html_document
+date: "2025-05-07"
+---
+
+A demo notebook for Dow Jones News Fund data interns
+
+During the week’s training, you will work on a project called Investigate Your Community to produce detailed story pitches relevant to their summer internship positions. The goal is to have the students research a topic relevant to your newsroom so they can get to work immediately at the internship. 
+
+Here are some examples from last year’s DJNF data journalism training:
+
+Hannah Rosenberger, at ASI Media/Counselor magazine, produced this analysis on name, image and likeness trends: https://hrosenberger.github.io/ASI-NIL-Project/
+
+Shifra Dayak, an intern at the Connecticut Mirror, produced this analysis of environment spill data: https://shifradayak.github.io/DJNF_Merrill/ct_env_spills.html.
+
+Michael Zhang, an intern at the Houston Landing, explored local election data: https://michaelzhangreporter.github.io/Houston_Campaign_Finance/
+
+
+Here's what your newsroom suggested for a project:
+As far as I can tell, no one has ever done an income vs. student test scores analysis in Maryland. We are going to try to do one for the entire state. Patrick can start with whatever we have in here. He should plan to have 23 counties worth of data for his final analysis.
+
+Google Drive link that has some of the data in it. I will compile more of it into this folder as I wrangle things together. https://drive.google.com/drive/folders/1INQ7mIAQ_PwJgA2kSylllJm1KjJwVYNk?usp=drive_link
+
+
+
+
+This notebook helps you get started
+
+# Load software libraries
+```{r}
+#install.packages("tidyverse")
+#install.packages("janitor")
+#install.packages("readxl")
+#install.packages("rvest")
+#install.packages("ggmap")
+#install.packages("geosphere")
+#install.packages("sf")
+#install.packages("tidycensus")
+
+library(tidycensus)
+library(tidyverse)
+library(janitor)
+library(readxl)
+library(rvest)
+library(ggmap)
+library(geosphere)
+library(sf)
+
+```
+
+
+# Load your data
+
+Census API key.
+
+```{r message=FALSE}
+census_api_key("XXXXX", install = TRUE, overwrite = TRUE)
+```
+
+```{r}
+#Calls variables for the 2020 ACS census
+v23_acs <- load_variables(2023, "acs5", cache = TRUE)
+```
+
+
+#Income by unified school district, 2023 ACS
+```{r}
+#2023 Per Capita By Unified School District ACS
+#B19001 COUNTS THE NUMBER OF HOUSEHOLDS
+#B19301_001 is the per capita income "Per capita income in the past 12 months (in 2023 inflation-adjusted dollars"
+#Documentation: https://censusreporter.org/tables/B19301/
+percap_income2023 <- get_acs(geography = "school district (unified)", 
+              variables = c(number_households = "B19001_001", percap_income = "B19301_001"), 
+               state = "MD", 
+               year = 2023) %>% 
+  mutate(year=("2023"))
+
+ 
+percap_income2023
+
+```
+
+Load the MD test score data
+```{r}
+scores <- read.csv("../data/mcap_23_24/lea_ela_scores_23_24_by_level.csv")
+
+```
+
+
+
+Join the income and test score data
+```{r}
+
+```
+
+
+
+Load shapefile of Montgomery County schools
+```{r}
+
+#Trying to add outline of counties using Shapefile
+mont_schools<- st_read("../data/montgomery_county/MCPS_GIS_Data_2024_2025/Schools.shp")
+```
+
+
+map your data
+```{r}
+map_plot <- ggplot(data = XXXX, aes(x = long, y = lat)) +
+  geom_polygon(fill = "white", color = "black") +
+  geom_point(data = XXXX, aes(x = lynching.lon, y = lynching.lat, color = in_state), size = 3) +
+  coord_quickmap() +
+  theme_void() + 
+  labs(title="XXXX") + 
+  theme(axis.title.x = element_blank(),
+    axis.text.x = element_blank(),
+    axis.ticks.x = element_blank(),
+    axis.title.y = element_blank(),
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank())
+
+print(map_plot)
+```
+```
+
+
+
+Data details:
+Data files with Maryland School boundaries
+https://drive.google.com/drive/folders/1INQ7mIAQ_PwJgA2kSylllJm1KjJwVYNk
+
+
+
+
+# Questions 
+
+Write down questions you want answered:
+
+
+
+# Data Details
+
+Documentation for Maryland test scores: https://reportcard.msde.maryland.gov/
+
+
+This allows you to start the analysis by unified school district. You should hunt down the income data by high school, and elementary school district. 

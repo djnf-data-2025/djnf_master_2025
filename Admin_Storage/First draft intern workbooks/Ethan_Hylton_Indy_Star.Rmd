@@ -1,0 +1,118 @@
+---
+title: "Ethan_Hylton_Indy_Star"
+output: html_document
+date: "2025-04-22"
+---
+
+A demo notebook for Dow Jones News Fund data interns
+
+During the week’s training, you will work on a project called Investigate Your Community to produce detailed story pitches relevant to their summer internship positions. The goal is to have the students research a topic relevant to your newsroom so they can get to work immediately at the internship. 
+
+Here are some examples from last year’s DJNF data journalism training:
+
+Hannah Rosenberger, at ASI Media/Counselor magazine, produced this analysis on name, image and likeness trends: https://hrosenberger.github.io/ASI-NIL-Project/
+
+Shifra Dayak, an intern at the Connecticut Mirror, produced this analysis of environment spill data: https://shifradayak.github.io/DJNF_Merrill/ct_env_spills.html.
+
+Michael Zhang, an intern at the Houston Landing, explored local election data: https://michaelzhangreporter.github.io/Houston_Campaign_Finance/
+
+
+Here's what your newsroom suggested for a project
+I would like Ethan to look at Indiana gambling revenue for 2015-2024. The data is available in Excel format here https://www.in.gov/igc/publications/archived-monthly-revenue-reports/ the site also has YTD for 2025
+
+
+I'm not sure what exactly we are looking for, but would like to be able to track total amount of money flowing through casinos -- including revenue trends for individual casinos -- and online sports betting sites; how much goes to the state and "winners"; and look at the growth and impact of online sports betting that became legal in October 2019. 
+
+
+I am especially interested in the online sports betting because it is relatively new and doesn't require visiting casinos (which I believe also take sports bets). That would include an over-time look at the amount of money spent by Indiana online bettors and the increasing number of online options available. 
+
+
+Hopefully, an examination of the data will reveal other story paths.
+
+
+I'm happy to talk if you have questions or thoughts.
+
+
+Thanks again.
+Tim
+
+
+
+This notebook helps you get started
+
+# Load software libraries
+```{r}
+#install.packages("tidyverse")
+#install.packages("janitor")
+#install.packages("readxl")
+#install.packages("rvest")
+library(tidyverse)
+library(janitor)
+library(readxl)
+library(rvest)
+
+```
+
+
+# Load your data
+
+2024
+
+```{r}
+
+# 
+# YOUR_DATA <- read.csv("../data/XXXXX.csv") |> 
+#     clean_names()
+
+data_2024 <- read_excel("../data/2024-12-Revenue.xlsx", skip=2) |> 
+    clean_names()
+
+
+```
+
+Data details:
+
+
+# Explore the data types
+```{r}
+
+#glimpse(YOUR_DATA)
+
+glimpse(data)
+
+```
+# Fix dates
+```{r}
+data_2024 <- data_2024 |> 
+  mutate(date_month = "Dec_2024")
+```
+
+
+
+# Import data for 2023, 2023
+/data/2023-12-Revenue.xlsx
+/data/2022-12-Revenue.xlsx
+
+```{r}
+
+```
+
+
+
+
+# Questions 
+
+Write down questions you want answered:
+
+
+
+# Data Details
+Monthly report in PDF form
+https://www.in.gov/igc/files/2025-03-Revenue.pdf
+
+
+
+Check this annual report for context: https://www.in.gov/igc/files/FY2024-Annual.pdf
+
+Revenue reports:
+https://www.in.gov/igc/publications/archived-monthly-revenue-reports/

@@ -1,0 +1,149 @@
+---
+title: "Yasmeen Saadi"
+output: html_document
+date: "2025-05-01"
+---
+
+A demo notebook for Dow Jones News Fund data interns
+
+During the week’s training, you will work on a project called Investigate Your Community to produce detailed story pitches relevant to their summer internship positions. The goal is to have the students research a topic relevant to your newsroom so they can get to work immediately at the internship. 
+
+Here are some examples from last year’s DJNF data journalism training:
+
+Hannah Rosenberger, at ASI Media/Counselor magazine, produced this analysis on name, image and likeness trends: https://hrosenberger.github.io/ASI-NIL-Project/
+
+Shifra Dayak, an intern at the Connecticut Mirror, produced this analysis of environment spill data: https://shifradayak.github.io/DJNF_Merrill/ct_env_spills.html.
+
+Michael Zhang, an intern at the Houston Landing, explored local election data: https://michaelzhangreporter.github.io/Houston_Campaign_Finance/
+
+
+Here's what your newsroom suggested for a project
+My name is Marissa Evans. I'm the investigations editor with the Investigative Project on Race and Equity. We are very excited to have Yasmeen join us this summer at IPRE and hope to help her achieve her goals and report the best stories possible.
+
+
+Here are some potential ideas we'd like Yasmeen to consider during the training. We are excited to see what she might come up with and are of course open to ideas she has coming into the training that she is interested in pursuing. We are interested in ideas related to education (K-12, higher education, trade schools, etc.), housing, healthcare, income inequality, Chicago/Illinois demographic changes and immigration as these are subject matters we're eager to develop coverage opportunities for in the future.
+COMMUNITY COLLEGE TRANSFER CREDITS: We read this Education Writers Association post on community college credit mobility with great interest: https://ewa.org/how-to-cover-the-story/what-is-credit-mobility-and-how-does-it-affect-college-students We think there’s a great potential story here looking at this issue from a racial equity standpoint using public records/data from the City Colleges of Chicago system on how often people of color in community colleges are able to successfully use transfer credits to further their education and the institutions that are willing to take them.
+CHICAGO COMMUNITY COLLEGE ADMISSIONS: We'd like Yasmeen to look into City Colleges of Chicago admissions (acceptance and rejection) by race and zip code to see how this has changed over time.
+CPS BUS ROUTES: We also read an Education Writers Association post about covering present day school segregation: https://ewa.org/educated-reporter/how-school-choice-contributes-to-segregation-in-schools One of the items that stood out is how often school bus routes and transportation issues may inadvertently create segregation issues. There's been ongoing coverage among local newsrooms about Chicago Public Schools' ongoing bus driver shortage and how transportation for kids is not always guaranteed. However, we are curious about a potential story looking into how CPS bus routes have changed over the years and how these route changes may be impacting children of color. We're also curious about a few other things: what is the average wait time for school buses for CPS kids, how late are the buses and which routes have notoriously late ones, on cold winter days how much longer are kids waiting to be picked up for school / get home, how many kids have missed large chunks of time at school because the bus was late, etc. We predict our local newsroom competitors will cover the driver shortage and bus availability again for their back to school coverage in the late summer / early fall but we would like to see if there's a way to elevate the coverage to consider the broader systemic, institutional and structural issues that come with getting Chicago kids to school and back home on time.
+
+
+CHICAGO WEALTH GAPS: We're interested in a potential story looking at how racial wealth gaps across Chicago neighborhoods have changed over time.
+Thanks so much. Please let me know if you or Yasmeen have any questions.
+
+
+This notebook helps you get started.
+
+First option to extract the data:
+Open Adobe Acrobat Pro (the paid version, part of the Creative Cloud)
+Select a specific page with a table you want (I used p 257)
+"Scan & OCR" to Extract Text
+Highlight the table, left click, export to Excel.
+Clean up data
+
+
+# Load software libraries
+```{r}
+#install.packages("tidyverse")
+#install.packages("janitor")
+#install.packages("readxl")
+#install.packages("rvest")
+library(tidyverse)
+library(janitor)
+library(readxl)
+library(rvest)
+
+```
+
+
+# Load your data
+
+2024
+
+```{r}
+
+# 
+# YOUR_DATA <- read.csv("../data/XXXXX.csv") |> 
+#     clean_names()
+
+# data <- read_excel("../data/2024-12-Revenue.xlsx", skip=2) |> 
+#     clean_names()
+
+data <- read.csv("../data/degree_by_race_ethnicity.csv") |> 
+    clean_names()
+
+
+```
+
+Data details:
+
+
+# Explore the data types
+```{r}
+
+#glimpse(YOUR_DATA)
+
+glimpse(data)
+
+
+
+
+
+```
+# Percent of whole by race
+
+```{r}
+data <- data |> 
+  #Fix Asian data
+  
+  mutate(asian = (as.numeric(asian)),
+    asian_pct = asian/total,
+         black_pct = black/total,
+         latinx_pct = latinx/total,
+         white_pct = white/total,
+         other_pct = other/total)
+
+```
+
+
+
+# Code for later --- Fix dates
+```{r}
+# data <- data |> 
+#   mutate(date = lubridate::mdy(contribution_date))
+```
+
+
+
+# Code for later ---  Data exploration: dates
+
+```{r}
+# data |> 
+#    count(date) |> 
+#   arrange(desc(n))
+```
+
+
+
+
+# Questions 
+
+Write down questions you want answered:
+
+
+
+# Data Details
+https://www.ccc.edu/menu/facts-and-statistics/
+
+I would call the city Colleges people and say you want the data files that underly this report. And ask for prior years, too:
+
+https://www.ccc.edu/wp-content/uploads/CCC-FY23-Statistical-Digest-As-of-March-7-2024.pdf
+
+Second option for extraction:
+
+First, download Tabula, a tool to extract data from PDFs
+https://tabula.technology/
+
+1) Install Tabula and launch it
+2) Download this PDF to your laptop: https://www.ccc.edu/wp-content/uploads/CCC-FY23-Statistical-Digest-As-of-March-7-2024.pdf
+3) I extracted "Degrees by Certificate, Ethnicity" on page 257. Look at the rest and extract other relevant tables later. https://www.youtube.com/watch?v=IEusn9HB1sc
+

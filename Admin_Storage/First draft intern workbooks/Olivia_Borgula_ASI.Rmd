@@ -1,0 +1,136 @@
+---
+title: "Olivia_Borgula_ASI"
+output: html_document
+date: "2025-04-22"
+---
+
+A demo notebook for Dow Jones News Fund data interns
+
+During the week’s training, you will work on a project called Investigate Your Community to produce detailed story pitches relevant to their summer internship positions. The goal is to have the students research a topic relevant to your newsroom so they can get to work immediately at the internship. 
+
+Here are some examples from last year’s DJNF data journalism training:
+
+Hannah Rosenberger, at ASI Media/Counselor magazine, produced this analysis on name, image and likeness trends: https://hrosenberger.github.io/ASI-NIL-Project/
+
+Shifra Dayak, an intern at the Connecticut Mirror, produced this analysis of environment spill data: https://shifradayak.github.io/DJNF_Merrill/ct_env_spills.html.
+
+Michael Zhang, an intern at the Houston Landing, explored local election data: https://michaelzhangreporter.github.io/Houston_Campaign_Finance/
+
+
+Here's what your newsroom suggested for a project
+Rob,
+ 
+Good morning! I wanted to get back to you about data for our summer intern to work on before I forgot. I chatted with Hannah Rosenberger (former intern, current superstar data analytics editor at ASI) to get her take since she went through the training program last year, and here’s an idea we thought would work:
+ 
+How are cuts by the Trump administration affecting top markets in promo? Education is the biggest market that buys swag/merch, but the chart at the bottom of this story has a list of other markets: https://members.asicentral.com/news/strategy/july-2024/state-of-the-industry-combatting-anti-swag-sentiment/
+ 
+One of my colleagues did a preliminary story in March about how Trump cuts were affecting education spending (though it’s more anecdotal): https://members.asicentral.com/news/industry-news/march-2025/education-market-sales-resilient-despite-federal-funding-uncertainties/
+ 
+Hannah did a feature story that ran in February about the “white-collar recession” and what it means for the promo industry, with some great Flourish charts based on data from Indeed and the Bureau of Labor Statistics:  https://members.asicentral.com/news/strategy/february-2025/what-does-the-white-collar-recession-mean-for-promo/
+ 
+Perhaps Olivia can look at some of the top markets for promo (Education, Healthcare, Construction, Manufacturing/Distribution & Financial/Insurance are the top 5) and analyze some data from Bureau of Labor Statistics and other sources to find trends in how they’re doing, etc.?
+ 
+Let me know if that works for you, or if you need us to supply anything further. Thanks!
+ 
+ 
+Best regards,
+ 
+Theresa Hegel, MASI
+Executive Editor, Special Projects & Sustainability
+Editor, Promo for the Planet
+Advertising Specialty Institute® | Every Step of the Way™
+ 
+Email: thegel@asicentral.com
+Phone: (610) 462-2238
+Fax: (215) 953-3107
+Web: members.asicentral.com/news
+LinkedIn: www.linkedin.com/in/theresahegel/
+Instagram: @theresa_hegel_asi
+
+
+
+
+
+This notebook helps you get started
+
+# Load software libraries
+```{r}
+#install.packages("tidyverse")
+#install.packages("janitor")
+#install.packages("readxl")
+#install.packages("rvest")
+library(tidyverse)
+library(janitor)
+library(readxl)
+library(rvest)
+
+```
+
+
+# Load your data
+
+GDP by Industry / COMP, TXPIXS, GOS
+Wages and salaries, supplements to wages and salaries, taxes on production and imports, subsidies, government surplus, consumption of fixed capital, business current transfer payments, and corporate and noncorporate other gross operating surplus by industry
+
+Current-dollar levels, 1998-2023: 65 Industries
+
+This data is UVCT40	Gross operating surplus by industry
+
+```{r}
+
+# data <- read.csv("../data/2024 Presidential Post General Md Financial Info 2024 Presidential Post General .csv") |> 
+#     clean_names()
+
+
+data <- read_excel("../data/ComponentsOfVA.xlsx", skip=7, sheet="UVCT40-A") |> 
+   clean_names() |> 
+  rename(industry = x2)
+
+
+
+```
+
+Data details:
+
+
+# Explore the data types
+```{r}
+
+#glimpse(YOUR_DATA)
+
+glimpse(data)
+
+```
+
+# Top 10 industries by gross operating surplus, 2023
+```{r}
+
+top2023 <- data |> 
+  select(industry, x2023) |> 
+  slice_max(x2023, n= 10)
+
+top2023
+```
+
+
+
+# Questions 
+
+Write down questions you want answered:
+Perhaps Olivia can look at some of the top markets for promo (Education, Healthcare, Construction, Manufacturing/Distribution & Financial/Insurance are the top 5) and analyze some data from Bureau of Labor Statistics and other sources to find trends in how they’re doing, etc.?
+
+
+# Data Details
+
+You're looking at GDP by industry from the Bureau of Economic Analysis, the underlying estimates
+https://www.bea.gov/industry/industry-underlying-estimates
+
+GDP by Industry / COMP, TXPIXS, GOS
+Wages and salaries, supplements to wages and salaries, taxes on production and imports, subsidies, government surplus, consumption of fixed capital, business current transfer payments, and corporate and noncorporate other gross operating surplus by industry
+
+Current-dollar levels, 1998-2023: 65 Industries Zipped | XLSX, Interactive Data
+
+
+For general context, read this report
+https://www.bea.gov/sites/default/files/2025-03/gdp4q24-3rd.pdf
+

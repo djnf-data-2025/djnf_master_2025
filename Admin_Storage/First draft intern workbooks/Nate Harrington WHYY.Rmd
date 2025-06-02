@@ -1,0 +1,162 @@
+---
+title: "Nate Harrington WHYY"
+output: html_document
+date: "2025-05-5"
+---
+
+A demo notebook for Dow Jones News Fund data interns
+
+During the week’s training, you will work on a project called Investigate Your Community to produce detailed story pitches relevant to their summer internship positions. The goal is to have the students research a topic relevant to your newsroom so they can get to work immediately at the internship. 
+
+Here are some examples from last year’s DJNF data journalism training:
+
+Hannah Rosenberger, at ASI Media/Counselor magazine, produced this analysis on name, image and likeness trends: https://hrosenberger.github.io/ASI-NIL-Project/
+
+Shifra Dayak, an intern at the Connecticut Mirror, produced this analysis of environment spill data: https://shifradayak.github.io/DJNF_Merrill/ct_env_spills.html.
+
+Michael Zhang, an intern at the Houston Landing, explored local election data: https://michaelzhangreporter.github.io/Houston_Campaign_Finance/
+
+
+Here's what your newsroom suggested for a project
+Here are some newsroom-wide projects coming up that we welcome data journalism contributions from our future DJ interns.
+ 
+Aging in the region – tentative project title is “Growing Golden: Aging with Purpose.” Numerous stories about aging and thriving in retirement will cover a range of financial, health, housing, dying, family coping and planning for retirement story topics. This is an explanatory journalism project.
+ 
+Developing project on Black Women in the region – inspired by the election of Philadelphia’s first woman mayor and Black woman mayor. Areas of storytelling will include: politics, education and health
+ 
+Philadelphia neighborhood guides is a project coming from Billy Penn.
+ 
+An existing project on education is such, and we will continue to produce stories through mid-summer -- Creativity Sparks Success Project https://whyy.org/series/creativity-sparks-success/
+
+
+
+This notebook helps you get started on the Growing Golden project.
+
+
+# Load software libraries
+```{r}
+#install.packages("tidyverse")
+#install.packages("janitor")
+#install.packages("readxl")
+#install.packages("rvest")
+#install.packages("jsonlite")
+library(tidyverse)
+library(janitor)
+library(readxl)
+library(rvest)
+library(jsonlite)
+
+```
+
+
+# Load your data
+
+Check Census Reporter for ideas. Here's a start
+https://censusreporter.org/data/table/?table=B01001&primary_geo_id=16000US4260000&geo_ids=16000US4260000,05000US42101,31000US37980,04000US42,01000US
+
+
+```{r}
+
+# 
+# YOUR_DATA <- read.csv("../data/XXXXX.csv") |> 
+#     clean_names()
+
+# data <- read_excel("../data/2024-12-Revenue.xlsx", skip=2) |> 
+#     clean_names()
+
+data <- read.csv("../data/acs2023_1yr_B01001_04000US42.csv") |> 
+    clean_names() 
+```
+
+Restructure the table for 
+
+```{r}
+
+
+demographic_table <- data %>%
+  # First select just the relevant columns
+  select(name, matches("^b01001\\d+$")) %>%  
+  # Pivot to make each b01001 variable a row
+  pivot_longer(cols = starts_with("b01001"),
+               names_to = "variable",
+               values_to = "value") %>%
+  # Then pivot to make each location a column
+  pivot_wider(names_from = name,
+              values_from = value) %>%
+  # Clean up column names if needed
+  rename_with(~ gsub(", PA$", "", .x), matches("Philadelphia County")) %>%
+  rename_with(~ gsub(" Metro Area$", "", .x), matches("Philadelphia-Camden")) |> 
+  clean_names()
+
+```
+
+
+Read json file as a dataframe
+```{r}
+
+data_labels <- fromJSON("../data/metadata.json")
+
+column_list <- data_labels[["tables"]][["B01001"]][["columns"]]
+
+# Create a dataframe from the list
+label_df <- data.frame(
+  variable = names(column_list),
+  indent = sapply(column_list, function(x) x$indent),
+  name = sapply(column_list, function(x) x$name),
+  stringsAsFactors = FALSE
+) |> 
+  mutate(variable = tolower(variable))
+
+
+```
+
+
+# Join labels and data
+```{r}
+demographic_table1 <- demographic_table |> 
+  inner_join(label_df, by=c("variable")) |> 
+  select(name, philadelphia_pa,philadelphia_county, pennsylvania,  
+          philadelphia_camden_wilmington_pa_nj_de_md,  united_states, variable, indent)
+
+#fix to specify male-female
+demographic_table1 <- demographic_table1 %>%
+  mutate(name = case_when(
+    # Skip rows 1, 2, 26, and 50+ (if any)
+    row_number() %in% c(1, 2, 26) ~ name,
+    # Add " (male)" to rows 3-25
+    row_number() >= 3 & row_number() <= 25 ~ paste0(name, "_male"),
+    # Add " (female)" to rows 27-49
+    row_number() >= 27 & row_number() <= 49 ~ paste0(name, "_female"),
+    # Keep any other rows unchanged
+    TRUE ~ name
+  ))
+
+```
+
+
+Data details:
+
+
+# Explore the data types
+```{r}
+
+#glimpse(YOUR_DATA)
+
+glimpse(demographic_table1 )
+
+```
+
+
+# Questions 
+
+Write down questions you want answered:
+
+
+
+# Data Details
+https://censusreporter.org/data/table/?table=B01001&primary_geo_id=16000US4260000&geo_ids=16000US4260000,05000US42101,31000US37980,04000US42,01000US
+
+
+Next steps:
+You should learn to use the TidyCensus package in R. It would make this work so much easier.
+https://walker-data.com/tidycensus/

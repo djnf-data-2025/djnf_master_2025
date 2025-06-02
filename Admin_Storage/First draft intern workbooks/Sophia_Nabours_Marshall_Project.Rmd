@@ -1,0 +1,153 @@
+---
+title: "Demo_Sasha"
+output: html_document
+date: "2025-04-22"
+---
+
+A demo notebook for Dow Jones News Fund data interns
+
+During the week’s training, you will work on a project called Investigate Your Community to produce detailed story pitches relevant to their summer internship positions. The goal is to have the students research a topic relevant to your newsroom so they can get to work immediately at the internship. 
+
+Here are some examples from last year’s DJNF data journalism training:
+
+Hannah Rosenberger, at ASI Media/Counselor magazine, produced this analysis on name, image and likeness trends: https://hrosenberger.github.io/ASI-NIL-Project/
+
+Shifra Dayak, an intern at the Connecticut Mirror, produced this analysis of environment spill data: https://shifradayak.github.io/DJNF_Merrill/ct_env_spills.html.
+
+Michael Zhang, an intern at the Houston Landing, explored local election data: https://michaelzhangreporter.github.io/Houston_Campaign_Finance/
+
+
+Here's what your newsroom suggested for a project:
+A potentially useful dataset would be our political survey of incarcerated people: 
+
+
+https://observablehq.com/@themarshallproject/survey3-state-summaries 
+https://observablehq.com/@themarshallproject/survey3-summaries-by-jail
+https://www.themarshallproject.org/2024/10/18/journalism-election-survey-prisons-jails-voting 
+
+
+We've seen a lot of local outlets use this data in various ways. It's particularly useful because anyone using it can ask us for free text quotes from questions of interest and potentially even contact info for a few sources (if respondents who consented to further contact exist for the area of interest). 
+
+
+D
+——
+David Eads
+Data Editor, The Marshall Project 
+Cell/signal: 773-354-2285
+
+
+This notebook helps you get started
+
+# Load software libraries
+```{r}
+#install.packages("tidyverse")
+#install.packages("janitor")
+#install.packages("readxl")
+#install.packages("rvest")
+library(tidyverse)
+library(janitor)
+library(readxl)
+library(rvest)
+
+```
+
+
+# Load your data
+
+# Voter preference: who_vote_for	single	If the election for president were being held today, would you vote for:
+```{r}
+
+# 
+# YOUR_DATA <- read.csv("../data/XXXXX.csv") |> 
+#     clean_names()
+
+data <- read.csv("../data/data-who_vote_for.csv") |> 
+    clean_names()
+
+
+```
+
+Data details:
+
+
+# Explore the data types
+```{r}
+
+#glimpse(YOUR_DATA)
+
+glimpse(data)
+
+```
+# Voting by race
+race__who_vote_for	See base definitions for question types.	See base definitions for compound counts.	JSON	CSV
+```{r}
+
+# 
+# YOUR_DATA <- read.csv("../data/XXXXX.csv") |> 
+#     clean_names()
+
+data_race <- read.csv("../data/data-race__who_vote_for.csv") |> 
+    clean_names()
+
+
+```
+
+
+# Code for later - doesn't apply for this download of the political preference poll
+
+# Fix dates
+```{r}
+# data <- data |> 
+#   mutate(date = lubridate::mdy(contribution_date))
+```
+
+
+
+# Data exploration: dates
+
+```{r}
+# data |> 
+#    count(date) |> 
+#   arrange(desc(n))
+```
+
+
+
+
+# Questions 
+
+Write down questions you want answered:
+
+
+
+# Data Details
+https://observablehq.com/@themarshallproject/survey3-state-summaries
+
+The Marshall Project 2024 Political Survey, State Summaries of Selected Questions
+The Marshall Project surveyed approximately 54,000 incarcerated people in 785 prisons and jails nationwide, with responses in 45 states and the District of Columbia. This is a landmark study of people in prison and jails that The Marshall Project first conducted in 2020 to learn about their political leanings.
+
+See our toolkit for more context, sources, and reporting guidance. If you want the data, read on...
+
+This notebook contains counts of answers for selected combinations of questions, aggregated by state.
+
+The results are not representative of the incarcerated population nationally or at the state level. When writing about this data, use extreme care to represent findings using language like "of the people who responded to the survey" and "of the survey respondents who identified as women."
+
+Results are presented as counts and percentages of combinations of variables. For example, there is an export called race__who_vote_for. This groups by race and voting preference to be able to say "XX% of people who identified as Hispanic or Latino expressed a preference for Donald Trump." In this case, the results table will include unique answers in the race and who_vote_for columns.
+
+Answer groups with less than 10 responses are suppressed from the results to avoid the possibility of identifying someone (e.g. a transgender person in a state with a small prison population) and associating them with their political beliefs.
+
+The survey was conducted twice. Once while Joe Biden was the Democratic presidential candidate and ran from June 4, 2024 to July 17, 2024 (known as answer set 2024-001 in the data) and another time after Kamala Harris assumed the candidacy for the Democrats from August 8, 2024 to August 22, 2025 (answer set 2024-002). Most questions were the same between surveys; this tool defaults to showing the answers across both survey (answer set all-surveys), with an exception for questions like who_vote_for, which had different options in the two surveys.
+
+All results include these fields in addition to the each answer to the question(s) being summarized:
+
+state: The state the respondent was incarcerated. The data also includes a "special" state code called 0_ALL_STATES that represents the national counts.
+answer_set: The survey was conducted twice. Once while Joe Biden was the Democratic presidential candidate (answer set 2024-001) and another time after Kamala Harris assumed the candidacy for the Democrats (answer set 2024-002). We include a third set (answer set all-surveys) that includes responses from unique individuals across surveys.
+count: Number of respondents with this combination of responses.
+n_respondents: Number of people who answered this question.
+pct_of_respondents: Percent of people who responded with this answer. In cases with multiple variables, this is the percentage of the parent group. For example, in race__who_vote_for, this number represents the percent of people of a specific race who said they would vote for a specific candidate.
+In addition to these fields, the tables below show the national percentages for convenient comparison.
+
+The selected questions, including the full text of the question asked, are available in the download table below.
+
+Some counts be may be of combined varables, e.g. race__who_vote_for.
+
