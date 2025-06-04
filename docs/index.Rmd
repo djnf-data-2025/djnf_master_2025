@@ -186,15 +186,19 @@ Speakers</a></button>
 -   **6:00 p.m.**: Meet at Knight Hall and walk to [Cava, College
     Park.](https://cava.com/locations/college-park-md)
 
--   **11:59 p.m.**: Draft story pitch
-    memo emailed to Wells and Herzog.
-    
-    Monday, June 3, 11:59 p.m. Draft a story pitch memo.  
-    
-–Submit as a link to an R Markdown document on your GitHub account. 
+-   **11:59 p.m.**: Draft story pitch memo emailed to Wells and Herzog.
 
-A minimum of 400 words, building on the story idea paragraph, that incorporates some of the best practices in pitching a story and generally follows the story pitch template and process as described in Monday’s lecture. This draft pitch will reflect a deeper exploration of the assigned data and hopefully some independent research. The best story pitches will have some context about recent coverage of this topic.
+    Monday, June 3, 11:59 p.m. Draft a story pitch memo.
 
+–Submit as a link to an R Markdown document on your GitHub account.
+
+A minimum of 400 words, building on the story idea paragraph, that
+incorporates some of the best practices in pitching a story and
+generally follows the story pitch template and process as described in
+Monday’s lecture. This draft pitch will reflect a deeper exploration of
+the assigned data and hopefully some independent research. The best
+story pitches will have some context about recent coverage of this
+topic.
 
 > **Handouts, Readings for Monday** -
 
@@ -206,10 +210,11 @@ A minimum of 400 words, building on the story idea paragraph, that incorporates 
 
 -   [Web page hosting
     tutorial](https://docs.google.com/document/d/1m6WrprX3BshPV3r0YVrx5fol8reB2azS8Mb19lN6qkg/edit?tab=t.0#heading=h.ahlwvelrtcgr)
-    
+
 -   [Sean Mussenden R Intro](https://go.umd.edu/djnf_r_intro)
 
--   [Christoph Mergerson slides](https://docs.google.com/presentation/d/1842t-NVaVTc4aGFKeZv7PAxVYw01JNGy/edit?usp=sharing&ouid=102324743793755798467&rtpof=true&sd=true)
+-   [Christoph Mergerson
+    slides](https://docs.google.com/presentation/d/1842t-NVaVTc4aGFKeZv7PAxVYw01JNGy/edit?usp=sharing&ouid=102324743793755798467&rtpof=true&sd=true)
 
 ------------------------------------------------------------------------
 
@@ -265,8 +270,9 @@ A minimum of 400 words, building on the story idea paragraph, that incorporates 
 
 -   **5:30 p.m.**: Break
 
--   **6:30 p.m.**: Dinner at [Greene Turtle, College
-    Park, 7356 Baltimore Ave, College Park, MD 20740.](https://www.thegreeneturtle.com/menu/) (Meet at Knight Hall,
+-   **6:30 p.m.**: Dinner at [Greene Turtle, College Park, 7356
+    Baltimore Ave, College Park, MD
+    20740.](https://www.thegreeneturtle.com/menu/) (Meet at Knight Hall,
     walk to venue)
 
 > **Handouts, Readings for Tuesday** -
@@ -316,12 +322,11 @@ A minimum of 400 words, building on the story idea paragraph, that incorporates 
         it.
 
 -   **3:30 p.m.**: Workshop. Connie Mitchell Ford workshop on project
-    proposals. (Wells, Lang, Herzog as coaches). Room 2103, 2107
+    proposals. (Wells, Lang, Herzog as coaches). Eaton Theater
 
 -   **5 p.m.**: Break
 
--   **6:00 p.m.**: Gather at Knight Hall, walk to [The Hall,
-    CP.](https://thehallcp.com/)
+-   **6:00 p.m.**: Dinner delivered to Knight Hall.
 
 -   **11:59 p.m.**: [Second draft of story pitch memos
     due](https://docs.google.com/document/d/1A-dlzWX7ksOt6LRHYpuPDk7SPPWxyZEmGt2wC0lM7Mg/edit),
@@ -357,8 +362,8 @@ A minimum of 400 words, building on the story idea paragraph, that incorporates 
 -   **9 a.m.: Gathering Public Records**
     -   All attend. (Herzog and Wells). Eaton Theater
 -   **10:00 a.m. - 10:15 a.m.**: Break
--   **10:15 a.m.**: Public records exercise. (Wells, Herzog, Lang coach)
--   **11:00 a.m.**: Skills to survive in the newsroom. Time management,
+-   **10:15 a.m.**: Workshop on projects.
+-   **11:15 a.m.**: Skills to survive in the newsroom. Time management,
     deadlines. All attend. (Denny) Eaton Theater
 -   **12 p.m.**: Lunch in Knight Hall.
     -   Speaker: Prof. Kevin Blackistone on racial justice in sports
@@ -382,13 +387,17 @@ A minimum of 400 words, building on the story idea paragraph, that incorporates 
 **Saturday June 7, 2025**
 
 -   **9:00 a.m. Breakfast**: At Knight Hall
+
 -   **10:00 a.m.**: [Students present web
     pages](https://docs.google.com/document/d/1A-dlzWX7ksOt6LRHYpuPDk7SPPWxyZEmGt2wC0lM7Mg/edit),
-    story pitches, solicit feedback. 
-    
+    story pitches, solicit feedback.
+
 -   **12:15 p.m.**: Lunch in Knight Hall
+
 -   **1 p.m.**: On the van for D.C.
+
 -   **2:15 p.m.**: Tour of African-American History Museum, D.C.
+
 -   **6:00 p.m.**: Dinner at Ledo Pizza, College Park
 
 > **Handouts, Readings for Saturday** - TK
