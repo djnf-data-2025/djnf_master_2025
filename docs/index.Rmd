@@ -284,6 +284,10 @@ topic.
     talk](https://docs.google.com/presentation/d/1nO41TYeSyoC-p0Xdn7pH872OVkZxdr3M/edit?usp=sharing&ouid=102324743793755798467&rtpof=true&sd=true)
 -   Derek Willis [AI and coding
     lecture](https://github.com/profrobwells/djnf-llm-willis-2025)
+-   Adam Marton's visualization
+    [slides](https://docs.google.com/presentation/d/1RKI9xYdT1qPcg2iknl3H4R-x7pxNeJcdycjmNxO9no8/edit?usp=sharing)
+    and [Datawrapper API
+    repo](https://amarton.github.io/datawrapper-api/)
 
 ------------------------------------------------------------------------
 
