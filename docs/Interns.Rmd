@@ -8,7 +8,7 @@ editor_options:
 ::: {style="text-align: center; color: #2ba9dc;"}
 # Dow Jones News Fund Data Interns 2025
 
-<span style="font-size: 8pt;">(ver May 22, 2025)</span>
+[(ver May 22, 2025)]{style="font-size: 8pt;"}
 :::
 
 ::: {style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 30px;"}
@@ -96,7 +96,8 @@ with the The Detroit News.
 ::: {style="float:right; padding:10px;"}
 <img src="../images/interns/Patrick McCaslin.jpg" width="25%" height="25%" align="left" style="padding:10px;"/>
 **Patrick McCaslin** studies at University of Miami and will intern with
-the Baltimore Banner.
+the Baltimore Banner. [Profile of Patrick by Nate
+Harrington.](https://docs.google.com/document/d/1cGbEk3aE87GiOsoSYUqH3230IFsffTtUAEd9hVmpjpk/edit?usp=drivesdk)
 :::
 
 ::: {style="float:right; padding:10px;"}
