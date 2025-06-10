@@ -73,7 +73,8 @@ will intern with the Houston Chronicle. Profile of Ava by Ethan Hylton
 ::: {style="float:right; padding:10px;"}
 <img src="../images/interns/Ethan Hylton.jpg" width="25%" height="25%" align="left" style="padding:10px;"/>
 **Ethan James Hylton** studies at Goldsmiths, University of London and
-will intern with the Indianapolis Star.
+will intern with the Indianapolis Star. [Ethan's profile by Ava
+Hu.](https://docs.google.com/document/d/1ztsovng3dKfH4jMs6eRNzFUwPZdt99iw5Eo2VsWrr7g/edit?usp=sharing)
 :::
 
 :::::::::: {style="float:right; padding:10px;"}
@@ -93,7 +94,8 @@ Bensen](https://docs.google.com/document/d/1KpAog5S57ONW_B18uNwXz1jLak-QbnuF_yoa
 ::: {style="float:right; padding:10px;"}
 <img src="../images/interns/Apurva Mahajan.png" width="25%" height="25%" align="left" style="padding:10px;"/>
 **Apurva Mahajan** studies at University of Maryland and will intern
-with the The Detroit News.
+with the The Detroit News. [Apurva's profile by Yasmeen
+Saadi.](https://docs.google.com/document/d/1l-0mNqCJ0oDHyfGD1MtxuuEh6RJxjlopVWAJEzF3v-Y/edit?tab=t.0)
 :::
 
 ::: {style="float:right; padding:10px;"}
@@ -118,7 +120,9 @@ the Futuro Media.
 ::: {style="float:right; padding:10px;"}
 <img src="../images/interns/Yasmeen Saadi.jpg" width="25%" height="25%" align="left" style="padding:10px;"/>
 **Yasmeen Saadi** studies at University of Missouri-Columbia and will
-intern with the Investigative Project on Race and Equity newsroom.
+intern with the Investigative Project on Race and Equity newsroom. [Here
+is Yasmeen's data project for the
+week.](https://djnf-data-2025.github.io/yasmeen-saadi/)
 :::
 ::::
 
