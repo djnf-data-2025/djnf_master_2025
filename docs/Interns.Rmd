@@ -29,7 +29,9 @@ intern with the Connecticut Mirror.
 ::: {style="float:right; padding:10px;"}
 <img src="../images/interns/Hannah Bensen.jpg" width="25%" height="25%" align="left" style="padding:10px;"/>
 **Hannah Bensen** studies at Stanford University and will intern with
-the Washington Post through the Investigative Reporting Workshop.
+the Washington Post through the Investigative Reporting Workshop. See
+[Hannah's data
+project.](https://djnf-data-2025.github.io/hannah-bensen/)
 :::
 
 ::: {style="float:right; padding:10px;"}
