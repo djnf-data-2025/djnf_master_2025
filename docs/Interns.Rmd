@@ -37,7 +37,8 @@ project.](https://djnf-data-2025.github.io/hannah-bensen/)
 ::: {style="float:right; padding:10px;"}
 <img src="../images/interns/Olivia Borgula.jpg" width="25%" height="25%" align="left" style="padding:10px;"/>
 **Olivia Borgula** studies at University of Maryland, College Park and
-will intern with the Advertising Specialty Institute newsroom.
+will intern with the Advertising Specialty Institute newsroom. See [her
+data project.](https://djnf-data-2025.github.io/olivia-borgula/)
 :::
 
 ::: {style="float:right; padding:10px;"}
@@ -117,7 +118,8 @@ Allen.](https://docs.google.com/document/d/1w13eQ6WBpSC_pp6u_maU90IBDucs4X2ryKBW
 :::: {style="float:right; padding:10px;"}
 <img src="../images/interns/Diego Perdomo.jpg" width="25%" height="25%" align="left" style="padding:10px;"/>
 **Diego Perdomo** studies at University of Florida and will intern with
-the Futuro Media.
+the Futuro Media. [Read his profile by Olivia
+Borgula](https://docs.google.com/document/d/1iP5efSFNN2lFfGRhU3VZnD5M65P93Tsky_oeqvTgDno/edit?usp=sharing)
 
 ::: {style="float:right; padding:10px;"}
 <img src="../images/interns/Yasmeen Saadi.jpg" width="25%" height="25%" align="left" style="padding:10px;"/>
